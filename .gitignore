@@ -1,0 +1,6 @@
+# Solo publicamos la app y los datos que descarga el navegador.
+*
+!.gitignore
+!index.html
+!official.json
+!schedule.json
