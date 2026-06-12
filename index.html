@@ -211,6 +211,22 @@
   .lu-sub{font-size:11px;color:var(--muted);margin:8px 0 4px;text-transform:uppercase;letter-spacing:.5px}
   .seal-bar{display:flex;align-items:center;gap:10px;background:var(--card);padding:11px 14px;border-radius:10px;margin-bottom:16px;font-size:13px}
   .seal-bar input{width:18px;height:18px}
+  /* Ficha oficial (solo lectura) */
+  .det-list{display:flex;flex-direction:column;gap:3px}
+  .det-line{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0}
+  .det-min{min-width:38px;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:700;font-size:12px}
+  .det-flag{font-size:15px}
+  .det-name{font-weight:600}
+  .det-card{font-size:13px}
+  .det-tag{font-size:10px;background:var(--card2);color:var(--muted);border-radius:6px;padding:1px 6px;font-weight:700}
+  .det-assist{font-size:12px;color:var(--muted)}
+  .det-empty{color:var(--muted);font-size:13px;font-style:italic;padding:2px 0}
+  .lu-xi{margin:0;padding-left:22px;font-size:13px;line-height:1.7}
+  .det-sub{font-size:13px;display:flex;align-items:center;gap:6px;padding:1px 0}
+  .det-pen{font-size:15px;text-align:center;background:var(--card);border-radius:10px;padding:10px}
+  /* Canal de TV en el calendario */
+  .sch-tv{font-size:11px;color:var(--muted);display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
+  .sch-tv.free{color:var(--green);font-weight:700}
   .pill{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:.5px}
   .pill.green{background:rgba(55,226,154,.18);color:var(--green)}
   /* Formulario porra (bienvenida) */
@@ -309,7 +325,7 @@
   <section id="view-terceros" class="view">
     <div class="third-wrap">
       <h3>🥉 Clasificación de los 12 terceros</h3>
-      <p style="color:var(--muted);font-size:12px;margin-bottom:10px">Los <b>8 mejores terceros</b> avanzan a la fase eliminatoria. Orden: puntos → diferencia de goles → goles a favor.</p>
+      <p style="color:var(--muted);font-size:12px;margin-bottom:10px">Los <b>8 mejores terceros</b> avanzan a la fase eliminatoria. Orden: puntos → diferencia de goles → goles a favor. Las cifras se actualizan con cada resultado oficial; la clasificación es <b>provisional</b> hasta que terminen los 12 grupos.</p>
       <div id="third-table"></div>
     </div>
   </section>
@@ -353,6 +369,7 @@
     <div class="pform-body" id="pform-body"></div>
     <div class="pform-foot">
       <div id="pform-err" class="pform-err"></div>
+      <button id="pform-skip" class="ghost">Rellenar más tarde</button>
       <button id="pform-cancel" class="ghost" style="display:none">Cancelar</button>
       <button id="pform-save" class="primary">Guardar mi porra</button>
     </div>
@@ -494,6 +511,26 @@ const SCHEDULE_DATA={
 "M97":{date:"2026-07-09",time:"22:00"},"M98":{date:"2026-07-10",time:"21:00"},"M99":{date:"2026-07-11",time:"23:00"},"M100":{date:"2026-07-12",time:"03:00"},"M101":{date:"2026-07-14",time:"21:00"},"M102":{date:"2026-07-15",time:"21:00"},"M103":{date:"2026-07-18",time:"23:00"},"M104":{date:"2026-07-19",time:"21:00"}
 };
 let SCHEDULE=SCHEDULE_DATA;
+/* Emisión en España. DAZN tiene los 104 partidos (de pago). RTVE (La 1, en
+   abierto/gratis y en RTVE Play) da: el inaugural, TODOS los de España, las
+   semifinales, el 3.er puesto y la final. Los partidos de España en
+   eliminatorias se marcan en abierto automáticamente cuando se conozca el cruce.
+   El resto (de momento) solo en DAZN; se irá afinando según anuncie RTVE. */
+const TV_ABIERTO={
+  'GA-0':'La 1',                          // partido inaugural
+  'GH-0':'La 1','GH-2':'La 1','GH-4':'La 1', // España (fase de grupos)
+  'M101':'La 1','M102':'La 1',            // semifinales
+  'M103':'La 1','M104':'La 1'             // 3.er puesto y final
+};
+function tvFor(id){
+  // Si una eliminatoria la juega España, va en abierto en La 1.
+  if(id&&id[0]==='M'){
+    const m=KO[id];const hs=m&&resolveSource(m.h),as=m&&resolveSource(m.a);
+    if((hs&&hs.name==='España')||(as&&as.name==='España'))return {label:'La 1',free:true};
+  }
+  if(TV_ABIERTO[id])return {label:TV_ABIERTO[id],free:true};
+  return {label:'DAZN',free:false};
+}
 async function loadSchedule(){
   // Usa el calendario incrustado. Si se sirve por servidor y existe un
   // schedule.json (para futuros ajustes de horario), lo deja sobrescribir.
@@ -662,11 +699,11 @@ function renderThirds(){
     const qual=i<8;
     rows+=`<tr class="${qual?'qual':''}"><td>${i+1}</td>
       <td class="team"><span class="flag">${r.t.flag}</span>${r.t.name} <span class="pos">(Gr. ${r.g})</span></td>
-      <td>${r.complete?r.Pts:'–'}</td><td>${r.complete?(r.GD>0?'+':'')+r.GD:'–'}</td><td>${r.complete?r.GF:'–'}</td>
+      <td>${r.P}</td><td>${r.Pts}</td><td>${(r.GD>0?'+':'')+r.GD}</td><td>${r.GF}</td><td>${r.GA}</td>
       <td>${qual?'<span class="pill green">CLASIFICA</span>':'<span class="pill amber">fuera</span>'}</td></tr>`;
   });
   document.getElementById('third-table').innerHTML=`<table class="third">
-    <thead><tr><th>#</th><th style="text-align:left">Tercero de grupo</th><th>Pts</th><th>DG</th><th>GF</th><th>Estado</th></tr></thead>
+    <thead><tr><th>#</th><th style="text-align:left">Tercero de grupo</th><th>PJ</th><th>Pts</th><th>DG</th><th>GF</th><th>GC</th><th>Estado</th></tr></thead>
     <tbody>${rows}</tbody></table>`;
 }
 
@@ -1158,8 +1195,9 @@ function openPorraForm(prefill){
   PORRA_FORM.matches.forEach(m=>{if(!_pformDraft.scores[m.id])_pformDraft.scores[m.id]=['',''];});
   document.getElementById('pform-intro').innerHTML=_pformEditing
     ? 'Edita tus respuestas. Al guardar se recalcularán tus puntos en la pestaña «🎯 Porra».'
-    : '¡Bienvenido! Antes de empezar, rellena tu porra. Estas preguntas son las mismas para todos y <b>solo se rellenan una vez</b>. Después podrás seguir tus puntos en la pestaña «🎯 Porra».';
+    : '¡Bienvenido! Estas preguntas (las mismas para todos) son tu porra y <b>solo se rellenan una vez</b>. ¿Prefieres echar un vistazo primero? Pulsa <b>«Rellenar más tarde»</b>: podrás rellenarla cuando quieras desde la pestaña «🎯 Porra».';
   document.getElementById('pform-cancel').style.display=_pformEditing?'':'none';
+  document.getElementById('pform-skip').style.display=_pformEditing?'none':'';
   drawPorraForm();
   document.getElementById('pform-err').textContent='';
   document.getElementById('pform-bg').classList.add('open');
@@ -1246,6 +1284,7 @@ document.getElementById('pform-save').onclick=()=>{
   toast('✅ Tu porra se ha guardado');
 };
 document.getElementById('pform-cancel').onclick=()=>closePorraForm();
+document.getElementById('pform-skip').onclick=()=>{closePorraForm();toast('Puedes rellenar tu porra cuando quieras desde la pestaña «🎯 Porra».');};
 
 /* ============ CALENDARIO / FECHAS ============ */
 const DIAS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
@@ -1286,10 +1325,12 @@ function renderSchedule(){
       const awayHtml=mi.away?`<span class="flag">${mi.away.flag}</span>${mi.away.name}`:`<span class="desc">${mi.awayDesc}</span>`;
       // En el calendario SOLO se muestran resultados oficiales (sellados); las predicciones manuales no aparecen aquí.
       const mid=(mi.sealed&&mi.score)?`<span class="sch-score off">${mi.score[0]} – ${mi.score[1]}</span>`:`<span class="vs">vs</span>`;
+      const tv=tvFor(id);
       rowsHtml+=`<div class="sch-row">
         <span class="sch-time ${time?'':'tbd'}">${time||'por confirmar'}</span>
         <span class="sch-tag ${mi.ko?'ko':''}">${mi.tag}</span>
         <span class="sch-match"><span class="side r">${homeHtml}</span>${mid}<span class="side">${awayHtml}</span></span>
+        <span class="sch-tv ${tv.free?'free':''}" title="${tv.free?'En abierto y gratis (también en RTVE Play)':'Solo en TV de pago'}">📺 ${tv.label}</span>
       </div>`;
     });
     html+=`<div class="day-block"><div class="day-head"><span class="dnum">${fechaLarga(date)}</span>
@@ -1315,114 +1356,35 @@ function openDetail(mid){
   }
   const d=getDet(mid);
   d.lineups=normLineups(d.lineups);
-  const ps=(!isGroup&&getKO(mid).penScore)||{};
-  const penBlock=isGroup?'':`
-    <div class="sec">
-      <h4>🥅 Tanda de penaltis <span style="font-weight:400;font-size:12px;color:var(--muted)">(si el partido acabó en empate)</span></h4>
-      <div class="ev-row pen-row">
-        <span>${home.name}</span>
-        <input type="number" class="min" id="pen-h" min="0" value="${ps.h??''}">
-        <span class="vs">–</span>
-        <input type="number" class="min" id="pen-a" min="0" value="${ps.a??''}">
-        <span>${away.name}</span>
-      </div>
-      <div style="font-size:12px;color:var(--muted);margin-top:4px">Los goles de la tanda no cuentan como goles (normativa FIFA).</div>
-    </div>`;
+  const gp=isGroup?getGS(mid):getKO(mid);
+  const ps=(!isGroup&&gp.penScore)||{};
+  const fl=t=>t==='h'?home.flag:away.flag;
+  const scList=d.scorers.length
+    ? d.scorers.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
+    : '<div class="det-empty">Sin goles registrados</div>';
+  const cdList=d.cards.length
+    ? d.cards.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(cd.name||'')}</span></div>`).join('')
+    : '<div class="det-empty">Sin tarjetas</div>';
+  const luTeam=(side)=>{
+    const lu=d.lineups[side],flag=side==='h'?home.flag:away.flag,name=side==='h'?home.name:away.name;
+    const xi=lu.xi.length?`<ol class="lu-xi">${lu.xi.map(p=>`<li>${esc(p)}</li>`).join('')}</ol>`:'<div class="det-empty">Sin alineación</div>';
+    const subs=lu.subs.length?`<div class="lu-sub">Cambios</div>${lu.subs.map(sb=>`<div class="det-sub"><span class="det-min">${esc(sb.minute||'')}'</span>${esc(sb.out||'')} <span class="vs">→</span> ${esc(sb.in||'')}</div>`).join('')}`:'';
+    return `<div class="lu-team"><label>${flag} ${name}</label><div class="lu-sub">Once inicial</div>${xi}${subs}</div>`;
+  };
+  const penBlock=(!isGroup&&(ps.h!=null||ps.a!=null))
+    ? `<div class="sec"><h4>🥅 Tanda de penaltis</h4><div class="det-pen">${home.name} <b>${ps.h??'–'}</b> – <b>${ps.a??'–'}</b> ${away.name}</div></div>`
+    : '';
   document.getElementById('m-title').textContent=`${home.flag} ${home.name} vs ${away.name} ${away.flag}`;
   const body=document.getElementById('m-body');
   body.innerHTML=`
     <div class="mscore">${score[0]??'–'}<span class="vs">:</span>${score[1]??'–'}</div>
     <div class="seal-bar"><span class="pill green">🔒 OFICIAL</span>
-      <span style="font-size:12px;color:var(--muted)">Datos del partido. Se rellenan con fuentes oficiales al actualizar resultados; también puedes editarlos a mano.</span></div>
+      <span style="font-size:12px;color:var(--muted)">Ficha oficial y cerrada. Lo ocurrido en un partido ya jugado no se puede modificar.${gp.src?' · Fuente: '+esc(gp.src):''}</span></div>
     ${penBlock}
-    <div class="sec">
-      <h4>⚽ Goleadores</h4>
-      <div id="scorer-list"></div>
-      <button class="addbtn" id="add-scorer">＋ Añadir gol</button>
-    </div>
-    <div class="sec">
-      <h4>🟨🟥 Tarjetas</h4>
-      <div id="card-list"></div>
-      <button class="addbtn" id="add-card">＋ Añadir tarjeta</button>
-    </div>
-    <div class="sec">
-      <h4>👕 Onces y cambios</h4>
-      <div class="lineups">
-        <div class="lu-team">
-          <label>${home.flag} ${home.name}</label>
-          <div class="lu-sub">Once inicial (un jugador por línea)</div>
-          <textarea id="lu-h" placeholder="11 titulares, uno por línea...">${d.lineups.h.xi.join('\n')}</textarea>
-          <div class="lu-sub">Cambios (sale → entra · min)</div>
-          <div id="subs-h"></div>
-          <button class="addbtn" data-addsub="h">＋ Añadir cambio</button>
-        </div>
-        <div class="lu-team">
-          <label>${away.flag} ${away.name}</label>
-          <div class="lu-sub">Once inicial (un jugador por línea)</div>
-          <textarea id="lu-a" placeholder="11 titulares, uno por línea...">${d.lineups.a.xi.join('\n')}</textarea>
-          <div class="lu-sub">Cambios (sale → entra · min)</div>
-          <div id="subs-a"></div>
-          <button class="addbtn" data-addsub="a">＋ Añadir cambio</button>
-        </div>
-      </div>
-    </div>`;
-  drawScorers();drawCards();drawSubs('h');drawSubs('a');
-  function drawScorers(){
-    const wrap=document.getElementById('scorer-list');wrap.innerHTML='';
-    d.scorers.forEach((sc,idx)=>{
-      const row=document.createElement('div');row.className='ev-row';
-      row.innerHTML=`
-        <select data-f="team"><option value="h" ${sc.team==='h'?'selected':''}>${home.name}</option><option value="a" ${sc.team==='a'?'selected':''}>${away.name}</option></select>
-        <input type="text" data-f="name" placeholder="Nombre del goleador" value="${esc(sc.name||'')}">
-        <input type="text" class="min" data-f="min" placeholder="min'" value="${esc(sc.minute||'')}">
-        <label class="pk-lbl" title="Gol de penalti (en juego)"><input type="checkbox" data-f="pk" ${sc.pk?'checked':''}> pen</label>
-        <button class="del">🗑</button>`;
-      row.querySelectorAll('[data-f]').forEach(inp=>inp.addEventListener(inp.type==='checkbox'?'change':'input',e=>{const f=e.target.dataset.f;sc[f==='min'?'minute':f]=f==='pk'?e.target.checked:e.target.value;DB.det[mid]=d;save();renderStats();renderPorra();}));
-      row.querySelector('.del').addEventListener('click',()=>{d.scorers.splice(idx,1);DB.det[mid]=d;save();drawScorers();renderStats();});
-      wrap.appendChild(row);
-    });
-  }
-  function drawCards(){
-    const wrap=document.getElementById('card-list');wrap.innerHTML='';
-    d.cards.forEach((cd,idx)=>{
-      const row=document.createElement('div');row.className='ev-row';
-      row.innerHTML=`
-        <select data-f="type"><option value="yellow" ${cd.type==='yellow'?'selected':''}>🟨 Amarilla</option><option value="red" ${cd.type==='red'?'selected':''}>🟥 Roja</option></select>
-        <select data-f="team"><option value="h" ${cd.team==='h'?'selected':''}>${home.name}</option><option value="a" ${cd.team==='a'?'selected':''}>${away.name}</option></select>
-        <input type="text" data-f="name" placeholder="Jugador" value="${esc(cd.name||'')}">
-        <input type="text" class="min" data-f="min" placeholder="min'" value="${esc(cd.minute||'')}">
-        <button class="del">🗑</button>`;
-      row.querySelectorAll('[data-f]').forEach(inp=>inp.addEventListener('input',e=>{cd[e.target.dataset.f==='min'?'minute':e.target.dataset.f]=e.target.value;DB.det[mid]=d;save();renderStats();renderPorra();}));
-      row.querySelector('.del').addEventListener('click',()=>{d.cards.splice(idx,1);DB.det[mid]=d;save();drawCards();renderStats();renderPorra();});
-      wrap.appendChild(row);
-    });
-  }
-  function drawSubs(side){
-    const wrap=document.getElementById('subs-'+side);if(!wrap)return;wrap.innerHTML='';
-    d.lineups[side].subs.forEach((sb,idx)=>{
-      const row=document.createElement('div');row.className='ev-row';
-      row.innerHTML=`
-        <input type="text" data-f="out" placeholder="Sale" value="${esc(sb.out||'')}">
-        <span class="vs">→</span>
-        <input type="text" data-f="in" placeholder="Entra" value="${esc(sb.in||'')}">
-        <input type="text" class="min" data-f="minute" placeholder="min'" value="${esc(sb.minute||'')}">
-        <button class="del">🗑</button>`;
-      row.querySelectorAll('[data-f]').forEach(inp=>inp.addEventListener('input',e=>{sb[e.target.dataset.f]=e.target.value;DB.det[mid]=d;save();}));
-      row.querySelector('.del').addEventListener('click',()=>{d.lineups[side].subs.splice(idx,1);DB.det[mid]=d;save();drawSubs(side);});
-      wrap.appendChild(row);
-    });
-  }
-  document.getElementById('add-scorer').onclick=()=>{d.scorers.push({team:'h',name:'',minute:''});DB.det[mid]=d;save();drawScorers();};
-  document.getElementById('add-card').onclick=()=>{d.cards.push({type:'yellow',team:'h',name:'',minute:''});DB.det[mid]=d;save();drawCards();};
-  document.querySelectorAll('[data-addsub]').forEach(b=>b.onclick=()=>{const side=b.dataset.addsub;d.lineups[side].subs.push({out:'',in:'',minute:''});DB.det[mid]=d;save();drawSubs(side);});
-  const luSave=side=>e=>{d.lineups[side].xi=e.target.value.split('\n').map(x=>x.trim()).filter(Boolean);DB.det[mid]=d;save();};
-  document.getElementById('lu-h').addEventListener('input',luSave('h'));
-  document.getElementById('lu-a').addEventListener('input',luSave('a'));
-  if(!isGroup){
-    const savePen=()=>{const h=document.getElementById('pen-h').value,a=document.getElementById('pen-a').value;const s=getKO(mid);s.penScore=(h===''&&a==='')?null:{h:h===''?null:+h,a:a===''?null:+a};DB.ko[mid]=s;save();};
-    document.getElementById('pen-h').addEventListener('input',savePen);
-    document.getElementById('pen-a').addEventListener('input',savePen);
-  }
+    <div class="sec"><h4>⚽ Goleadores</h4><div class="det-list">${scList}</div></div>
+    <div class="sec"><h4>🟨🟥 Tarjetas</h4><div class="det-list">${cdList}</div></div>
+    <div class="sec"><h4>👕 Onces y cambios</h4><div class="lineups">${luTeam('h')}${luTeam('a')}</div></div>`;
+  /* Ficha de solo lectura: lo ocurrido en un partido oficial no se puede editar. */
   document.getElementById('modal-bg').classList.add('open');
 }
 function esc(s){return String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;');}
