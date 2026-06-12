@@ -146,6 +146,15 @@
   .porra-total .pt-num{font-size:46px;font-weight:900;line-height:1}
   .porra-total .pt-lbl{font-size:18px;font-weight:700;opacity:.9}
   .porra-note{color:var(--muted);font-size:12.5px;margin:0 2px 16px}
+  .porra-pick{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 22px;text-align:center;max-width:460px;margin:24px auto}
+  .porra-pick h3{margin:8px 0 6px;font-size:22px}
+  .porra-pick .porra-note{text-align:left}
+  .porra-select{width:100%;padding:13px 14px;font-size:16px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#16122b);color:var(--fg,#fff);margin-bottom:14px;cursor:pointer}
+  .porra-pick button{width:100%;margin-top:8px}
+  table.lb-table td.lb-pos{text-align:center;width:42px;font-size:16px;font-weight:800;color:var(--muted)}
+  table.lb-table tr.lb-me{background:linear-gradient(90deg,rgba(108,76,241,.20),rgba(255,95,162,.12))}
+  table.lb-table tr.lb-me td{color:var(--fg,#fff)}
+  .lb-tag{display:inline-block;background:var(--accent,#6c4cf1);color:#fff;font-size:10px;font-weight:800;border-radius:6px;padding:1px 6px;margin-left:4px;vertical-align:middle}
   .porra-sec{margin-bottom:16px;overflow-x:auto}
   table.porra-table td{vertical-align:middle}
   table.porra-table td.pcat{color:var(--muted);font-size:12px;font-weight:700}
@@ -357,22 +366,6 @@
   <div class="modal">
     <div class="modal-head"><h3 id="m-title">Partido</h3><button class="x" id="m-close">✕</button></div>
     <div class="modal-body" id="m-body"></div>
-  </div>
-</div>
-
-<div class="pform-bg" id="pform-bg">
-  <div class="pform">
-    <div class="pform-head">
-      <h2>🎯 La Porra del Mundial 2026</h2>
-      <p id="pform-intro">¡Bienvenido! Antes de empezar, rellena tu porra. Estas preguntas son las mismas para todos y <b>solo se rellenan una vez</b>. Después podrás seguir tus puntos en la pestaña «🎯 Porra».</p>
-    </div>
-    <div class="pform-body" id="pform-body"></div>
-    <div class="pform-foot">
-      <div id="pform-err" class="pform-err"></div>
-      <button id="pform-skip" class="ghost">Rellenar más tarde</button>
-      <button id="pform-cancel" class="ghost" style="display:none">Cancelar</button>
-      <button id="pform-save" class="primary">Guardar mi porra</button>
-    </div>
   </div>
 </div>
 
@@ -929,18 +922,53 @@ const PLAYER_TEAMS={
   'Son Heung-min':'Corea del Sur','Mehdi Taremi':'Irán','Ayase Ueda':'Japón',
   'Eldor Shomurodov':'Uzbekistán','Akram Afif':'Catar','Tim Payne':'Nueva Zelanda'
 };
-/* Respuestas del PROPIETARIO (Juan). Se siembran en su navegador para que él no
-   vea el cuestionario; los amigos arrancan en blanco. */
-const MY_ANSWERS={
-  teams:{Favoritos:['España','Francia'],Aspirantes:['Bélgica','Noruega'],Sorpresas:['Ecuador','Suiza'],
-    Africanos:['Senegal','Costa de Marfil'],'Resto 1':['Escocia','Chequia'],'Resto 2':['Arabia Saudí','Congo'],
-    Cenicientas:['Irán','Uzbekistán']},
-  players:{Leyenda:'Messi',Jugones:'Julián Álvarez',Asiáticos:'Mehdi Taremi'},
-  scores:{'GG-1':[1,0],'GC-1':[0,2],'GE-1':[1,2],'GA-1':[1,1]}
-};
-const PORRA_KEY='wc2026_porra';
-function getPorraAnswers(){try{const r=localStorage.getItem(PORRA_KEY);return r?JSON.parse(r):null;}catch(e){return null;}}
-function savePorraAnswers(a){localStorage.setItem(PORRA_KEY,JSON.stringify(a));}
+/* Respuestas de TODOS los participantes (importadas del Excel de gestión de la
+   porra). Cada uno se identifica por su ALIAS. Ya NO hay formulario: al entrar en
+   la pestaña «Porra» eliges quién eres y ves tu desglose + la clasificación. */
+const PARTICIPANTS=[
+  {"alias": "Dudu", "nombre": "Eduardo Arquez Rodriguez", "ans": {"teams": {"Favoritos": ["Portugal", "Francia"], "Aspirantes": ["Bélgica", "Noruega"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Paraguay", "Chequia"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Haití", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [3, 1], "GC-1": [1, 2], "GE-1": [2, 2], "GA-1": [1, 2]}}},
+  {"alias": "Angelitros", "nombre": "Ángel Arias López", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Ecuador", "Suecia"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Australia"], "Resto 2": ["Irak", "Arabia Saudí"], "Cenicientas": ["Cabo Verde", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Julián Álvarez", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 2], "GE-1": [1, 3], "GA-1": [1, 3]}}},
+  {"alias": "Antoñito", "nombre": "Antonio Gómez", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Uruguay", "Marruecos"], "Sorpresas": ["Turquía", "Suecia"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Corea del Sur", "Australia"], "Resto 2": ["Arabia Saudí", "Catar"], "Cenicientas": ["Curazao", "Cabo Verde"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 1], "GC-1": [0, 2], "GE-1": [1, 3], "GA-1": [3, 2]}}},
+  {"alias": "Felipitoooo", "nombre": "Felipe Gonzalez", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Noruega", "Japón"], "Sorpresas": ["Turquía", "Canadá"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Sudáfrica"], "Resto 2": ["Arabia Saudí", "Catar"], "Cenicientas": ["Haití", "Curazao"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Akram Afif"}, "scores": {"GG-1": [2, 1], "GC-1": [0, 2], "GE-1": [3, 1], "GA-1": [1, 1]}}},
+  {"alias": "Roberto Larcos", "nombre": "Ángel Escalante", "ans": {"teams": {"Favoritos": ["España", "Brasil"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Turquía", "Austria"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Irak", "Panamá"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [3, 1], "GC-1": [0, 2], "GE-1": [1, 1], "GA-1": [0, 0]}}},
+  {"alias": "Adri93", "nombre": "Adrián González Cañón", "ans": {"teams": {"Favoritos": ["España", "Inglaterra"], "Aspirantes": ["Colombia", "Bélgica"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Catar", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [2, 0], "GC-1": [0, 2], "GE-1": [2, 2], "GA-1": [2, 1]}}},
+  {"alias": "Bizcochito santos", "nombre": "Luis Santos", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Japón", "Marruecos"], "Sorpresas": ["EEUU", "Ecuador"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Australia"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Curazao", "Uzbekistán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Declan Rice", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [0, 1], "GC-1": [0, 0], "GE-1": [1, 3], "GA-1": [2, 0]}}},
+  {"alias": "Nach", "nombre": "Nacho", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Croacia", "Marruecos"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 2], "GC-1": [0, 2], "GE-1": [1, 2], "GA-1": [1, 0]}}},
+  {"alias": "MarioR", "nombre": "Mario Rivas", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Colombia", "Bélgica"], "Sorpresas": ["EEUU", "Suiza"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Arabia Saudí", "Catar"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 2], "GE-1": [1, 1], "GA-1": [1, 1]}}},
+  {"alias": "Octavio", "nombre": "Octavio Mareque Segura", "ans": {"teams": {"Favoritos": ["Portugal", "Francia"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Argelia"], "Resto 1": ["Paraguay", "Chequia"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Jordania", "Uzbekistán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 3], "GE-1": [0, 2], "GA-1": [2, 2]}}},
+  {"alias": "Samubv", "nombre": "Samuel bodega valle", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Noruega", "México"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Argelia"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Cabo Verde", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Declan Rice", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 2], "GE-1": [1, 2], "GA-1": [1, 0]}}},
+  {"alias": "Franute", "nombre": "Fran García", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["EEUU", "Ecuador"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Australia"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Cabo Verde", "Uzbekistán"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 3], "GC-1": [0, 2], "GE-1": [1, 3], "GA-1": [3, 1]}}},
+  {"alias": "Fidel", "nombre": "Fidel Arguiz", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Chequia", "Corea del Sur"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Jordania", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [3, 1], "GC-1": [0, 2], "GE-1": [1, 1], "GA-1": [2, 1]}}},
+  {"alias": "Martin98", "nombre": "Álvaro Martín Alcántara", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Uruguay", "Marruecos"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Irak", "Panamá"], "Cenicientas": ["Haití", "Cabo Verde"]}, "players": {"Leyenda": "Messi", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 0], "GC-1": [0, 2], "GE-1": [2, 1], "GA-1": [1, 2]}}},
+  {"alias": "Daniel Villarreal", "nombre": "Daniel Villarreal Diez", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Uruguay", "Marruecos"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Egipto", "Argelia"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Nueva Zelanda", "Catar"], "Cenicientas": ["Jordania", "Cabo Verde"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 0], "GE-1": [0, 1], "GA-1": [0, 0]}}},
+  {"alias": "Garrota", "nombre": "Marcos Enríquez", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Colombia", "Marruecos"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Irak", "Nueva Zelanda"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 2], "GC-1": [2, 2], "GE-1": [1, 3], "GA-1": [1, 0]}}},
+  {"alias": "Peluka19", "nombre": "Ivan Gil", "ans": {"teams": {"Favoritos": ["España", "Brasil"], "Aspirantes": ["Bélgica", "Noruega"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Chequia", "Corea del Sur"], "Resto 2": ["Catar", "Congo"], "Cenicientas": ["Cabo Verde", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Federico Valverde", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [3, 0], "GC-1": [1, 5], "GE-1": [0, 1], "GA-1": [1, 1]}}},
+  {"alias": "Alex :)", "nombre": "ALEJANDRO MARTINEZ QUERO", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Bélgica", "Noruega"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Nueva Zelanda", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 3], "GE-1": [1, 2], "GA-1": [1, 1]}}},
+  {"alias": "Cocu", "nombre": "Luis Baltés", "ans": {"teams": {"Favoritos": ["Francia", "Países Bajos"], "Aspirantes": ["Bélgica", "Marruecos"], "Sorpresas": ["EEUU", "Ecuador"], "Africanos": ["Egipto", "Argelia"], "Resto 1": ["Paraguay", "Chequia"], "Resto 2": ["Panamá", "Catar"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Ayase Ueda"}, "scores": {"GG-1": [1, 1], "GC-1": [1, 3], "GE-1": [0, 2], "GA-1": [2, 1]}}},
+  {"alias": "El calito", "nombre": "Carlos Elena González", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Croacia", "Marruecos"], "Sorpresas": ["EEUU", "Turquía"], "Africanos": ["Senegal", "Argelia"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Irak", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 2], "GE-1": [1, 0], "GA-1": [1, 1]}}},
+  {"alias": "Juanmaldini", "nombre": "Juanma Espinar", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Japón", "Uruguay"], "Sorpresas": ["Turquía", "Suecia"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Escocia", "Australia"], "Resto 2": ["Irak", "Nueva Zelanda"], "Cenicientas": ["Jordania", "Curazao"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [0, 2], "GC-1": [0, 3], "GE-1": [2, 2], "GA-1": [2, 1]}}},
+  {"alias": "psansito", "nombre": "Pablo Sánchez", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Colombia", "Marruecos"], "Sorpresas": ["Suiza", "Ecuador"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Nueva Zelanda", "Congo"], "Cenicientas": ["Jordania", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 0], "GC-1": [1, 4], "GE-1": [2, 2], "GA-1": [2, 1]}}},
+  {"alias": "Empresario de éxito", "nombre": "César López Miguélez", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Uruguay", "México"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Argelia"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Arabia Saudí", "Catar"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Federico Valverde", "Asiáticos": "Ayase Ueda"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 4], "GE-1": [0, 2], "GA-1": [0, 1]}}},
+  {"alias": "Becquerbauer", "nombre": "Guillermo Bécquer", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Bélgica", "Marruecos"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Catar", "Congo"], "Cenicientas": ["Jordania", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 0], "GC-1": [1, 2], "GE-1": [1, 1], "GA-1": [1, 1]}}},
+  {"alias": "Chino", "nombre": "Rodrigo Baranda Gómez", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Ghana"], "Resto 1": ["Paraguay", "Chequia"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 2], "GE-1": [2, 2], "GA-1": [1, 0]}}},
+  {"alias": "Gsus94", "nombre": "Jesús de Andres", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["EEUU", "Canadá"], "Africanos": ["Costa de Marfil", "Egipto"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Irak", "Catar"], "Cenicientas": ["Jordania", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Martin Ødegaard", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 1], "GC-1": [0, 2], "GE-1": [2, 0], "GA-1": [2, 1]}}},
+  {"alias": "Andresrn", "nombre": "Andrés Ruiz Navarrete", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Colombia", "Bélgica"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Costa de Marfil", "Egipto"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Haití", "Cabo Verde"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [1, 2], "GC-1": [0, 2], "GE-1": [2, 2], "GA-1": [3, 1]}}},
+  {"alias": "Poza", "nombre": "Alejandro Poza Martín", "ans": {"teams": {"Favoritos": ["Brasil", "Francia"], "Aspirantes": ["Uruguay", "Croacia"], "Sorpresas": ["EEUU", "Suiza"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Panamá", "Arabia Saudí"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 1], "GE-1": [1, 1], "GA-1": [1, 0]}}},
+  {"alias": "Roos", "nombre": "Juan Roos", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Bélgica", "Noruega"], "Sorpresas": ["Suiza", "Ecuador"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Julián Álvarez", "Asiáticos": "Mehdi Taremi"}, "scores": {"GG-1": [1, 0], "GC-1": [0, 2], "GE-1": [1, 2], "GA-1": [1, 1]}}},
+  {"alias": "Messi lover", "nombre": "Morena Figueroa", "ans": {"teams": {"Favoritos": ["Argentina", "Francia"], "Aspirantes": ["Colombia", "Bélgica"], "Sorpresas": ["Suiza", "Ecuador"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Paraguay", "Australia"], "Resto 2": ["Irak", "Arabia Saudí"], "Cenicientas": ["Jordania", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 0], "GC-1": [1, 2], "GE-1": [0, 1], "GA-1": [2, 1]}}},
+  {"alias": "FrancisBacon18", "nombre": "Francisco j. Perela", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Japón", "Croacia"], "Sorpresas": ["Suiza", "Turquía"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Escocia", "Sudáfrica"], "Resto 2": ["Irak", "Nueva Zelanda"], "Cenicientas": ["Haití", "Uzbekistán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Julián Álvarez", "Asiáticos": "Eldor Shomurodov"}, "scores": {"GG-1": [1, 3], "GC-1": [2, 2], "GE-1": [2, 1], "GA-1": [1, 2]}}},
+  {"alias": "Al-Var", "nombre": "Alba Gonzalez", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Japón", "Marruecos"], "Sorpresas": ["EEUU", "Turquía"], "Africanos": ["Egipto", "Argelia"], "Resto 1": ["Corea del Sur", "Australia"], "Resto 2": ["Panamá", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Messi", "Jugones": "Ousmane Dembélé", "Asiáticos": "Tim Payne"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 2], "GE-1": [0, 1], "GA-1": [2, 2]}}},
+  {"alias": "QuiQueen", "nombre": "Enrique Arias López", "ans": {"teams": {"Favoritos": ["Brasil", "Portugal"], "Aspirantes": ["Bélgica", "Marruecos"], "Sorpresas": ["EEUU", "Turquía"], "Africanos": ["Senegal", "Costa de Marfil"], "Resto 1": ["Escocia", "Chequia"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Cabo Verde", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 1], "GC-1": [0, 2], "GE-1": [1, 3], "GA-1": [1, 1]}}},
+  {"alias": "Pau", "nombre": "Paula Estévez Bartolomé", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Bélgica", "Marruecos"], "Sorpresas": ["Suiza", "Suecia"], "Africanos": ["Senegal", "Egipto"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Arabia Saudí", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [2, 0], "GC-1": [0, 1], "GE-1": [0, 2], "GA-1": [2, 1]}}},
+  {"alias": "Mataleanto", "nombre": "Antonio Mateos", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Suiza", "Ecuador"], "Africanos": ["Senegal", "Ghana"], "Resto 1": ["Paraguay", "Escocia"], "Resto 2": ["Nueva Zelanda", "Congo"], "Cenicientas": ["Cabo Verde", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Julián Álvarez", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [1, 1], "GC-1": [0, 2], "GE-1": [1, 2], "GA-1": [1, 0]}}},
+  {"alias": "Javito", "nombre": "Javier Gonzalez", "ans": {"teams": {"Favoritos": ["Portugal", "Francia"], "Aspirantes": ["Colombia", "Marruecos"], "Sorpresas": ["Turquía", "Ecuador"], "Africanos": ["Senegal", "Argelia"], "Resto 1": ["Escocia", "Corea del Sur"], "Resto 2": ["Arabia Saudí", "Catar"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Ousmane Dembélé", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [3, 1], "GC-1": [0, 3], "GE-1": [2, 3], "GA-1": [3, 1]}}},
+  {"alias": "No hay que saber de futbol para ganarasi.", "nombre": "Asier Seijas", "ans": {"teams": {"Favoritos": ["España", "Francia"], "Aspirantes": ["Colombia", "Marruecos"], "Sorpresas": ["EEUU", "Suecia"], "Africanos": ["Ghana", "Argelia"], "Resto 1": ["Paraguay", "Sudáfrica"], "Resto 2": ["Nueva Zelanda", "Arabia Saudí"], "Cenicientas": ["Haití", "Curazao"]}, "players": {"Leyenda": "Messi", "Jugones": "Declan Rice", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [0, 2], "GC-1": [0, 0], "GE-1": [0, 3], "GA-1": [1, 1]}}},
+  {"alias": "🦁1️⃣4️⃣", "nombre": "Javier de Eusebio", "ans": {"teams": {"Favoritos": ["España", "Portugal"], "Aspirantes": ["Noruega", "Marruecos"], "Sorpresas": ["Suiza", "Ecuador"], "Africanos": ["Senegal", "Ghana"], "Resto 1": ["Paraguay", "Corea del Sur"], "Resto 2": ["Catar", "Congo"], "Cenicientas": ["Uzbekistán", "Irán"]}, "players": {"Leyenda": "Cristiano Ronaldo", "Jugones": "Bruno Fernandes", "Asiáticos": "Son Heung-min"}, "scores": {"GG-1": [3, 0], "GC-1": [0, 2], "GE-1": [2, 3], "GA-1": [1, 0]}}}
+];
+const PORRA_ME_KEY='wc2026_porra_me';
+function getMyAlias(){try{return localStorage.getItem(PORRA_ME_KEY)||null;}catch(e){return null;}}
+function setMyAlias(a){try{localStorage.setItem(PORRA_ME_KEY,a);}catch(e){}}
+function findParticipant(alias){return PARTICIPANTS.find(p=>p.alias===alias)||null;}
 /* Convierte las respuestas guardadas → estructura que entiende computePorra. */
 function answersToPorra(ans){
   if(!ans)return null;
@@ -1013,8 +1041,8 @@ function resolveSealed(src){
 function koWinnerSealed(id){const r=koResultSealed(id);if(!r)return null;const m=KO[id];return resolveSealed(r==='h'?m.h:m.a);}
 function koLoserSealed(id){const r=koResultSealed(id);if(!r)return null;const m=KO[id];return resolveSealed(r==='h'?m.a:m.h);}
 
-function computePorra(){
-  const P=answersToPorra(getPorraAnswers());
+function computePorraFor(ans){
+  const P=answersToPorra(ans);
   if(!P)return {teamRows:[],playerRows:[],matchRows:[],total:0,noAns:true};
   _sealedThirdMap=assignThirdsSealed();
   // Partidos de eliminatoria oficiales con ambos equipos ya conocidos
@@ -1089,18 +1117,55 @@ function computePorra(){
   matchRows.forEach(m=>total+=m.pts);
   return {teamRows,playerRows,matchRows,total};
 }
+/* Clasificación en tiempo real: puntos de TODOS los participantes (solo con
+   resultados oficiales). Se recalcula en cada render. */
+function porraLeaderboard(){
+  return PARTICIPANTS.map(p=>({alias:p.alias,nombre:p.nombre,total:computePorraFor(p.ans).total}))
+    .sort((a,b)=>b.total-a.total||a.alias.localeCompare(b.alias));
+}
 function fmtPts(n){return (Math.round(n*10)/10).toString().replace('.',',');}
 function signPts(n){return (n>0?'+':'')+fmtPts(n);}
+/* Selector «¿quién eres?»: se muestra la primera vez (sin alias guardado) y al
+   pulsar «Cambiar de persona». Permite ver el desglose de cualquier participante. */
+function renderPorraPicker(preselect){
+  const box=document.getElementById('porra-content');if(!box)return;
+  const cur=preselect||getMyAlias()||'';
+  const opts=PARTICIPANTS.slice().sort((a,b)=>a.alias.localeCompare(b.alias))
+    .map(p=>`<option value="${esc(p.alias)}" ${p.alias===cur?'selected':''}>${esc(p.alias)}</option>`).join('');
+  const hasMe=!!getMyAlias();
+  box.innerHTML=`
+    <div class="porra-pick">
+      <div class="pt-num" style="font-size:42px">🎯</div>
+      <h3>¿Quién eres?</h3>
+      <p class="porra-note">Elige tu <b>alias</b> de la porra para ver tus puntos y el desglose. Podrás cambiarlo cuando quieras (por ejemplo, para ver cómo va otra persona).</p>
+      <select id="porra-who" class="porra-select">${opts}</select>
+      <button class="primary" id="porra-who-ok">Ver la porra</button>
+      ${hasMe?`<button class="ghost" id="porra-who-cancel">Cancelar</button>`:''}
+    </div>`;
+  document.getElementById('porra-who-ok').onclick=()=>{
+    const v=document.getElementById('porra-who').value;if(!v)return;
+    setMyAlias(v);renderPorra();
+  };
+  const cc=document.getElementById('porra-who-cancel');
+  if(cc)cc.onclick=()=>renderPorra();
+}
 function renderPorra(){
   const box=document.getElementById('porra-content');if(!box)return;
-  const r=computePorra();
-  if(r.noAns){
-    box.innerHTML=`<div class="porra-total"><div class="pt-num">🎯</div><div class="pt-lbl">sin porra todavía</div></div>
-      <p class="porra-note">Aún no has rellenado tu porra. Pulsa el botón para responder el cuestionario.</p>
-      <button class="pbtn-edit" id="porra-edit">📝 Rellenar mi porra</button>`;
-    document.getElementById('porra-edit').onclick=()=>editPorra();
-    return;
-  }
+  const alias=getMyAlias();
+  const me=findParticipant(alias);
+  if(!me){renderPorraPicker();return;}
+  const r=computePorraFor(me.ans);
+  // Clasificación general (todos los participantes)
+  const board=porraLeaderboard();
+  let lbHtml='';
+  board.forEach((row,i)=>{
+    const isme=row.alias===alias;
+    const pos=i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+    lbHtml+=`<tr class="${isme?'lb-me':''}">
+      <td class="lb-pos">${pos}</td>
+      <td><b>${esc(row.alias)}</b>${isme?' <span class="lb-tag">tú</span>':''}</td>
+      <td class="ptot">${fmtPts(row.total)}</td></tr>`;
+  });
   let teamHtml='';
   r.teamRows.forEach(c=>{
     c.teams.forEach((t,i)=>{
@@ -1138,20 +1203,28 @@ function renderPorra(){
       <td class="reslab ${cls}">${m.played?m.outcome:'—'}</td>
       <td class="ptot">${fmtPts(m.pts)}</td></tr>`;
   });
+  const myPos=board.findIndex(x=>x.alias===alias)+1;
   box.innerHTML=`
-    <div class="porra-total"><div class="pt-num">${fmtPts(r.total)}</div><div class="pt-lbl">puntos</div></div>
-    <p class="porra-note">Solo se cuentan los <b>resultados oficiales</b> (🔒). Tus predicciones manuales no afectan a la porra. Los puntos van apareciendo a medida que se juegan y se actualizan los partidos.</p>
-    <button class="pbtn-edit" id="porra-edit">✏️ Cambiar mis respuestas al formulario</button>
+    <div class="porra-total"><div class="pt-num">${fmtPts(r.total)}</div><div class="pt-lbl">puntos · ${myPos}.º de ${board.length}</div></div>
+    <p class="porra-note">Viendo la porra de <b>${esc(me.alias)}</b>. Solo se cuentan los <b>resultados oficiales</b> (🔒); las predicciones manuales no afectan. Los puntos van apareciendo a medida que se juegan y se actualizan los partidos.</p>
+    <button class="pbtn-edit" id="porra-change">🔄 Cambiar de persona</button>
 
     <div class="scorers-wrap porra-sec">
-      <h3>🌍 Mis selecciones</h3>
+      <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
+      <table class="scorers porra-table lb-table"><thead><tr>
+        <th>#</th><th>Jugador</th><th>Pts</th>
+      </tr></thead><tbody>${lbHtml}</tbody></table>
+    </div>
+
+    <div class="scorers-wrap porra-sec">
+      <h3>🌍 Selecciones de ${esc(me.alias)}</h3>
       <table class="scorers porra-table"><thead><tr>
         <th>Categoría</th><th>Selección</th><th>Resultados</th><th>Grupo</th><th>Avance</th><th>Goles</th><th>Pts</th>
       </tr></thead><tbody>${teamHtml}</tbody></table>
     </div>
 
     <div class="scorers-wrap porra-sec">
-      <h3>👤 Mis jugadores <span class="psub">(solo fase de grupos)</span></h3>
+      <h3>👤 Jugadores <span class="psub">(solo fase de grupos)</span></h3>
       <table class="scorers porra-table"><thead><tr>
         <th>Categoría</th><th>Jugador</th><th>Goles</th><th>Penaltis</th><th>Asist.</th><th>🟨</th><th>🟥</th><th>Pts</th>
       </tr></thead><tbody>${playerHtml}</tbody></table>
@@ -1160,7 +1233,7 @@ function renderPorra(){
     <div class="scorers-wrap porra-sec">
       <h3>🎲 Partidos especiales</h3>
       <table class="scorers porra-table"><thead><tr>
-        <th>Partido</th><th>Mi pronóstico</th><th>Resultado</th><th></th><th>Pts</th>
+        <th>Partido</th><th>Pronóstico</th><th>Resultado</th><th></th><th>Pts</th>
       </tr></thead><tbody>${matchHtml}</tbody></table>
     </div>
 
@@ -1180,111 +1253,10 @@ function renderPorra(){
           <li>Acertar ganador/empate +2</li></ul></div>
       </div>
     </details>`;
-  const eb=document.getElementById('porra-edit');if(eb)eb.onclick=()=>editPorra();
+  const cb=document.getElementById('porra-change');if(cb)cb.onclick=()=>renderPorraPicker(alias);
 }
 
-/* ============ FORMULARIO DE LA PORRA (cuestionario de bienvenida) ============ */
-let _pformDraft=null;       // respuestas en construcción
-let _pformEditing=false;    // ¿se abrió desde "cambiar respuestas"? (permite cancelar)
-function openPorraForm(prefill){
-  _pformEditing=!!prefill;
-  // borrador inicial (copia profunda del prefill o vacío)
-  _pformDraft=prefill?JSON.parse(JSON.stringify(prefill)):{teams:{},players:{},scores:{}};
-  PORRA_FORM.cats.forEach(c=>{if(!_pformDraft.teams[c.cat])_pformDraft.teams[c.cat]=[];});
-  PORRA_FORM.playerCats.forEach(c=>{if(!(c.cat in _pformDraft.players))_pformDraft.players[c.cat]=null;});
-  PORRA_FORM.matches.forEach(m=>{if(!_pformDraft.scores[m.id])_pformDraft.scores[m.id]=['',''];});
-  document.getElementById('pform-intro').innerHTML=_pformEditing
-    ? 'Edita tus respuestas. Al guardar se recalcularán tus puntos en la pestaña «🎯 Porra».'
-    : '¡Bienvenido! Estas preguntas (las mismas para todos) son tu porra y <b>solo se rellenan una vez</b>. ¿Prefieres echar un vistazo primero? Pulsa <b>«Rellenar más tarde»</b>: podrás rellenarla cuando quieras desde la pestaña «🎯 Porra».';
-  document.getElementById('pform-cancel').style.display=_pformEditing?'':'none';
-  document.getElementById('pform-skip').style.display=_pformEditing?'none':'';
-  drawPorraForm();
-  document.getElementById('pform-err').textContent='';
-  document.getElementById('pform-bg').classList.add('open');
-}
-function closePorraForm(){document.getElementById('pform-bg').classList.remove('open');}
-function editPorra(){openPorraForm(getPorraAnswers()||MY_ANSWERS);}
-function drawPorraForm(){
-  const body=document.getElementById('pform-body');let h='';
-  PORRA_FORM.cats.forEach((c,qi)=>{
-    h+=`<div class="pq"><div class="pq-title">${qi+1}. ${c.cat}</div><div class="pq-hint">Elige ${c.pick}</div><div class="pq-opts">`;
-    c.opts.forEach(o=>{
-      const sel=_pformDraft.teams[c.cat].includes(o);
-      h+=`<label class="pq-opt check ${sel?'sel':''}" data-tcat="${c.cat}" data-opt="${o}">
-        <span class="mk">${sel?'✓':''}</span><span>${o}</span></label>`;
-    });
-    h+=`</div></div>`;
-  });
-  const base=PORRA_FORM.cats.length;
-  PORRA_FORM.playerCats.forEach((c,qi)=>{
-    h+=`<div class="pq"><div class="pq-title">${base+qi+1}. ${c.cat}</div><div class="pq-hint">Elige 1</div><div class="pq-opts">`;
-    c.opts.forEach(o=>{
-      const sel=_pformDraft.players[c.cat]===o;
-      h+=`<label class="pq-opt radio ${sel?'sel':''}" data-pcat="${c.cat}" data-opt="${o}">
-        <span class="mk">${sel?'●':''}</span><span>${o}</span></label>`;
-    });
-    h+=`</div></div>`;
-  });
-  const n2=base+PORRA_FORM.playerCats.length;
-  h+=`<div class="pq"><div class="pq-title">${n2+1}. Resultados exactos</div><div class="pq-hint">Pon tu marcador para cada partido</div>`;
-  PORRA_FORM.matches.forEach(m=>{
-    const sc=_pformDraft.scores[m.id]||['',''];
-    h+=`<div class="pq-score"><span class="nm">${m.label}</span>
-      <input type="number" min="0" max="99" data-score="${m.id}" data-side="0" value="${sc[0]}">
-      <span class="dash">–</span>
-      <input type="number" min="0" max="99" data-score="${m.id}" data-side="1" value="${sc[1]}"></div>`;
-  });
-  h+=`</div>`;
-  body.innerHTML=h;
-}
-document.addEventListener('click',e=>{
-  const t=e.target.closest('.pq-opt');if(!t)return;
-  if(t.dataset.tcat!==undefined){
-    const cat=t.dataset.tcat,opt=t.dataset.opt,arr=_pformDraft.teams[cat];
-    const i=arr.indexOf(opt),lim=PORRA_FORM.cats.find(c=>c.cat===cat).pick;
-    if(i>=0)arr.splice(i,1);
-    else{if(arr.length>=lim)arr.shift();arr.push(opt);}
-    drawPorraForm();
-  }else if(t.dataset.pcat!==undefined){
-    const cat=t.dataset.pcat,opt=t.dataset.opt;
-    _pformDraft.players[cat]=_pformDraft.players[cat]===opt?null:opt;
-    drawPorraForm();
-  }
-});
-document.addEventListener('input',e=>{
-  if(e.target.dataset.score!==undefined){
-    const id=e.target.dataset.score,side=+e.target.dataset.side;
-    if(!_pformDraft.scores[id])_pformDraft.scores[id]=['',''];
-    _pformDraft.scores[id][side]=e.target.value;
-  }
-});
-function porraFormError(){
-  for(const c of PORRA_FORM.cats){
-    if((_pformDraft.teams[c.cat]||[]).length!==c.pick)return `«${c.cat}»: elige exactamente ${c.pick}.`;
-  }
-  for(const c of PORRA_FORM.playerCats){
-    if(!_pformDraft.players[c.cat])return `«${c.cat}»: elige 1 jugador.`;
-  }
-  for(const m of PORRA_FORM.matches){
-    const sc=_pformDraft.scores[m.id]||['',''];
-    if(sc[0]===''||sc[1]===''||isNaN(+sc[0])||isNaN(+sc[1]))return `Resultado exacto: rellena el marcador de «${m.label}».`;
-  }
-  return null;
-}
-document.getElementById('pform-save').onclick=()=>{
-  const err=porraFormError();
-  if(err){document.getElementById('pform-err').textContent='⚠️ '+err;return;}
-  const out={teams:{},players:{},scores:{}};
-  PORRA_FORM.cats.forEach(c=>out.teams[c.cat]=_pformDraft.teams[c.cat].slice());
-  PORRA_FORM.playerCats.forEach(c=>out.players[c.cat]=_pformDraft.players[c.cat]);
-  PORRA_FORM.matches.forEach(m=>out.scores[m.id]=[+_pformDraft.scores[m.id][0],+_pformDraft.scores[m.id][1]]);
-  savePorraAnswers(out);
-  closePorraForm();
-  renderPorra();
-  toast('✅ Tu porra se ha guardado');
-};
-document.getElementById('pform-cancel').onclick=()=>closePorraForm();
-document.getElementById('pform-skip').onclick=()=>{closePorraForm();toast('Puedes rellenar tu porra cuando quieras desde la pestaña «🎯 Porra».');};
+/* ============ (Formulario de la porra eliminado: ahora se elige participante por alias) ============ */
 
 /* ============ CALENDARIO / FECHAS ============ */
 const DIAS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
@@ -1543,8 +1515,6 @@ document.getElementById('btn-demo').onclick=()=>{
 };
 
 renderAll();
-// Primera entrada: si no hay respuestas guardadas, mostrar el cuestionario.
-if(!getPorraAnswers())openPorraForm();
 // Cargar calendario (fechas/horas) y refrescar la pestaña Fechas
 loadSchedule().then(()=>renderSchedule());
 // Cargar resultados oficiales del agente y refrescar
