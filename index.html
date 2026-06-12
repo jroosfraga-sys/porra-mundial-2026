@@ -146,15 +146,29 @@
   .porra-total .pt-num{font-size:46px;font-weight:900;line-height:1}
   .porra-total .pt-lbl{font-size:18px;font-weight:700;opacity:.9}
   .porra-note{color:var(--muted);font-size:12.5px;margin:0 2px 16px}
-  .porra-pick{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 22px;text-align:center;max-width:460px;margin:24px auto}
-  .porra-pick h3{margin:8px 0 6px;font-size:22px}
-  .porra-pick .porra-note{text-align:left}
-  .porra-select{width:100%;padding:13px 14px;font-size:16px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#16122b);color:var(--fg,#fff);margin-bottom:14px;cursor:pointer}
-  .porra-pick button{width:100%;margin-top:8px}
+  .porra-pick{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 24px;text-align:center;max-width:440px;margin:24px auto;box-shadow:0 10px 36px rgba(124,58,237,.12)}
+  .porra-pick h3{margin:10px 0 6px;font-size:23px;color:var(--txt)}
+  .porra-pick .porra-note{text-align:left;margin:0 0 18px}
+  .porra-pick label.porra-lbl{display:block;text-align:left;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:0 0 6px 2px}
+  .porra-select{width:100%;padding:13px 40px 13px 14px;font-size:16px;font-weight:600;border-radius:12px;border:1.5px solid var(--line);background:var(--bg2);color:var(--txt);margin-bottom:18px;cursor:pointer;-webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237c3aed' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");background-repeat:no-repeat;background-position:right 14px center}
+  .porra-select:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.15)}
+  .porra-select option{color:var(--txt);background:#fff}
+  .porra-pick .pp-btn{width:100%;border:none;border-radius:12px;padding:13px 16px;font-size:15px;font-weight:700;cursor:pointer;transition:.15s}
+  .porra-pick .pp-btn.primary{background:linear-gradient(100deg,var(--purple),var(--pink));color:#fff;box-shadow:0 4px 16px rgba(255,61,154,.3)}
+  .porra-pick .pp-btn.primary:hover{filter:brightness(1.06)}
+  .porra-pick .pp-btn.ghost{background:transparent;color:var(--muted);border:1.5px solid var(--line);margin-top:10px}
+  .porra-pick .pp-btn.ghost:hover{color:var(--purple);border-color:var(--purple)}
   table.lb-table td.lb-pos{text-align:center;width:42px;font-size:16px;font-weight:800;color:var(--muted)}
   table.lb-table tr.lb-me{background:linear-gradient(90deg,rgba(108,76,241,.20),rgba(255,95,162,.12))}
   table.lb-table tr.lb-me td{color:var(--fg,#fff)}
-  .lb-tag{display:inline-block;background:var(--accent,#6c4cf1);color:#fff;font-size:10px;font-weight:800;border-radius:6px;padding:1px 6px;margin-left:4px;vertical-align:middle}
+  .lb-tag{display:inline-block;background:var(--purple);color:#fff;font-size:10px;font-weight:800;border-radius:6px;padding:1px 6px;margin-left:4px;vertical-align:middle}
+  .lb-pot{font-size:12.5px;color:var(--muted);margin:0 2px 12px;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:9px 13px;line-height:1.7}
+  .lb-pot b{color:var(--txt)}
+  .lb-prize{display:inline-block;font-size:11px;font-weight:800;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+  .lb-prize.p1{background:rgba(245,180,0,.18);color:#a87b00;border:1px solid rgba(245,180,0,.45)}
+  .lb-prize.p2{background:rgba(154,166,182,.20);color:#5e6b7e;border:1px solid rgba(154,166,182,.5)}
+  .lb-prize.p3{background:rgba(255,61,154,.14);color:#c2186e;border:1px solid rgba(255,61,154,.4)}
   .porra-sec{margin-bottom:16px;overflow-x:auto}
   table.porra-table td{vertical-align:middle}
   table.porra-table td.pcat{color:var(--muted);font-size:12px;font-weight:700}
@@ -1138,9 +1152,10 @@ function renderPorraPicker(preselect){
       <div class="pt-num" style="font-size:42px">🎯</div>
       <h3>¿Quién eres?</h3>
       <p class="porra-note">Elige tu <b>alias</b> de la porra para ver tus puntos y el desglose. Podrás cambiarlo cuando quieras (por ejemplo, para ver cómo va otra persona).</p>
+      <label class="porra-lbl" for="porra-who">Tu alias</label>
       <select id="porra-who" class="porra-select">${opts}</select>
-      <button class="primary" id="porra-who-ok">Ver la porra</button>
-      ${hasMe?`<button class="ghost" id="porra-who-cancel">Cancelar</button>`:''}
+      <button class="pp-btn primary" id="porra-who-ok">Ver la porra</button>
+      ${hasMe?`<button class="pp-btn ghost" id="porra-who-cancel">Cancelar</button>`:''}
     </div>`;
   document.getElementById('porra-who-ok').onclick=()=>{
     const v=document.getElementById('porra-who').value;if(!v)return;
@@ -1157,13 +1172,19 @@ function renderPorra(){
   const r=computePorraFor(me.ans);
   // Clasificación general (todos los participantes)
   const board=porraLeaderboard();
+  // Reparto de premios: bote = 10€ x participantes; 70% 1º, 20% 2º, 10% penúltimo
+  const pot=PARTICIPANTS.length*10;
+  const prizes={0:Math.round(pot*0.70),1:Math.round(pot*0.20),[board.length-2]:Math.round(pot*0.10)};
   let lbHtml='';
   board.forEach((row,i)=>{
     const isme=row.alias===alias;
     const pos=i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+    const prize=prizes[i];
+    const prizeCls=i===0?'p1':i===1?'p2':'p3';
+    const prizeBadge=prize?` <span class="lb-prize ${prizeCls}">${prize} €</span>`:'';
     lbHtml+=`<tr class="${isme?'lb-me':''}">
       <td class="lb-pos">${pos}</td>
-      <td><b>${esc(row.alias)}</b>${isme?' <span class="lb-tag">tú</span>':''}</td>
+      <td><b>${esc(row.alias)}</b>${isme?' <span class="lb-tag">tú</span>':''}${prizeBadge}</td>
       <td class="ptot">${fmtPts(row.total)}</td></tr>`;
   });
   let teamHtml='';
@@ -1211,6 +1232,7 @@ function renderPorra(){
 
     <div class="scorers-wrap porra-sec">
       <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
+      <p class="lb-pot">💰 Bote: <b>${pot} €</b> · 🥇 ${prizes[0]} € · 🥈 ${prizes[1]} € · 😅 penúltimo ${prizes[board.length-2]} €</p>
       <table class="scorers porra-table lb-table"><thead><tr>
         <th>#</th><th>Jugador</th><th>Pts</th>
       </tr></thead><tbody>${lbHtml}</tbody></table>
