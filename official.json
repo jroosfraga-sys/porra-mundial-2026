@@ -1,4 +1,40 @@
 {
-  "updated": null,
-  "matches": {}
+  "updated": "2026-06-12 09:34",
+  "matches": {
+    "GA-0": {
+      "h": 2,
+      "a": 0,
+      "src": "ESPN",
+      "scorers": [
+        { "team": "h", "name": "Julián Quiñones", "minute": "9" },
+        { "team": "h", "name": "Raúl Jiménez", "minute": "67" }
+      ],
+      "cards": [
+        { "type": "red", "team": "a", "name": "Sphephelo Sithole", "minute": "49" },
+        { "type": "red", "team": "a", "name": "Themba Zwane", "minute": "84" },
+        { "type": "red", "team": "h", "name": "César Montes", "minute": "90+2" }
+      ],
+      "lineups": {
+        "h": { "xi": ["Rangel", "Vásquez", "Montes", "Reyes", "Gallardo", "Edson Álvarez", "Chávez", "Alvarado", "Vega", "González", "Quiñones"], "subs": [] },
+        "a": { "xi": ["Williams", "Mudau", "Mbokazi", "Sibisi", "Okon", "Mbatha", "Mokoena", "Appollis", "Sithole", "Zwane", "Makgopa"], "subs": [] }
+      }
+    },
+    "GA-1": {
+      "h": 2,
+      "a": 1,
+      "src": "ESPN",
+      "scorers": [
+        { "team": "a", "name": "Ladislav Krejčí", "minute": "59" },
+        { "team": "h", "name": "Hwang In-beom", "minute": "67" },
+        { "team": "h", "name": "Oh Hyeon-gyu", "minute": "80" }
+      ],
+      "cards": [
+        { "type": "yellow", "team": "h", "name": "Lee Gi-hyuk", "minute": "90+6" }
+      ],
+      "lineups": {
+        "h": { "xi": ["Kim Seung-gyu", "Lee Han-beom", "Kim Min-jae", "Lee Gi-hyuk", "Seol Young-woo", "Kim Jin-gyu", "Park Jin-seop", "Eom Ji-sung", "Lee Kang-in", "Hwang Hee-chan", "Oh Hyeon-gyu"], "subs": [] },
+        "a": { "xi": ["Matěj Kovář", "Štěpán Chaloupek", "Robin Hranáč", "Ladislav Krejčí", "Vladimír Coufal", "Tomáš Souček", "Mojmír Chytil", "Jaroslav Zelený", "Adam Hložek", "Tomáš Chorý", "Michal Sadílek"], "subs": [] }
+      }
+    }
+  }
 }
