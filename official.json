@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12 09:34",
+  "updated": "2026-06-13 09:10",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -34,6 +34,83 @@
       "lineups": {
         "h": { "xi": ["Kim Seung-gyu", "Lee Han-beom", "Kim Min-jae", "Lee Gi-hyuk", "Seol Young-woo", "Kim Jin-gyu", "Park Jin-seop", "Eom Ji-sung", "Lee Kang-in", "Hwang Hee-chan", "Oh Hyeon-gyu"], "subs": [] },
         "a": { "xi": ["Matěj Kovář", "Štěpán Chaloupek", "Robin Hranáč", "Ladislav Krejčí", "Vladimír Coufal", "Tomáš Souček", "Mojmír Chytil", "Jaroslav Zelený", "Adam Hložek", "Tomáš Chorý", "Michal Sadílek"], "subs": [] }
+      }
+    },
+    "GB-0": {
+      "h": 1,
+      "a": 1,
+      "src": "ESPN",
+      "scorers": [
+        { "team": "a", "name": "Jovo Lukić", "minute": "21", "assist": "Sead Kolašinac" },
+        { "team": "h", "name": "Cyle Larin", "minute": "78", "assist": "Promise David" }
+      ],
+      "cards": [
+        { "type": "yellow", "team": "h", "name": "Alistair Johnston", "minute": "11" },
+        { "type": "yellow", "team": "a", "name": "Ermedin Demirović", "minute": "44" },
+        { "type": "yellow", "team": "a", "name": "Jovo Lukić", "minute": "45+1" },
+        { "type": "yellow", "team": "h", "name": "Luc de Fougerolles", "minute": "53" },
+        { "type": "yellow", "team": "a", "name": "Nikola Katić", "minute": "90+3" }
+      ],
+      "lineups": {
+        "h": {
+          "xi": ["Maxime Crépeau", "Alistair Johnston", "Derek Cornelius", "Luc de Fougerolles", "Richie Laryea", "Ismaël Koné", "Stephen Eustáquio", "Tajon Buchanan", "Liam Millar", "Jonathan David", "Tani Oluwaseyi"],
+          "subs": [
+            { "out": "Tajon Buchanan", "in": "Ali Ahmed", "minute": "61" },
+            { "out": "Liam Millar", "in": "Jacob Shaffelburg", "minute": "61" },
+            { "out": "Jonathan David", "in": "Promise David", "minute": "61" },
+            { "out": "Tani Oluwaseyi", "in": "Cyle Larin", "minute": "76" },
+            { "out": "Stephen Eustáquio", "in": "Jonathan Osorio", "minute": "90+1" }
+          ]
+        },
+        "a": {
+          "xi": ["Nikola Vasilj", "Amar Dedić", "Nikola Katić", "Tarik Muharemović", "Sead Kolašinac", "Benjamin Tahirović", "Ivan Bašić", "Esmir Bajraktarević", "Amar Memić", "Ermedin Demirović", "Jovo Lukić"],
+          "subs": [
+            { "out": "Ivan Bašić", "in": "Armin Gigović", "minute": "62" },
+            { "out": "Jovo Lukić", "in": "Samed Baždar", "minute": "62" },
+            { "out": "Esmir Bajraktarević", "in": "Ivan Šunjić", "minute": "74" },
+            { "out": "Amar Memić", "in": "Kerim Alajbegović", "minute": "74" },
+            { "out": "Sead Kolašinac", "in": "Dženis Burnić", "minute": "83" }
+          ]
+        }
+      }
+    },
+    "GD-0": {
+      "h": 4,
+      "a": 1,
+      "src": "FOX",
+      "scorers": [
+        { "team": "h", "name": "Damián Bobadilla (en propia puerta)", "minute": "7" },
+        { "team": "h", "name": "Folarin Balogun", "minute": "31", "assist": "Christian Pulisic" },
+        { "team": "h", "name": "Folarin Balogun", "minute": "45+5", "assist": "Malik Tillman" },
+        { "team": "a", "name": "Maurício", "minute": "73", "assist": "Julio Enciso" },
+        { "team": "h", "name": "Gio Reyna", "minute": "90+8", "assist": "Alex Freeman" }
+      ],
+      "cards": [
+        { "type": "yellow", "team": "a", "name": "Juan José Cáceres", "minute": "10" },
+        { "type": "yellow", "team": "a", "name": "Miguel Almirón", "minute": "53" },
+        { "type": "yellow", "team": "h", "name": "Tyler Adams", "minute": "59" },
+        { "type": "yellow", "team": "a", "name": "Diego Gómez", "minute": "78" },
+        { "type": "yellow", "team": "a", "name": "Alex Arce", "minute": "88" },
+        { "type": "yellow", "team": "a", "name": "Junior Alonso", "minute": "90+3" }
+      ],
+      "lineups": {
+        "h": {
+          "xi": ["Matt Freese", "Alex Freeman", "Chris Richards", "Tim Ream", "Antonee Robinson", "Tyler Adams", "Weston McKennie", "Sergiño Dest", "Malik Tillman", "Christian Pulisic", "Folarin Balogun"],
+          "subs": [
+            { "out": "Christian Pulisic", "in": "Sebastian Berhalter", "minute": "45" },
+            { "out": "Folarin Balogun", "in": "Ricardo Pepi", "minute": "72" },
+            { "out": "Sergiño Dest", "in": "Tim Weah", "minute": "72" },
+            { "out": "Malik Tillman", "in": "Gio Reyna", "minute": "82" }
+          ]
+        },
+        "a": {
+          "xi": ["Orlando Gill", "Juan José Cáceres", "Junior Alonso", "Omar Alderete", "Gustavo Gómez", "Andrés Cubas", "Diego Gómez", "Miguel Almirón", "Julio Enciso", "Antonio Sanabria", "Damián Bobadilla"],
+          "subs": [
+            { "out": "Antonio Sanabria", "in": "Maurício", "minute": "45" },
+            { "out": "Damián Bobadilla", "in": "Alex Arce", "minute": "62" },
+            { "out": "Diego Gómez", "in": "Alejandro Romero", "minute": "79" }
+          ]
+        }
       }
     }
   }
