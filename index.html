@@ -518,16 +518,31 @@ const SCHEDULE_DATA={
 "M97":{date:"2026-07-09",time:"22:00"},"M98":{date:"2026-07-10",time:"21:00"},"M99":{date:"2026-07-11",time:"23:00"},"M100":{date:"2026-07-12",time:"03:00"},"M101":{date:"2026-07-14",time:"21:00"},"M102":{date:"2026-07-15",time:"21:00"},"M103":{date:"2026-07-18",time:"23:00"},"M104":{date:"2026-07-19",time:"21:00"}
 };
 let SCHEDULE=SCHEDULE_DATA;
-/* Emisión en España. DAZN tiene los 104 partidos (de pago). RTVE (La 1, en
-   abierto/gratis y en RTVE Play) da: el inaugural, TODOS los de España, las
-   semifinales, el 3.er puesto y la final. Los partidos de España en
-   eliminatorias se marcan en abierto automáticamente cuando se conozca el cruce.
-   El resto (de momento) solo en DAZN; se irá afinando según anuncie RTVE. */
+/* Emisión en España. DAZN tiene los 104 partidos (de pago). RTVE compró el
+   paquete en abierto: 17 partidos de la fase de grupos (uno destacado por
+   jornada), TODOS los de España, las semifinales, el 3.er puesto y la final.
+   Además, en eliminatorias, si España juega, va automáticamente en La 1. */
 const TV_ABIERTO={
-  'GA-0':'La 1',                          // partido inaugural
-  'GH-0':'La 1','GH-2':'La 1','GH-4':'La 1', // España (fase de grupos)
-  'M101':'La 1','M102':'La 1',            // semifinales
-  'M103':'La 1','M104':'La 1'             // 3.er puesto y final
+  // Fase de grupos — los 17 que RTVE emite en abierto
+  'GA-0':'La 1', // inaugural: México - Sudáfrica (11 jun)
+  'GB-0':'La 1', // Canadá - Bosnia (12 jun)
+  'GC-0':'La 1', // Brasil - Marruecos (14 jun)
+  'GE-0':'La 1', // Alemania - Curazao (14 jun)
+  'GH-0':'La 1', // España - Cabo Verde (15 jun)
+  'GI-0':'La 1', // Francia - Senegal (16 jun)
+  'GL-0':'La 1', // Inglaterra - Croacia (17 jun)
+  'GB-3':'La 1', // Suiza - Bosnia (18 jun)
+  'GD-2':'La 1', // EE. UU. - Australia (19 jun)
+  'GF-2':'La 1', // Países Bajos - Suecia (20 jun)
+  'GH-2':'La 1', // España - Arabia Saudí (21 jun)
+  'GJ-2':'La 1', // Argentina - Austria (22 jun)
+  'GL-2':'La 1', // Inglaterra - Ghana (23 jun)
+  'GC-4':'La 1', // Escocia - Brasil (25 jun)
+  'GE-4':'La 1', // Ecuador - Alemania (25 jun)
+  'GH-4':'La 1', // Uruguay - España (27 jun)
+  'GK-4':'La 1', // Colombia - Portugal (28 jun)
+  // Eliminatorias: semifinales, tercer puesto y final
+  'M101':'La 1','M102':'La 1','M103':'La 1','M104':'La 1'
 };
 function tvFor(id){
   // Si una eliminatoria la juega España, va en abierto en La 1.
