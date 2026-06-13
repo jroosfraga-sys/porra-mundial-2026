@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13 09:23",
+  "updated": "2026-06-13 09:45",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -14,7 +14,8 @@
         {
           "team": "h",
           "name": "Raul Jimenez",
-          "minute": "67"
+          "minute": "67",
+          "assist": "Roberto Alvarado"
         }
       ],
       "cards": [
@@ -150,7 +151,8 @@
         {
           "team": "h",
           "name": "Oh Hyeongyu",
-          "minute": "80"
+          "minute": "80",
+          "assist": "Hwang Inbeom"
         },
         {
           "team": "a",
@@ -256,12 +258,14 @@
         {
           "team": "h",
           "name": "Cyle Larin",
-          "minute": "78"
+          "minute": "78",
+          "assist": "Promise David"
         },
         {
           "team": "a",
           "name": "Jovo Lukic",
-          "minute": "21"
+          "minute": "21",
+          "assist": "Sead Kolasinac"
         }
       ],
       "cards": [
@@ -397,12 +401,14 @@
         {
           "team": "h",
           "name": "Folarin Balogun",
-          "minute": "31"
+          "minute": "31",
+          "assist": "Christian Pulisic"
         },
         {
           "team": "h",
           "name": "Folarin Balogun",
-          "minute": "45+5"
+          "minute": "45+5",
+          "assist": "Malik Tillman"
         },
         {
           "team": "h",
