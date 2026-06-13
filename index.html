@@ -599,6 +599,16 @@ function luSide(s){
   return {formation:s.formation||'',xi,subs};
 }
 function normLineups(lu){lu=lu||{};return {h:luSide(lu.h),a:luSide(lu.a)};}
+/* Ordena cronológicamente eventos (goles, tarjetas) por su campo `minute`.
+   Acepta valores tipo "9", "45+5", "90+2". Vacío/no numérico va al final. */
+function byMinute(a,b){
+  const parse=m=>{const s=String(m==null?'':m);const i=s.indexOf('+');
+    const base=parseInt(i>=0?s.slice(0,i):s,10);
+    const extra=i>=0?parseInt(s.slice(i+1),10)||0:0;
+    return [isNaN(base)?9999:base, extra];};
+  const [ba,ea]=parse(a&&a.minute),[bb,eb]=parse(b&&b.minute);
+  return ba-bb || ea-eb;
+}
 
 /* ============ CÁLCULO DE CLASIFICACIONES ============ */
 function computeStandings(g){
@@ -1390,11 +1400,13 @@ function openDetail(mid){
   const gp=isGroup?getGS(mid):getKO(mid);
   const ps=(!isGroup&&gp.penScore)||{};
   const fl=t=>t==='h'?home.flag:away.flag;
-  const scList=d.scorers.length
-    ? d.scorers.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.og?'<span class="det-tag">e.p.</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
+  const scorersOrdered=d.scorers.slice().sort(byMinute);
+  const cardsOrdered=d.cards.slice().sort(byMinute);
+  const scList=scorersOrdered.length
+    ? scorersOrdered.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.og?'<span class="det-tag">e.p.</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
     : '<div class="det-empty">Sin goles registrados</div>';
-  const cdList=d.cards.length
-    ? d.cards.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(cd.name||'')}</span></div>`).join('')
+  const cdList=cardsOrdered.length
+    ? cardsOrdered.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(cd.name||'')}</span></div>`).join('')
     : '<div class="det-empty">Sin tarjetas</div>';
   const luTeam=(side)=>{
     const lu=d.lineups[side],flag=side==='h'?home.flag:away.flag,name=side==='h'?home.name:away.name;

@@ -21,21 +21,15 @@
       "cards": [
         {
           "type": "yellow",
-          "team": "h",
-          "name": "Brian Gutierrez",
-          "minute": "23"
-        },
-        {
-          "type": "red",
-          "team": "h",
-          "name": "Cesar Montes",
-          "minute": "90+2"
-        },
-        {
-          "type": "yellow",
           "team": "a",
           "name": "Teboho Mokoena",
           "minute": "17"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Brian Gutierrez",
+          "minute": "23"
         },
         {
           "type": "red",
@@ -54,6 +48,12 @@
           "team": "a",
           "name": "Themba Zwane",
           "minute": "84"
+        },
+        {
+          "type": "red",
+          "team": "h",
+          "name": "Cesar Montes",
+          "minute": "90+2"
         }
       ],
       "lineups": {
@@ -236,6 +236,11 @@
       "src": "FIFA",
       "scorers": [
         {
+          "team": "a",
+          "name": "Ladislav Krejci",
+          "minute": "59"
+        },
+        {
           "team": "h",
           "name": "Hwang Inbeom",
           "minute": "67"
@@ -245,11 +250,6 @@
           "name": "Oh Hyeongyu",
           "minute": "80",
           "assist": "Hwang Inbeom"
-        },
-        {
-          "team": "a",
-          "name": "Ladislav Krejci",
-          "minute": "59"
         }
       ],
       "cards": [
@@ -440,16 +440,16 @@
       "src": "FIFA",
       "scorers": [
         {
-          "team": "h",
-          "name": "Cyle Larin",
-          "minute": "78",
-          "assist": "Promise David"
-        },
-        {
           "team": "a",
           "name": "Jovo Lukic",
           "minute": "21",
           "assist": "Sead Kolasinac"
+        },
+        {
+          "team": "h",
+          "name": "Cyle Larin",
+          "minute": "78",
+          "assist": "Promise David"
         }
       ],
       "cards": [
@@ -458,12 +458,6 @@
           "team": "h",
           "name": "Alistair Johnston",
           "minute": "11"
-        },
-        {
-          "type": "yellow",
-          "team": "h",
-          "name": "Luc De Fougerolles",
-          "minute": "53"
         },
         {
           "type": "yellow",
@@ -476,6 +470,12 @@
           "team": "a",
           "name": "Jovo Lukic",
           "minute": "45+1"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Luc De Fougerolles",
+          "minute": "53"
         },
         {
           "type": "yellow",
@@ -687,23 +687,17 @@
           "assist": "Malik Tillman"
         },
         {
-          "team": "h",
-          "name": "Giovanni Reyna",
-          "minute": "90+8"
-        },
-        {
           "team": "a",
           "name": "Mauricio",
           "minute": "73"
+        },
+        {
+          "team": "h",
+          "name": "Giovanni Reyna",
+          "minute": "90+8"
         }
       ],
       "cards": [
-        {
-          "type": "yellow",
-          "team": "h",
-          "name": "Tyler Adams",
-          "minute": "59"
-        },
         {
           "type": "yellow",
           "team": "a",
@@ -715,6 +709,12 @@
           "team": "a",
           "name": "Miguel Almiron",
           "minute": "53"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Tyler Adams",
+          "minute": "59"
         },
         {
           "type": "yellow",
