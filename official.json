@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13 09:45",
+  "updated": "2026-06-13 09:36",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -58,18 +58,64 @@
       ],
       "lineups": {
         "h": {
+          "formation": "4-1-2-3",
           "xi": [
-            "Raul Rangel",
-            "Cesar Montes",
-            "Johan Vasquez",
-            "Israel Reyes",
-            "Jesus Gallardo",
-            "Erik Lira",
-            "Alvaro Fidalgo",
-            "Brian Gutierrez",
-            "Raul Jimenez",
-            "Julian Quinones",
-            "Roberto Alvarado"
+            {
+              "n": 1,
+              "name": "Raul Rangel",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "Cesar Montes",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 5,
+              "name": "Johan Vasquez",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Israel Reyes",
+              "pos": "DEF"
+            },
+            {
+              "n": 23,
+              "name": "Jesus Gallardo",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Erik Lira",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Alvaro Fidalgo",
+              "pos": "MED"
+            },
+            {
+              "n": 26,
+              "name": "Brian Gutierrez",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Raul Jimenez",
+              "pos": "DEL"
+            },
+            {
+              "n": 16,
+              "name": "Julian Quinones",
+              "pos": "DEL"
+            },
+            {
+              "n": 25,
+              "name": "Roberto Alvarado",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -100,18 +146,64 @@
           ]
         },
         "a": {
+          "formation": "5-3-2",
           "xi": [
-            "Ronwen Williams",
-            "Aubrey Modiba",
-            "Mbekezeli Mbokazi",
-            "Nkosinathi Sibisi",
-            "Khuliso Mudau",
-            "Ime Okon",
-            "Teboho Mokoena",
-            "Sphephelo Sithole",
-            "Jayden Adams",
-            "Lyle Foster",
-            "Iqraam Rayners"
+            {
+              "n": 1,
+              "name": "Ronwen Williams",
+              "pos": "POR",
+              "cap": true
+            },
+            {
+              "n": 6,
+              "name": "Aubrey Modiba",
+              "pos": "DEF"
+            },
+            {
+              "n": 14,
+              "name": "Mbekezeli Mbokazi",
+              "pos": "DEF"
+            },
+            {
+              "n": 19,
+              "name": "Nkosinathi Sibisi",
+              "pos": "DEF"
+            },
+            {
+              "n": 20,
+              "name": "Khuliso Mudau",
+              "pos": "DEF"
+            },
+            {
+              "n": 21,
+              "name": "Ime Okon",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Teboho Mokoena",
+              "pos": "MED"
+            },
+            {
+              "n": 13,
+              "name": "Sphephelo Sithole",
+              "pos": "MED"
+            },
+            {
+              "n": 23,
+              "name": "Jayden Adams",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Lyle Foster",
+              "pos": "DEL"
+            },
+            {
+              "n": 15,
+              "name": "Iqraam Rayners",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -170,18 +262,64 @@
       ],
       "lineups": {
         "h": {
+          "formation": "3-4-3",
           "xi": [
-            "Kim Seunggyu",
-            "Lee Hanbeom",
-            "Kim Minjae",
-            "Lee Taeseok",
-            "Seol Youngwoo",
-            "Lee Gihyuk",
-            "Hwang Inbeom",
-            "Paik Seungho",
-            "Lee Jaesung",
-            "Lee Kangin",
-            "Son Heungmin"
+            {
+              "n": 1,
+              "name": "Kim Seunggyu",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Lee Hanbeom",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Kim Minjae",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Lee Taeseok",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Seol Youngwoo",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Lee Gihyuk",
+              "pos": "MED"
+            },
+            {
+              "n": 6,
+              "name": "Hwang Inbeom",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Paik Seungho",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Lee Jaesung",
+              "pos": "MED"
+            },
+            {
+              "n": 19,
+              "name": "Lee Kangin",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Son Heungmin",
+              "pos": "DEL",
+              "cap": true
+            }
           ],
           "subs": [
             {
@@ -212,18 +350,64 @@
           ]
         },
         "a": {
+          "formation": "5-2-3",
           "xi": [
-            "Matej Kovar",
-            "Robin Hranac",
-            "Vladimir Coufal",
-            "Stepan Chaloupek",
-            "Ladislav Krejci",
-            "Jaroslav Zeleny",
-            "Lukas Provod",
-            "Tomas Soucek",
-            "Alexandr Sojka",
-            "Patrik Schick",
-            "Pavel Sulc"
+            {
+              "n": 1,
+              "name": "Matej Kovar",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Robin Hranac",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Vladimir Coufal",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Stepan Chaloupek",
+              "pos": "DEF"
+            },
+            {
+              "n": 7,
+              "name": "Ladislav Krejci",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 20,
+              "name": "Jaroslav Zeleny",
+              "pos": "DEF"
+            },
+            {
+              "n": 17,
+              "name": "Lukas Provod",
+              "pos": "MED"
+            },
+            {
+              "n": 22,
+              "name": "Tomas Soucek",
+              "pos": "MED"
+            },
+            {
+              "n": 24,
+              "name": "Alexandr Sojka",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Patrik Schick",
+              "pos": "DEL"
+            },
+            {
+              "n": 15,
+              "name": "Pavel Sulc",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -302,18 +486,64 @@
       ],
       "lineups": {
         "h": {
+          "formation": "4-4-2",
           "xi": [
-            "Maxime Crepeau",
-            "Alistair Johnston",
-            "Luc De Fougerolles",
-            "Derek Cornelius",
-            "Richie Laryea",
-            "Stephen Eustaquio",
-            "Ismael Kone",
-            "Liam Millar",
-            "Jonathan David",
-            "Tani Oluwaseyi",
-            "Tajon Buchanan"
+            {
+              "n": 16,
+              "name": "Maxime Crepeau",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Alistair Johnston",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Luc De Fougerolles",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Derek Cornelius",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Richie Laryea",
+              "pos": "DEF"
+            },
+            {
+              "n": 7,
+              "name": "Stephen Eustaquio",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 8,
+              "name": "Ismael Kone",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Liam Millar",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Jonathan David",
+              "pos": "DEL"
+            },
+            {
+              "n": 12,
+              "name": "Tani Oluwaseyi",
+              "pos": "DEL"
+            },
+            {
+              "n": 17,
+              "name": "Tajon Buchanan",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -344,18 +574,64 @@
           ]
         },
         "a": {
+          "formation": "4-4-2",
           "xi": [
-            "Nikola Vasilj",
-            "Tarik Muharemovic",
-            "Sead Kolasinac",
-            "Amar Dedic",
-            "Nikola Katic",
-            "Benjamin Tahirovic",
-            "Ivan Basic",
-            "Amar Memic",
-            "Ermedin Demirovic",
-            "Esmir Bajraktarevic",
-            "Jovo Lukic"
+            {
+              "n": 1,
+              "name": "Nikola Vasilj",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Tarik Muharemovic",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Sead Kolasinac",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 7,
+              "name": "Amar Dedic",
+              "pos": "DEF"
+            },
+            {
+              "n": 18,
+              "name": "Nikola Katic",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Benjamin Tahirovic",
+              "pos": "MED"
+            },
+            {
+              "n": 13,
+              "name": "Ivan Basic",
+              "pos": "MED"
+            },
+            {
+              "n": 15,
+              "name": "Amar Memic",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Ermedin Demirovic",
+              "pos": "DEL"
+            },
+            {
+              "n": 20,
+              "name": "Esmir Bajraktarevic",
+              "pos": "DEL"
+            },
+            {
+              "n": 25,
+              "name": "Jovo Lukic",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -394,7 +670,7 @@
       "scorers": [
         {
           "team": "h",
-          "name": "Damian Bobadilla (e.p.)",
+          "name": "Damian Bobadilla",
           "minute": "7",
           "og": true
         },
@@ -461,18 +737,64 @@
       ],
       "lineups": {
         "h": {
+          "formation": "4-2-3-1",
           "xi": [
-            "Matt Freese",
-            "Sergino Dest",
-            "Chris Richards",
-            "Antonee Robinson",
-            "Tim Ream",
-            "Alex Freeman",
-            "Tyler Adams",
-            "Weston McKennie",
-            "Malik Tillman",
-            "Christian Pulisic",
-            "Folarin Balogun"
+            {
+              "n": 24,
+              "name": "Matt Freese",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Sergino Dest",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Chris Richards",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Antonee Robinson",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Tim Ream",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 16,
+              "name": "Alex Freeman",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Tyler Adams",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Weston McKennie",
+              "pos": "MED"
+            },
+            {
+              "n": 17,
+              "name": "Malik Tillman",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Christian Pulisic",
+              "pos": "DEL"
+            },
+            {
+              "n": 20,
+              "name": "Folarin Balogun",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {
@@ -498,18 +820,64 @@
           ]
         },
         "a": {
+          "formation": "4-4-2",
           "xi": [
-            "Orlando Gill",
-            "Omar Alderete",
-            "Juan Jose Caceres",
-            "Junior Alonso",
-            "Gustavo Gomez",
-            "Diego Gomez",
-            "Miguel Almiron",
-            "Andres Cubas",
-            "Damian Bobadilla",
-            "Antonio Sanabria",
-            "Julio Enciso"
+            {
+              "n": 12,
+              "name": "Orlando Gill",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "Omar Alderete",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Juan Jose Caceres",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Junior Alonso",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Gustavo Gomez",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 8,
+              "name": "Diego Gomez",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Miguel Almiron",
+              "pos": "MED"
+            },
+            {
+              "n": 14,
+              "name": "Andres Cubas",
+              "pos": "MED"
+            },
+            {
+              "n": 16,
+              "name": "Damian Bobadilla",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Antonio Sanabria",
+              "pos": "DEL"
+            },
+            {
+              "n": 19,
+              "name": "Julio Enciso",
+              "pos": "DEL"
+            }
           ],
           "subs": [
             {

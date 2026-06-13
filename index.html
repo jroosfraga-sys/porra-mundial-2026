@@ -244,7 +244,18 @@
   .det-tag{font-size:10px;background:var(--card2);color:var(--muted);border-radius:6px;padding:1px 6px;font-weight:700}
   .det-assist{font-size:12px;color:var(--muted)}
   .det-empty{color:var(--muted);font-size:13px;font-style:italic;padding:2px 0}
-  .lu-xi{margin:0;padding-left:22px;font-size:13px;line-height:1.7}
+  .lu-xi{margin:0;padding:0;list-style:none;font-size:13px}
+  .lu-xi li{display:flex;align-items:center;gap:8px;padding:3px 0;border-bottom:1px solid var(--line)}
+  .lu-xi li:last-child{border-bottom:none}
+  .lu-num{display:inline-block;min-width:22px;text-align:center;background:var(--card2);color:var(--muted);border-radius:6px;padding:1px 4px;font-weight:700;font-size:11px;font-variant-numeric:tabular-nums}
+  .lu-name{flex:1;font-weight:500}
+  .lu-cap{color:var(--green);font-weight:700;margin-left:2px}
+  .lu-pos{font-size:10px;font-weight:700;padding:1px 6px;border-radius:6px;letter-spacing:.5px;background:var(--card2);color:var(--muted)}
+  .lu-pos-POR{background:rgba(255,193,7,.18);color:#ffc107}
+  .lu-pos-DEF{background:rgba(96,165,250,.18);color:#60a5fa}
+  .lu-pos-MED{background:rgba(167,139,250,.18);color:#a78bfa}
+  .lu-pos-DEL{background:rgba(255,99,99,.18);color:#ff6363}
+  .lu-form{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.5px}
   .det-sub{font-size:13px;display:flex;align-items:center;gap:6px;padding:1px 0}
   .det-pen{font-size:15px;text-align:center;background:var(--card);border-radius:10px;padding:10px}
   /* Canal de TV en el calendario */
@@ -567,14 +578,25 @@ function gmId(g,i){return 'G'+g+'-'+i;}
 function getGS(id){return DB.gs[id]||{h:null,a:null,sealed:false};}
 function getKO(id){return DB.ko[id]||{h:null,a:null,sealed:false,pen:null};}
 function getDet(id){return DB.det[id]||{scorers:[],assists:[],cards:[],lineups:{h:{xi:[],subs:[]},a:{xi:[],subs:[]}}};}
-/* Normaliza la ficha de alineaciones a {h:{xi:[],subs:[]},a:{...}}.
-   Acepta también el formato antiguo (texto plano) y datos parciales del agente. */
+/* Normaliza la ficha de alineaciones a {h:{formation,xi:[{n,name,pos,cap}],subs:[]},a:{...}}.
+   Acepta el formato nuevo (objetos {n,name,pos,cap}) y el antiguo (strings o texto plano). */
+function luPlayer(p){
+  if(p==null)return {name:''};
+  if(typeof p==='string')return {name:p.trim()};
+  return {
+    n: p.n!=null?p.n:'',
+    name: p.name||'',
+    pos: p.pos||'',
+    cap: !!p.cap
+  };
+}
 function luSide(s){
-  if(!s)return {xi:[],subs:[]};
-  if(typeof s==='string')return {xi:s.split('\n').map(x=>x.trim()).filter(Boolean),subs:[]};
-  const xi=Array.isArray(s.xi)?s.xi.slice():(s.xi?String(s.xi).split('\n').map(x=>x.trim()).filter(Boolean):[]);
+  if(!s)return {formation:'',xi:[],subs:[]};
+  if(typeof s==='string')return {formation:'',xi:s.split('\n').map(x=>x.trim()).filter(Boolean).map(luPlayer),subs:[]};
+  const xiRaw=Array.isArray(s.xi)?s.xi:(s.xi?String(s.xi).split('\n').map(x=>x.trim()).filter(Boolean):[]);
+  const xi=xiRaw.map(luPlayer);
   const subs=Array.isArray(s.subs)?s.subs.map(x=>({out:x.out||'',in:x.in||'',minute:x.minute||''})):[];
-  return {xi,subs};
+  return {formation:s.formation||'',xi,subs};
 }
 function normLineups(lu){lu=lu||{};return {h:luSide(lu.h),a:luSide(lu.a)};}
 
@@ -1369,16 +1391,17 @@ function openDetail(mid){
   const ps=(!isGroup&&gp.penScore)||{};
   const fl=t=>t==='h'?home.flag:away.flag;
   const scList=d.scorers.length
-    ? d.scorers.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
+    ? d.scorers.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.og?'<span class="det-tag">e.p.</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
     : '<div class="det-empty">Sin goles registrados</div>';
   const cdList=d.cards.length
     ? d.cards.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(cd.name||'')}</span></div>`).join('')
     : '<div class="det-empty">Sin tarjetas</div>';
   const luTeam=(side)=>{
     const lu=d.lineups[side],flag=side==='h'?home.flag:away.flag,name=side==='h'?home.name:away.name;
-    const xi=lu.xi.length?`<ol class="lu-xi">${lu.xi.map(p=>`<li>${esc(p)}</li>`).join('')}</ol>`:'<div class="det-empty">Sin alineación</div>';
+    const xi=lu.xi.length?`<ul class="lu-xi">${lu.xi.map(p=>`<li><span class="lu-num">${p.n!==''&&p.n!=null?esc(String(p.n)):''}</span><span class="lu-name">${esc(p.name||'')}${p.cap?' <span class="lu-cap" title="Capitán">©</span>':''}</span>${p.pos?`<span class="lu-pos lu-pos-${esc(p.pos)}">${esc(p.pos)}</span>`:''}</li>`).join('')}</ul>`:'<div class="det-empty">Sin alineación</div>';
     const subs=lu.subs.length?`<div class="lu-sub">Cambios</div>${lu.subs.map(sb=>`<div class="det-sub"><span class="det-min">${esc(sb.minute||'')}'</span>${esc(sb.out||'')} <span class="vs">→</span> ${esc(sb.in||'')}</div>`).join('')}`:'';
-    return `<div class="lu-team"><label>${flag} ${name}</label><div class="lu-sub">Once inicial</div>${xi}${subs}</div>`;
+    const head=`<label>${flag} ${name}${lu.formation?` <span class="lu-form">· ${esc(lu.formation)}</span>`:''}</label>`;
+    return `<div class="lu-team">${head}<div class="lu-sub">Once inicial</div>${xi}${subs}</div>`;
   };
   const penBlock=(!isGroup&&(ps.h!=null||ps.a!=null))
     ? `<div class="sec"><h4>🥅 Tanda de penaltis</h4><div class="det-pen">${home.name} <b>${ps.h??'–'}</b> – <b>${ps.a??'–'}</b> ${away.name}</div></div>`
