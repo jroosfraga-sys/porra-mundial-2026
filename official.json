@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15 09:42",
+  "updated": "2026-06-16 09:45",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -2633,6 +2633,835 @@
               "out": "Rani Khedira",
               "in": "Ismael Gharbi",
               "minute": "84"
+            }
+          ]
+        }
+      }
+    },
+    "GH-0": {
+      "h": 0,
+      "a": 0,
+      "src": "FIFA",
+      "scorers": [],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "SIDNY LOPES CABRAL",
+          "minute": "16"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "PEDRI",
+          "minute": "90+3"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-1-2-3",
+          "xi": [
+            {
+              "n": 23,
+              "name": "Unai SIMON",
+              "pos": "POR"
+            },
+            {
+              "n": 5,
+              "name": "Marcos LLORENTE",
+              "pos": "DEF"
+            },
+            {
+              "n": 14,
+              "name": "Aymeric LAPORTE",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Pau CUBARSI",
+              "pos": "DEF"
+            },
+            {
+              "n": 24,
+              "name": "Marc CUCURELLA",
+              "pos": "DEF"
+            },
+            {
+              "n": 8,
+              "name": "Fabian RUIZ",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "GAVI",
+              "pos": "MED"
+            },
+            {
+              "n": 16,
+              "name": "RODRI",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 20,
+              "name": "PEDRI",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Ferran TORRES",
+              "pos": "DEL"
+            },
+            {
+              "n": 21,
+              "name": "Mikel OYARZABAL",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Fabian RUIZ",
+              "in": "Mikel MERINO",
+              "minute": "71"
+            },
+            {
+              "out": "GAVI",
+              "in": "Lamine YAMAL",
+              "minute": "71"
+            },
+            {
+              "out": "Ferran TORRES",
+              "in": "Dani OLMO",
+              "minute": "81"
+            },
+            {
+              "out": "RODRI",
+              "in": "Nico WILLIAMS",
+              "minute": "87"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-1-2-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "VOZINHA",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "DINEY BORGES",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "PICO LOPES",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "SIDNY LOPES CABRAL",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "STEVEN MOREIRA",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "KEVIN PINA",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "JOVANE CABRAL",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "JAMIRO MONTEIRO",
+              "pos": "MED"
+            },
+            {
+              "n": 15,
+              "name": "LAROS DUARTE",
+              "pos": "MED"
+            },
+            {
+              "n": 19,
+              "name": "DAILON LIVRAMENTO",
+              "pos": "DEL"
+            },
+            {
+              "n": 20,
+              "name": "RYAN MENDES",
+              "pos": "DEL",
+              "cap": true
+            }
+          ],
+          "subs": [
+            {
+              "out": "DAILON LIVRAMENTO",
+              "in": "NUNO DA COSTA",
+              "minute": "61"
+            },
+            {
+              "out": "JOVANE CABRAL",
+              "in": "WILLY SEMEDO",
+              "minute": "61"
+            },
+            {
+              "out": "LAROS DUARTE",
+              "in": "DEROY DUARTE",
+              "minute": "61"
+            },
+            {
+              "out": "SIDNY LOPES CABRAL",
+              "in": "JOAO PAULO",
+              "minute": "76"
+            },
+            {
+              "out": "JAMIRO MONTEIRO",
+              "in": "TELMO ARCANJO",
+              "minute": "79"
+            }
+          ]
+        }
+      }
+    },
+    "GG-0": {
+      "h": 1,
+      "a": 1,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "EMAM ASHOUR",
+          "minute": "19"
+        },
+        {
+          "team": "h",
+          "name": "MOHAMED HANY",
+          "minute": "66",
+          "og": true
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "MARAWAN ATTIA",
+          "minute": "13"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Timothy CASTAGNE",
+          "minute": "14"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "AHMED FATOUH",
+          "minute": "34"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Maxim DE CUYPER",
+          "minute": "75"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Thibaut COURTOIS",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Brandon MECHELE",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Thomas MEUNIER",
+              "pos": "DEF"
+            },
+            {
+              "n": 21,
+              "name": "Timothy CASTAGNE",
+              "pos": "DEF"
+            },
+            {
+              "n": 25,
+              "name": "Nathan NGOY",
+              "pos": "DEF"
+            },
+            {
+              "n": 7,
+              "name": "Kevin DE BRUYNE",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Youri TIELEMANS",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 24,
+              "name": "Amadou ONANA",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Leandro TROSSARD",
+              "pos": "DEL"
+            },
+            {
+              "n": 11,
+              "name": "Jeremy DOKU",
+              "pos": "DEL"
+            },
+            {
+              "n": 17,
+              "name": "Charles DE KETELAERE",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Timothy CASTAGNE",
+              "in": "Nicolas RASKIN",
+              "minute": "56"
+            },
+            {
+              "out": "Amadou ONANA",
+              "in": "Maxim DE CUYPER",
+              "minute": "56"
+            },
+            {
+              "out": "Charles DE KETELAERE",
+              "in": "Romelu LUKAKU",
+              "minute": "66"
+            },
+            {
+              "out": "Kevin DE BRUYNE",
+              "in": "Hans VANAKEN",
+              "minute": "85"
+            },
+            {
+              "out": "Jeremy DOKU",
+              "in": "Matias FERNANDEZ-PARDO",
+              "minute": "85"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 23,
+              "name": "MOSTAFA SHOUBIR",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "YASSER IBRAHIM",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "MOHAMED HANY",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "AHMED FATOUH",
+              "pos": "DEF"
+            },
+            {
+              "n": 8,
+              "name": "EMAM ASHOUR",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "MOSTAFA ZICO",
+              "pos": "MED"
+            },
+            {
+              "n": 14,
+              "name": "HAMDY FATHY",
+              "pos": "MED"
+            },
+            {
+              "n": 17,
+              "name": "MOHANAD LASHIN",
+              "pos": "MED"
+            },
+            {
+              "n": 19,
+              "name": "MARAWAN ATTIA",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "MOHAMED SALAH",
+              "pos": "DEL",
+              "cap": true
+            },
+            {
+              "n": 22,
+              "name": "OMAR MARMOUSH",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "EMAM ASHOUR",
+              "in": "RAMY RABIA",
+              "minute": "71"
+            },
+            {
+              "out": "MOSTAFA ZICO",
+              "in": "ZIZO",
+              "minute": "76"
+            },
+            {
+              "out": "MOHAMED SALAH",
+              "in": "HAMZA ABDELKARIM",
+              "minute": "76"
+            },
+            {
+              "out": "AHMED FATOUH",
+              "in": "KARIM HAFEZ",
+              "minute": "88"
+            },
+            {
+              "out": "HAMDY FATHY",
+              "in": "IBRAHIM ADEL",
+              "minute": "88"
+            }
+          ]
+        }
+      }
+    },
+    "GH-1": {
+      "h": 1,
+      "a": 1,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "h",
+          "name": "Abdulelah ALAMRI",
+          "minute": "41"
+        },
+        {
+          "team": "a",
+          "name": "Maxi ARAUJO",
+          "minute": "80"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Abdulelah ALAMRI",
+          "minute": "44"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "n": 21,
+              "name": "MOHAMMED ALOWAIS",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Abdulelah ALAMRI",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "HASSAN ALTAMBAKTI",
+              "pos": "DEF"
+            },
+            {
+              "n": 12,
+              "name": "SAUD ABDULHAMID",
+              "pos": "DEF"
+            },
+            {
+              "n": 24,
+              "name": "MOTEB ALHARBI",
+              "pos": "DEF"
+            },
+            {
+              "n": 26,
+              "name": "MOHAMMED ABU ALSHAMAT",
+              "pos": "DEF"
+            },
+            {
+              "n": 7,
+              "name": "MUSAB ALJUWAYR",
+              "pos": "MED"
+            },
+            {
+              "n": 15,
+              "name": "ABDULLAH ALKHAIBARI",
+              "pos": "MED"
+            },
+            {
+              "n": 23,
+              "name": "MOHAMED KANNO",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "FERAS ALBRIKAN",
+              "pos": "DEL"
+            },
+            {
+              "n": 10,
+              "name": "SALEM ALDAWSARI",
+              "pos": "DEL",
+              "cap": true
+            }
+          ],
+          "subs": [
+            {
+              "out": "MUSAB ALJUWAYR",
+              "in": "NASSER ALDAWSARI",
+              "minute": "63"
+            },
+            {
+              "out": "MOHAMMED ABU ALSHAMAT",
+              "in": "NAWAF BU WASHL",
+              "minute": "81"
+            },
+            {
+              "out": "MOTEB ALHARBI",
+              "in": "ABDULLAH ALHAMDDAN",
+              "minute": "90+2"
+            },
+            {
+              "out": "FERAS ALBRIKAN",
+              "in": "ALA ALHAJJI",
+              "minute": "90+2"
+            },
+            {
+              "out": "SAUD ABDULHAMID",
+              "in": "ALI LAJAMI",
+              "minute": "90+2"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "n": 23,
+              "name": "Fernando MUSLERA",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "Sebastian CACERES",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Guillermo VARELA",
+              "pos": "DEF"
+            },
+            {
+              "n": 16,
+              "name": "Mathias OLIVERA",
+              "pos": "DEF"
+            },
+            {
+              "n": 17,
+              "name": "Matias VINA",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Manuel UGARTE",
+              "pos": "MED"
+            },
+            {
+              "n": 6,
+              "name": "Rodrigo BENTANCUR",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Federico VALVERDE",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 20,
+              "name": "Maxi ARAUJO",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Darwin NUNEZ",
+              "pos": "DEL"
+            },
+            {
+              "n": 21,
+              "name": "Federico VINAS",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Darwin NUNEZ",
+              "in": "Agustin CANOBBIO",
+              "minute": ""
+            },
+            {
+              "out": "Matias VINA",
+              "in": "Juan Manuel SANABRIA",
+              "minute": ""
+            },
+            {
+              "out": "Manuel UGARTE",
+              "in": "Nicolas DE LA CRUZ",
+              "minute": "72"
+            },
+            {
+              "out": "Maxi ARAUJO",
+              "in": "Brian RODRIGUEZ",
+              "minute": "81"
+            },
+            {
+              "out": "Federico VINAS",
+              "in": "Rodrigo AGUIRRE",
+              "minute": "90"
+            }
+          ]
+        }
+      }
+    },
+    "GG-1": {
+      "h": 2,
+      "a": 2,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Elijah JUST",
+          "minute": "7",
+          "assist": "Chris WOOD"
+        },
+        {
+          "team": "h",
+          "name": "Ramin REZAEIAN",
+          "minute": "32"
+        },
+        {
+          "team": "a",
+          "name": "Elijah JUST",
+          "minute": "54",
+          "assist": "Chris WOOD"
+        },
+        {
+          "team": "h",
+          "name": "Mohammad MOHEBBI",
+          "minute": "64",
+          "assist": "Ramin REZAEIAN"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Ehsan HAJISAFI",
+          "minute": "89"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-3-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Alireza BEIRANVAND",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Shoja KHALILZADEH",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Milad MOHAMMADI",
+              "pos": "DEF"
+            },
+            {
+              "n": 17,
+              "name": "Arya YOUSEFI",
+              "pos": "DEF"
+            },
+            {
+              "n": 19,
+              "name": "Ali NEMATI",
+              "pos": "DEF"
+            },
+            {
+              "n": 23,
+              "name": "Ramin REZAEIAN",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Saeid EZATOLAHI",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Mohammad MOHEBBI",
+              "pos": "MED"
+            },
+            {
+              "n": 14,
+              "name": "Saman GHODDOS",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Mehdi TAREMI",
+              "pos": "DEL",
+              "cap": true
+            },
+            {
+              "n": 20,
+              "name": "Shahriyar MOGHANLOO",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Arya YOUSEFI",
+              "in": "Mehdi GHAYEDI",
+              "minute": ""
+            },
+            {
+              "out": "Shahriyar MOGHANLOO",
+              "in": "Ali Alipour",
+              "minute": "53"
+            },
+            {
+              "out": "Saman GHODDOS",
+              "in": "Ehsan HAJISAFI",
+              "minute": "65"
+            },
+            {
+              "out": "Mehdi TAREMI",
+              "in": "Amirhossein Hosseinzadeh",
+              "minute": "80"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Max CROCOMBE",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Tim PAYNE",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Michael BOXALL",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Liberato CACACE",
+              "pos": "DEF"
+            },
+            {
+              "n": 16,
+              "name": "Finn SURMAN",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Joe BELL",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Marko STAMENIC",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Sarpreet SINGH",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Elijah JUST",
+              "pos": "MED"
+            },
+            {
+              "n": 20,
+              "name": "Callum McCOWATT",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Chris WOOD",
+              "pos": "DEL",
+              "cap": true
+            }
+          ],
+          "subs": [
+            {
+              "out": "Callum McCOWATT",
+              "in": "Ryan THOMAS",
+              "minute": "68"
+            },
+            {
+              "out": "Liberato CACACE",
+              "in": "Ben OLD",
+              "minute": "68"
+            },
+            {
+              "out": "Tim PAYNE",
+              "in": "Callan ELLIOT",
+              "minute": "77"
+            },
+            {
+              "out": "Sarpreet SINGH",
+              "in": "Jesse RANDALL",
+              "minute": "90+2"
+            },
+            {
+              "out": "Marko STAMENIC",
+              "in": "Tyler BINDON",
+              "minute": "90+2"
             }
           ]
         }
