@@ -895,7 +895,7 @@ function renderStats(){
   const add=(map,name,team,when)=>{
     if(!name||!name.trim())return;
     const k=name.trim().toLowerCase()+'|'+(team||'');
-    if(!map[k])map[k]={name:name.trim(),team:team||'',n:0,first:Infinity};
+    if(!map[k])map[k]={name:fixName(name.trim()),team:team||'',n:0,first:Infinity};
     map[k].n++;
     if(when<map[k].first)map[k].first=when;
   };
@@ -1403,15 +1403,15 @@ function openDetail(mid){
   const scorersOrdered=d.scorers.slice().sort(byMinute);
   const cardsOrdered=d.cards.slice().sort(byMinute);
   const scList=scorersOrdered.length
-    ? scorersOrdered.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(sc.name||'')}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.og?'<span class="det-tag">e.p.</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(sc.assist)}</span>`:''}</div>`).join('')
+    ? scorersOrdered.map(sc=>`<div class="det-line"><span class="det-min">${esc(sc.minute||'')}'</span><span class="det-flag">${fl(sc.team)}</span><span class="det-name">${esc(fixName(sc.name||''))}</span>${sc.pk?'<span class="det-tag">pen</span>':''}${sc.og?'<span class="det-tag">e.p.</span>':''}${sc.assist?`<span class="det-assist">↳ asist. ${esc(fixName(sc.assist))}</span>`:''}</div>`).join('')
     : '<div class="det-empty">Sin goles registrados</div>';
   const cdList=cardsOrdered.length
-    ? cardsOrdered.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(cd.name||'')}</span></div>`).join('')
+    ? cardsOrdered.map(cd=>`<div class="det-line"><span class="det-min">${esc(cd.minute||'')}'</span><span class="det-card">${cd.type==='red'?'🟥':'🟨'}</span><span class="det-flag">${fl(cd.team)}</span><span class="det-name">${esc(fixName(cd.name||''))}</span></div>`).join('')
     : '<div class="det-empty">Sin tarjetas</div>';
   const luTeam=(side)=>{
     const lu=d.lineups[side],flag=side==='h'?home.flag:away.flag,name=side==='h'?home.name:away.name;
-    const xi=lu.xi.length?`<ul class="lu-xi">${lu.xi.map(p=>`<li><span class="lu-num">${p.n!==''&&p.n!=null?esc(String(p.n)):''}</span><span class="lu-name">${esc(p.name||'')}${p.cap?' <span class="lu-cap" title="Capitán">©</span>':''}</span>${p.pos?`<span class="lu-pos lu-pos-${esc(p.pos)}">${esc(p.pos)}</span>`:''}</li>`).join('')}</ul>`:'<div class="det-empty">Sin alineación</div>';
-    const subs=lu.subs.length?`<div class="lu-sub">Cambios</div>${lu.subs.map(sb=>`<div class="det-sub"><span class="det-min">${esc(sb.minute||'')}'</span>${esc(sb.out||'')} <span class="vs">→</span> ${esc(sb.in||'')}</div>`).join('')}`:'';
+    const xi=lu.xi.length?`<ul class="lu-xi">${lu.xi.map(p=>`<li><span class="lu-num">${p.n!==''&&p.n!=null?esc(String(p.n)):''}</span><span class="lu-name">${esc(fixName(p.name||''))}${p.cap?' <span class="lu-cap" title="Capitán">©</span>':''}</span>${p.pos?`<span class="lu-pos lu-pos-${esc(p.pos)}">${esc(p.pos)}</span>`:''}</li>`).join('')}</ul>`:'<div class="det-empty">Sin alineación</div>';
+    const subs=lu.subs.length?`<div class="lu-sub">Cambios</div>${lu.subs.map(sb=>`<div class="det-sub"><span class="det-min">${esc(sb.minute||'')}'</span>${esc(fixName(sb.out||''))} <span class="vs">→</span> ${esc(fixName(sb.in||''))}</div>`).join('')}`:'';
     const head=`<label>${flag} ${name}${lu.formation?` <span class="lu-form">· ${esc(lu.formation)}</span>`:''}</label>`;
     return `<div class="lu-team">${head}<div class="lu-sub">Once inicial</div>${xi}${subs}</div>`;
   };
@@ -1432,6 +1432,20 @@ function openDetail(mid){
   document.getElementById('modal-bg').classList.add('open');
 }
 function esc(s){return String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+/* Unifica el formato de los nombres de jugador (p. ej. "FOLARIN BALOGUN" o
+   "folarin balogun" → "Folarin Balogun"). Respeta los que ya vienen bien
+   escritos con mayús/minús mezcladas (McTominay, Ødegaard, Son Heung-min). */
+function fixName(name){
+  if(!name)return name;
+  return String(name).split(/(\s+)/).map(tok=>{
+    if(/^\s*$/.test(tok))return tok;
+    const letters=tok.replace(/[^\p{L}]/gu,'');
+    if(/\p{Ll}/u.test(letters)&&/\p{Lu}/u.test(letters))return tok;
+    const m=tok.match(/\p{L}/u);if(!m)return tok;
+    const i=tok.indexOf(m[0]);
+    return tok.slice(0,i)+tok.charAt(i).toLocaleUpperCase('es')+tok.slice(i+1).toLocaleLowerCase('es');
+  }).join('');
+}
 
 /* ============ EVENTOS ============ */
 function renderAll(){renderGroups();renderThirds();renderKnockout();renderStats();renderSchedule();renderPorra();}
