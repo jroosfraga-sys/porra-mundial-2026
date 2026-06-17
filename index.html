@@ -1049,7 +1049,14 @@ const PPTS={win:3,draw:1,pos:[7,4,1],
 
 const TEAM_INDEX={};
 GLETTERS.forEach(g=>GROUPS[g].forEach((t,i)=>{TEAM_INDEX[t.name]={g,i};}));
-function pnorm(s){return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();}
+/* Normaliza un nombre para comparar: quita acentos combinables (á, ñ…) y además
+   convierte las letras especiales que NO se descomponen con NFD (ø, æ, ß, ł, đ…)
+   a su letra base. Así "Martin Ødegaard" (porra) empareja con "Martin Odegaard"
+   (datos de FIFA), que escribe la o sin barra. */
+function pnorm(s){return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()
+  .replace(/ø/g,'o').replace(/æ/g,'ae').replace(/œ/g,'oe').replace(/ß/g,'ss')
+  .replace(/ł/g,'l').replace(/đ/g,'d').replace(/ð/g,'d').replace(/þ/g,'th')
+  .replace(/ı/g,'i').replace(/ħ/g,'h').trim();}
 function pNameMatch(a,b){const na=pnorm(a),nb=pnorm(b);return !!na&&!!nb&&(na.includes(nb)||nb.includes(na));}
 
 /* --- versiones "solo resultados oficiales (sellados)" de las clasificaciones --- */
