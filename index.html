@@ -261,6 +261,10 @@
   /* Canal de TV en el calendario */
   .sch-tv{font-size:11px;color:var(--muted);display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
   .sch-tv.free{color:var(--green);font-weight:700}
+  .sch-fifa{font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--pink));padding:3px 9px;border-radius:20px;text-decoration:none;white-space:nowrap;line-height:1.6}
+  .sch-fifa:hover{filter:brightness(1.08)}
+  .fifa-btn{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;font-size:13px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--pink));padding:9px 16px;border-radius:10px;text-decoration:none}
+  .fifa-btn:hover{filter:brightness(1.08)}
   .pill{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:.5px}
   .pill.green{background:rgba(55,226,154,.18);color:var(--green)}
   /* Formulario porra (bienvenida) */
@@ -484,8 +488,8 @@ function mergeOfficial(off){
     const m=matches[id];if(!m||m.h===undefined||m.a===undefined||m.h===null||m.a===null)return;
     // El JSON publicado es la verdad oficial: sobrescribe siempre (permite que un
     // resultado que no era de FIFA se actualice luego con el dato de FIFA).
-    if(id.startsWith('M')){DB.ko[id]={h:m.h,a:m.a,sealed:true,pen:m.pen||null,penScore:m.penScore||null,src:m.src||null};}
-    else{DB.gs[id]={h:m.h,a:m.a,sealed:true,src:m.src||null};}
+    if(id.startsWith('M')){DB.ko[id]={h:m.h,a:m.a,sealed:true,pen:m.pen||null,penScore:m.penScore||null,src:m.src||null,fifa:m.fifa||null};}
+    else{DB.gs[id]={h:m.h,a:m.a,sealed:true,src:m.src||null,fifa:m.fifa||null};}
     if(m.scorers||m.assists||m.cards||m.lineups){
       const d=getDet(id);
       if(m.scorers)d.scorers=m.scorers;
@@ -564,6 +568,11 @@ function tvFor(id){
   if(TV_ABIERTO[id])return {label:TV_ABIERTO[id],free:true};
   return {label:'DAZN',free:false};
 }
+/* Resumen del partido en la web de la FIFA. Cada partido tiene un enlace exacto
+   (campo `fifa` en official.json). Si aún no lo tenemos, caemos a la página
+   general de resúmenes del Mundial, donde están todos. */
+const FIFA_HL_HUB='https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/highlights';
+function fifaUrl(id){const st=id&&id[0]==='M'?DB.ko[id]:DB.gs[id];return (st&&st.fifa)||FIFA_HL_HUB;}
 async function loadSchedule(){
   // Usa el calendario incrustado. Si se sirve por servidor y existe un
   // schedule.json (para futuros ajustes de horario), lo deja sobrescribir.
@@ -1379,6 +1388,7 @@ function renderSchedule(){
         <span class="sch-tag ${mi.ko?'ko':''}">${mi.tag}</span>
         <span class="sch-match"><span class="side r">${homeHtml}</span>${mid}<span class="side">${awayHtml}</span></span>
         <span class="sch-tv ${tv.free?'free':''}" title="${tv.free?'En abierto y gratis (también en RTVE Play)':'Solo en TV de pago'}">📺 ${tv.label}</span>
+        ${mi.sealed?`<a class="sch-fifa" href="${esc(fifaUrl(id))}" target="_blank" rel="noopener noreferrer" title="Ver el resumen del partido en la web de la FIFA">▶ Resumen</a>`:''}
       </div>`;
     });
     html+=`<div class="day-block"><div class="day-head"><span class="dnum">${fechaLarga(date)}</span>
@@ -1431,6 +1441,7 @@ function openDetail(mid){
     <div class="mscore">${score[0]??'–'}<span class="vs">:</span>${score[1]??'–'}</div>
     <div class="seal-bar"><span class="pill green">🔒 OFICIAL</span>
       <span style="font-size:12px;color:var(--muted)">Ficha oficial y cerrada. Lo ocurrido en un partido ya jugado no se puede modificar.${gp.src?' · Fuente: '+esc(gp.src):''}</span></div>
+    <a class="fifa-btn" href="${esc(fifaUrl(mid))}" target="_blank" rel="noopener noreferrer">▶ Ver resumen en FIFA</a>
     ${penBlock}
     <div class="sec"><h4>⚽ Goleadores</h4><div class="det-list">${scList}</div></div>
     <div class="sec"><h4>🟨🟥 Tarjetas</h4><div class="det-list">${cdList}</div></div>
