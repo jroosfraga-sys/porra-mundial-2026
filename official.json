@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19 09:00",
+ "updated": "2026-06-19 12:34",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -5398,7 +5398,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/8zfEoeCcUxu8wn5usWw5U"
   },
   "GB-3": {
    "h": 4,
@@ -5880,7 +5881,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/2aUGsEuBEIsCLXNrzkbo4m"
   },
   "GA-2": {
    "h": 1,
