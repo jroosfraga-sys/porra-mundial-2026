@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19 12:34",
+ "updated": "2026-06-19 12:37",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -6086,7 +6086,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/7EONkqbttoSK2UPpHkR6oz"
   }
  }
 }
