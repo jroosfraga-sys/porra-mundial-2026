@@ -898,15 +898,15 @@ function descSource(src){
    las cuatro tablas: goleadores, asistencias, amarillas y rojas. */
 function renderStats(){
   const goals={},assists={},yc={},rc={};
-  // Cada evento lleva un "cuándo" (fecha+hora del partido + minuto) para poder
-  // ordenar cronológicamente y desempatar: a igualdad de número, aparece antes
-  // quien lo consiguió primero.
+  // Cada evento lleva un "cuándo" (fecha+hora del partido + minuto). Guardamos
+  // el MÁS RECIENTE: ese es el momento en que el jugador llegó a su cifra
+  // actual. A igualdad de número, aparece antes quien alcanzó esa cifra antes.
   const add=(map,name,team,when)=>{
     if(!name||!name.trim())return;
     const k=name.trim().toLowerCase()+'|'+(team||'');
-    if(!map[k])map[k]={name:fixName(name.trim()),team:team||'',n:0,first:Infinity};
+    if(!map[k])map[k]={name:fixName(name.trim()),team:team||'',n:0,reached:-Infinity};
     map[k].n++;
-    if(when<map[k].first)map[k].first=when;
+    if(when>map[k].reached)map[k].reached=when;
   };
   const eventTime=(mid,minute)=>{
     const s=SCHEDULE[mid];
@@ -932,8 +932,8 @@ function renderStats(){
 }
 function drawStat(elId,map,valLabel){
   const box=document.getElementById(elId);if(!box)return;
-  // Orden: más eventos primero; a igualdad, el que lo logró antes; luego nombre.
-  const arr=Object.values(map).sort((a,b)=>b.n-a.n||a.first-b.first||a.name.localeCompare(b.name)).slice(0,10);
+  // Orden: más eventos primero; a igualdad, el que alcanzó esa cifra antes; luego nombre.
+  const arr=Object.values(map).sort((a,b)=>b.n-a.n||a.reached-b.reached||a.name.localeCompare(b.name)).slice(0,10);
   if(!arr.length){box.innerHTML='<div class="empty">Sin datos todavía.</div>';return;}
   let rows='';
   arr.forEach((p,i)=>{rows+=`<tr><td class="rankn">${i+1}</td><td><b>${p.name}</b></td><td style="color:var(--muted)">${p.team||''}</td><td class="goals">${p.n}</td></tr>`;});
