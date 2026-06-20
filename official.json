@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20 09:00",
+ "updated": "2026-06-20 09:30",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -6092,7 +6092,7 @@
   "GD-2": {
    "h": 2,
    "a": 0,
-   "src": "ESPN",
+   "src": "FIFA",
    "scorers": [
     {
      "team": "h",
@@ -6123,13 +6123,13 @@
      "type": "yellow",
      "team": "h",
      "name": "Antonee Robinson",
-     "minute": "79"
+     "minute": "56"
     },
     {
      "type": "yellow",
-     "team": "a",
-     "name": "Harry Souttar",
-     "minute": "88"
+     "team": "h",
+     "name": "Folarin Balogun",
+     "minute": "89"
     },
     {
      "type": "yellow",
@@ -6139,9 +6139,9 @@
     },
     {
      "type": "yellow",
-     "team": "h",
-     "name": "Folarin Balogun",
-     "minute": "90"
+     "team": "a",
+     "name": "Harry Souttar",
+     "minute": "89"
     },
     {
      "type": "yellow",
@@ -6152,7 +6152,7 @@
    ],
    "lineups": {
     "h": {
-     "formation": "3-4-1-2",
+     "formation": "3-5-2",
      "xi": [
       {
        "n": 24,
@@ -6160,8 +6160,18 @@
        "pos": "POR"
       },
       {
+       "n": 2,
+       "name": "Sergino Dest",
+       "pos": "DEF"
+      },
+      {
        "n": 3,
        "name": "Chris Richards",
+       "pos": "DEF"
+      },
+      {
+       "n": 5,
+       "name": "Antonee Robinson",
        "pos": "DEF"
       },
       {
@@ -6173,16 +6183,6 @@
       {
        "n": 16,
        "name": "Alex Freeman",
-       "pos": "DEF"
-      },
-      {
-       "n": 2,
-       "name": "Sergiño Dest",
-       "pos": "DEF"
-      },
-      {
-       "n": 5,
-       "name": "Antonee Robinson",
        "pos": "DEF"
       },
       {
@@ -6211,81 +6211,135 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Ricardo Pepi",
+       "in": "Sebastian Berhalter",
+       "minute": "74"
+      },
+      {
+       "out": "Sergino Dest",
+       "in": "Joe Scally",
+       "minute": "80"
+      },
+      {
+       "out": "Antonee Robinson",
+       "in": "Auston Trusty",
+       "minute": "80"
+      },
+      {
+       "out": "Folarin Balogun",
+       "in": "Haji Wright",
+       "minute": "90+6"
+      },
+      {
+       "out": "Weston McKennie",
+       "in": "Giovanni Reyna",
+       "minute": "90+6"
+      }
+     ]
     },
     "a": {
-     "formation": "3-4-2-1",
+     "formation": "5-4-1",
      "xi": [
       {
-       "n": "",
-       "name": "Paul Beach",
+       "n": 18,
+       "name": "Patrick Beach",
        "pos": "POR"
       },
       {
-       "n": "",
-       "name": "Cameron Burgess",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 3,
        "name": "Alessandro Circati",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Harry Souttar",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
-       "name": "Jordan Bos",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 4,
        "name": "Jacob Italiano",
        "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 5,
+       "name": "Jordan Bos",
+       "pos": "DEF"
+      },
+      {
+       "n": 19,
+       "name": "Harry Souttar",
+       "pos": "DEF",
+       "cap": true
+      },
+      {
+       "n": 21,
+       "name": "Cameron Burgess",
+       "pos": "DEF"
+      },
+      {
+       "n": 13,
        "name": "Aiden O'Neill",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Mathew Leckie",
-       "pos": "MED"
-      },
-      {
-       "n": "",
+       "n": 24,
        "name": "Paul Okon-Engstler",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Nishan Velupillay",
-       "pos": "MED"
+       "n": 7,
+       "name": "Mathew Leckie",
+       "pos": "DEL"
       },
       {
-       "n": "",
-       "name": "Mohamed Touré",
+       "n": 9,
+       "name": "Mohamed Toure",
+       "pos": "DEL"
+      },
+      {
+       "n": 23,
+       "name": "Nishan Velupillay",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Cameron Burgess",
+       "in": "Jason Geria",
+       "minute": ""
+      },
+      {
+       "out": "Nishan Velupillay",
+       "in": "Connor Metcalfe",
+       "minute": ""
+      },
+      {
+       "out": "Mohamed Toure",
+       "in": "Nestory Irankunda",
+       "minute": ""
+      },
+      {
+       "out": "Mathew Leckie",
+       "in": "Cristian Volpato",
+       "minute": "61"
+      },
+      {
+       "out": "Paul Okon-Engstler",
+       "in": "Jackson Irvine",
+       "minute": "78"
+      }
+     ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/1uOCG5cpsR45kemo4IdCO3"
   },
   "GC-3": {
    "h": 0,
    "a": 1,
-   "src": "ESPN",
+   "src": "FIFA",
    "scorers": [
     {
      "team": "a",
      "name": "Ismael Saibari",
      "minute": "2",
-     "assist": "Brahim Díaz"
+     "assist": "Brahim Diaz"
     }
    ],
    "cards": [
@@ -6293,139 +6347,186 @@
      "type": "yellow",
      "team": "a",
      "name": "Issa Diop",
-     "minute": "23"
+     "minute": "22"
     },
     {
      "type": "yellow",
      "team": "h",
-     "name": "Andrew Robertson",
+     "name": "Andy Robertson",
      "minute": "65"
     }
    ],
    "lineups": {
     "h": {
-     "formation": "4-3-3",
+     "formation": "4-4-2",
      "xi": [
       {
-       "n": "",
+       "n": 1,
        "name": "Angus Gunn",
        "pos": "POR"
       },
       {
-       "n": "",
-       "name": "Nathan Patterson",
-       "pos": "DEF"
+       "n": 3,
+       "name": "Andy Robertson",
+       "pos": "DEF",
+       "cap": true
       },
       {
-       "n": "",
-       "name": "Jack Hendry",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 5,
        "name": "Grant Hanley",
        "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 6,
        "name": "Kieran Tierney",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Lewis Ferguson",
+       "n": 13,
+       "name": "Jack Hendry",
+       "pos": "DEF"
+      },
+      {
+       "n": 22,
+       "name": "Nathan Patterson",
+       "pos": "DEF"
+      },
+      {
+       "n": 4,
+       "name": "Scott McTominay",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Ryan Christie",
-       "pos": "MED"
-      },
-      {
-       "n": "",
+       "n": 7,
        "name": "John McGinn",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Scott McTominay",
-       "pos": "DEL"
+       "n": 11,
+       "name": "Ryan Christie",
+       "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Andrew Robertson",
-       "pos": "DEL",
-       "cap": true
+       "n": 19,
+       "name": "Lewis Ferguson",
+       "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Ché Adams",
+       "n": 10,
+       "name": "Che Adams",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Kieran Tierney",
+       "in": "Ben Gannon-Doak",
+       "minute": "60"
+      },
+      {
+       "out": "Che Adams",
+       "in": "Lyndon Dykes",
+       "minute": "71"
+      },
+      {
+       "out": "Ryan Christie",
+       "in": "Kenny McLean",
+       "minute": "71"
+      },
+      {
+       "out": "Nathan Patterson",
+       "in": "Anthony Ralston",
+       "minute": "88"
+      },
+      {
+       "out": "John McGinn",
+       "in": "Ross Stewart",
+       "minute": "88"
+      }
+     ]
     },
     "a": {
-     "formation": "4-3-3",
+     "formation": "4-2-3-1",
      "xi": [
       {
-       "n": "",
+       "n": 1,
        "name": "Yassine Bounou",
        "pos": "POR"
       },
       {
-       "n": "",
+       "n": 2,
        "name": "Achraf Hakimi",
        "pos": "DEF",
        "cap": true
       },
       {
-       "n": "",
-       "name": "Issa Diop",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
-       "name": "Chadi Riad",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 3,
        "name": "Noussair Mazraoui",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Azzedine Ounahi",
-       "pos": "MED"
+       "n": 14,
+       "name": "Issa Diop",
+       "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 18,
+       "name": "Chadi Riad",
+       "pos": "DEF"
+      },
+      {
+       "n": 6,
        "name": "Ayyoub Bouaddi",
        "pos": "MED"
       },
       {
-       "n": "",
+       "n": 8,
+       "name": "Azzedine Ounahi",
+       "pos": "MED"
+      },
+      {
+       "n": 11,
+       "name": "Ismael Saibari",
+       "pos": "MED"
+      },
+      {
+       "n": 23,
+       "name": "Bilal El Khannouss",
+       "pos": "MED"
+      },
+      {
+       "n": 24,
        "name": "Neil El Aynaoui",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Brahim Díaz",
-       "pos": "DEL"
-      },
-      {
-       "n": "",
-       "name": "Ismael Saibari",
-       "pos": "DEL"
-      },
-      {
-       "n": "",
-       "name": "Bilal El Khannouss",
+       "n": 10,
+       "name": "Brahim Diaz",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Ismael Saibari",
+       "in": "Soufiane Rahimi",
+       "minute": "83"
+      },
+      {
+       "out": "Bilal El Khannouss",
+       "in": "Chemsdine Talbi",
+       "minute": "83"
+      },
+      {
+       "out": "Brahim Diaz",
+       "in": "Ayoube Amaimouni",
+       "minute": "83"
+      },
+      {
+       "out": "Azzedine Ounahi",
+       "in": "Samir El Mourabet",
+       "minute": "90"
+      }
+     ]
     }
    },
    "fifa": "https://www.fifa.com/es/watch/lLPqiMKeKkrKkEqOj9dxU"
@@ -6433,7 +6534,7 @@
   "GC-2": {
    "h": 3,
    "a": 0,
-   "src": "ESPN",
+   "src": "FIFA",
    "scorers": [
     {
      "team": "h",
@@ -6444,13 +6545,13 @@
      "team": "h",
      "name": "Matheus Cunha",
      "minute": "36",
-     "assist": "Vinícius Júnior"
+     "assist": "Vinicius Junior"
     },
     {
      "team": "h",
-     "name": "Vinícius Júnior",
+     "name": "Vinicius Junior",
      "minute": "45+3",
-     "assist": "Lucas Paquetá"
+     "assist": "Lucas Paqueta"
     }
    ],
    "cards": [
@@ -6462,15 +6563,15 @@
     },
     {
      "type": "yellow",
-     "team": "h",
-     "name": "Douglas Santos",
-     "minute": "16"
-    },
-    {
-     "type": "yellow",
      "team": "a",
      "name": "Frantzdy Pierrot",
      "minute": "45+4"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Douglas Santos",
+     "minute": "65"
     },
     {
      "type": "yellow",
@@ -6484,135 +6585,189 @@
      "formation": "4-3-3",
      "xi": [
       {
-       "n": "",
+       "n": 1,
        "name": "Alisson",
        "pos": "POR"
       },
       {
-       "n": "",
-       "name": "Danilo",
+       "n": 3,
+       "name": "Gabriel Magalhaes",
        "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 4,
        "name": "Marquinhos",
        "pos": "DEF",
        "cap": true
       },
       {
-       "n": "",
-       "name": "Gabriel Magalhães",
+       "n": 13,
+       "name": "Danilo",
        "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 16,
        "name": "Douglas Santos",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Lucas Paquetá",
-       "pos": "MED"
-      },
-      {
-       "n": "",
-       "name": "Bruno Guimarães",
-       "pos": "MED"
-      },
-      {
-       "n": "",
+       "n": 5,
        "name": "Casemiro",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Vinícius Júnior",
+       "n": 8,
+       "name": "Bruno Guimaraes",
+       "pos": "MED"
+      },
+      {
+       "n": 20,
+       "name": "Lucas Paqueta",
+       "pos": "MED"
+      },
+      {
+       "n": 7,
+       "name": "Vinicius Junior",
        "pos": "DEL"
       },
       {
-       "n": "",
+       "n": 9,
        "name": "Matheus Cunha",
        "pos": "DEL"
       },
       {
-       "n": "",
+       "n": 11,
        "name": "Raphinha",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Raphinha",
+       "in": "Rayan",
+       "minute": "40"
+      },
+      {
+       "out": "Matheus Cunha",
+       "in": "Endrick",
+       "minute": "64"
+      },
+      {
+       "out": "Lucas Paqueta",
+       "in": "Gabriel Martinelli",
+       "minute": "64"
+      },
+      {
+       "out": "Vinicius Junior",
+       "in": "Danilo Santos",
+       "minute": "81"
+      },
+      {
+       "out": "Bruno Guimaraes",
+       "in": "Ederson Silva",
+       "minute": "81"
+      }
+     ]
     },
     "a": {
      "formation": "5-4-1",
      "xi": [
       {
-       "n": "",
+       "n": 1,
        "name": "Johny Placide",
-       "pos": "POR"
+       "pos": "POR",
+       "cap": true
       },
       {
-       "n": "",
-       "name": "Ricardo Adé",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
-       "name": "Jean-Kévin Duverne",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
-       "name": "Hannes Delcroix",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 2,
        "name": "Carlens Arcus",
        "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 4,
+       "name": "Ricardo Ade",
+       "pos": "DEF"
+      },
+      {
+       "n": 5,
+       "name": "Hannes Delcroix",
+       "pos": "DEF"
+      },
+      {
+       "n": 8,
        "name": "Martin Experience",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Danley Jean Jacques",
-       "pos": "MED"
+       "n": 22,
+       "name": "Jean-Kevin Duverne",
+       "pos": "DEF"
       },
       {
-       "n": "",
+       "n": 10,
        "name": "Jean-Ricner Bellegarde",
        "pos": "MED"
       },
       {
-       "n": "",
+       "n": 17,
+       "name": "Danley Jean Jacques",
+       "pos": "MED"
+      },
+      {
+       "n": 15,
        "name": "Ruben Providence",
-       "pos": "MED"
+       "pos": "DEL"
       },
       {
-       "n": "",
-       "name": "Josué Casimir",
-       "pos": "MED"
-      },
-      {
-       "n": "",
+       "n": 20,
        "name": "Frantzdy Pierrot",
+       "pos": "DEL"
+      },
+      {
+       "n": 21,
+       "name": "Josue Casimir",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Carlens Arcus",
+       "in": "Dominique Simon",
+       "minute": ""
+      },
+      {
+       "out": "Frantzdy Pierrot",
+       "in": "Wilson Isidor",
+       "minute": ""
+      },
+      {
+       "out": "Josue Casimir",
+       "in": "Louicius Deedson",
+       "minute": "62"
+      },
+      {
+       "out": "Ruben Providence",
+       "in": "Lenny Joseph",
+       "minute": "71"
+      },
+      {
+       "out": "Jean-Ricner Bellegarde",
+       "in": "Derrick Etienne",
+       "minute": "81"
+      }
+     ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/4B1cORLHftHRri3QzyPvng"
   },
   "GD-3": {
    "h": 0,
    "a": 1,
-   "src": "ESPN",
+   "src": "FIFA",
    "scorers": [
     {
      "team": "a",
-     "name": "Matías Galarza",
+     "name": "Matias Galarza",
      "minute": "2"
     }
    ],
@@ -6620,14 +6775,26 @@
     {
      "type": "yellow",
      "team": "a",
-     "name": "Matías Galarza",
+     "name": "Matias Galarza",
      "minute": "4"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Carlos Gonzalez",
+     "minute": "37"
     },
     {
      "type": "red",
      "team": "a",
-     "name": "Miguel Almirón",
+     "name": "Miguel Almiron",
      "minute": "45+3"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Vincenzo Montella",
+     "minute": "63"
     },
     {
      "type": "yellow",
@@ -6641,127 +6808,180 @@
      "formation": "4-2-3-1",
      "xi": [
       {
-       "n": "",
-       "name": "Uğurcan Çakır",
+       "n": 23,
+       "name": "Ugurcan Cakir",
        "pos": "POR"
       },
       {
-       "n": "",
-       "name": "Mert Müldür",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
+       "n": 3,
        "name": "Merih Demiral",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Abdülkerim Bardakcı",
+       "n": 14,
+       "name": "Abdulkerim Bardakci",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Ferdi Kadıoğlu",
+       "n": 18,
+       "name": "Mert Muldur",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "İsmail Yüksek",
-       "pos": "MED"
+       "n": 20,
+       "name": "Ferdi Kadioglu",
+       "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Hakan Çalhanoğlu",
+       "n": 10,
+       "name": "Hakan Calhanoglu",
        "pos": "MED",
        "cap": true
       },
       {
-       "n": "",
-       "name": "Yunus Akgün",
+       "n": 16,
+       "name": "Ismail Yuksek",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Arda Güler",
-       "pos": "MED"
-      },
-      {
-       "n": "",
-       "name": "Kenan Yıldız",
+       "n": 7,
+       "name": "Kerem Akturkoglu",
        "pos": "DEL"
       },
       {
-       "n": "",
-       "name": "Kerem Aktürkoğlu",
+       "n": 8,
+       "name": "Arda Guler",
+       "pos": "DEL"
+      },
+      {
+       "n": 11,
+       "name": "Kenan Yildiz",
+       "pos": "DEL"
+      },
+      {
+       "n": 19,
+       "name": "Yunus Akgun",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Kerem Akturkoglu",
+       "in": "Baris Alper Yilmaz",
+       "minute": ""
+      },
+      {
+       "out": "Ismail Yuksek",
+       "in": "Can Uzun",
+       "minute": "60"
+      },
+      {
+       "out": "Yunus Akgun",
+       "in": "Deniz Gul",
+       "minute": "60"
+      },
+      {
+       "out": "Ferdi Kadioglu",
+       "in": "Eren Elmali",
+       "minute": "71"
+      },
+      {
+       "out": "Abdulkerim Bardakci",
+       "in": "Orkun Kokcu",
+       "minute": "86"
+      }
+     ]
     },
     "a": {
-     "formation": "4-4-2",
+     "formation": "4-2-3-1",
      "xi": [
       {
-       "n": "",
+       "n": 12,
        "name": "Orlando Gill",
        "pos": "POR"
       },
       {
-       "n": "",
-       "name": "Juan José Cáceres",
-       "pos": "DEF"
-      },
-      {
-       "n": "",
-       "name": "Gustavo Gómez",
-       "pos": "DEF",
-       "cap": true
-      },
-      {
-       "n": "",
+       "n": 3,
        "name": "Omar Alderete",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Júnior Alonso",
+       "n": 4,
+       "name": "Juan Jose Caceres",
        "pos": "DEF"
       },
       {
-       "n": "",
-       "name": "Andrés Cubas",
+       "n": 6,
+       "name": "Junior Alonso",
+       "pos": "DEF"
+      },
+      {
+       "n": 15,
+       "name": "Gustavo Gomez",
+       "pos": "DEF",
+       "cap": true
+      },
+      {
+       "n": 8,
+       "name": "Diego Gomez",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Matías Galarza",
+       "n": 10,
+       "name": "Miguel Almiron",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Diego Gómez",
+       "n": 14,
+       "name": "Andres Cubas",
        "pos": "MED"
       },
       {
-       "n": "",
-       "name": "Miguel Almirón",
+       "n": 23,
+       "name": "Matias Galarza",
        "pos": "MED"
       },
       {
-       "n": "",
+       "n": 19,
        "name": "Julio Enciso",
        "pos": "DEL"
       },
       {
-       "n": "",
+       "n": 25,
        "name": "Isidro Pitta",
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Isidro Pitta",
+       "in": "Damian Bobadilla",
+       "minute": ""
+      },
+      {
+       "out": "Diego Gomez",
+       "in": "Gustavo Velazquez",
+       "minute": "67"
+      },
+      {
+       "out": "Juan Jose Caceres",
+       "in": "Alexandro Maidana",
+       "minute": "81"
+      },
+      {
+       "out": "Julio Enciso",
+       "in": "Gabriel Avalos",
+       "minute": "90+1"
+      },
+      {
+       "out": "Matias Galarza",
+       "in": "Jose Canale",
+       "minute": "90+1"
+      }
+     ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/6gtrw3fGvuONahHQd4yE67"
   }
  }
 }
