@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25 07:40",
+  "updated": "2026-06-25 07:56",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -10429,6 +10429,7 @@
       "h": 0,
       "a": 3,
       "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/2GE7VJlgfD52khnWAjGpF2",
       "scorers": [
         {
           "team": "a",
