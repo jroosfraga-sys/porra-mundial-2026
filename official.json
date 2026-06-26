@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26 10:04",
+  "updated": "2026-06-26 10:09",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -11737,17 +11737,20 @@
         {
           "team": "a",
           "name": "Auston Trusty",
-          "minute": "3"
+          "minute": "3",
+          "assist": "Sebastian Berhalter"
         },
         {
           "team": "h",
           "name": "Arda Guler",
-          "minute": "10"
+          "minute": "10",
+          "assist": "Baris Alper Yilmaz"
         },
         {
           "team": "h",
           "name": "Baris Alper Yilmaz",
-          "minute": "31"
+          "minute": "31",
+          "assist": "Orkun Kokcu"
         },
         {
           "team": "a",
@@ -11757,7 +11760,8 @@
         {
           "team": "h",
           "name": "Kaan Ayhan",
-          "minute": "90+8"
+          "minute": "90+8",
+          "assist": "Can Uzun"
         }
       ],
       "cards": [
@@ -12155,7 +12159,8 @@
         {
           "team": "h",
           "name": "Gonzalo Plata",
-          "minute": "77"
+          "minute": "77",
+          "assist": "Kevin Rodriguez"
         }
       ],
       "cards": [
@@ -12372,12 +12377,14 @@
         {
           "team": "a",
           "name": "Nicolas Pepe",
-          "minute": "7"
+          "minute": "7",
+          "assist": "Yan Diomande"
         },
         {
           "team": "a",
           "name": "Nicolas Pepe",
-          "minute": "64"
+          "minute": "64",
+          "assist": "Ibrahim Sangare"
         }
       ],
       "cards": [
@@ -12588,7 +12595,8 @@
         {
           "team": "h",
           "name": "Daizen Maeda",
-          "minute": "56"
+          "minute": "56",
+          "assist": "Ritsu Doan"
         },
         {
           "team": "a",
@@ -12810,17 +12818,20 @@
         {
           "team": "a",
           "name": "Brian Brobbey",
-          "minute": "7"
+          "minute": "7",
+          "assist": "Virgil Van Dijk"
         },
         {
           "team": "h",
           "name": "Hazem Mastouri",
-          "minute": "54"
+          "minute": "54",
+          "assist": "Hannibal Mejbri"
         },
         {
           "team": "a",
           "name": "Jan Paul Van Hecke",
-          "minute": "62"
+          "minute": "62",
+          "assist": "Tijjani Reijnders"
         }
       ],
       "cards": [],
