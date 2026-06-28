@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27 11:57",
+  "updated": "2026-06-28 11:05",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -14374,6 +14374,931 @@
               "minute": "67"
             }
           ]
+        }
+      }
+    },
+    "GJ-4": {
+      "h": 1,
+      "a": 3,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/5BIvKB59XPeexfnCVgq1on",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Giovani Lo Celso",
+          "minute": "19"
+        },
+        {
+          "team": "a",
+          "name": "Lautaro Martínez",
+          "minute": "31",
+          "pk": true
+        },
+        {
+          "team": "h",
+          "name": "Musa Al-Tamari",
+          "minute": "55",
+          "assist": "Ehsan Haddad"
+        },
+        {
+          "team": "a",
+          "name": "Lionel Messi",
+          "minute": "80"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Mohannad Abu Taha",
+          "minute": "17"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Yazan Al-Arab",
+          "minute": "64"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Mohammad Abu Zrayq",
+          "minute": "90+4"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Abulaila",
+              "pos": "POR"
+            },
+            {
+              "name": "Nasib",
+              "pos": "DEF"
+            },
+            {
+              "name": "Yazan Al-Arab",
+              "pos": "DEF"
+            },
+            {
+              "name": "Abu Dahab",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ehsan Haddad",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nizar Al-Rashdan",
+              "pos": "MED"
+            },
+            {
+              "name": "Al-Rawabdeh",
+              "pos": "MED"
+            },
+            {
+              "name": "Mohannad Abu Taha",
+              "pos": "MED"
+            },
+            {
+              "name": "Yazan Azaizeh",
+              "pos": "DEL"
+            },
+            {
+              "name": "Ali Al-Fakhouri",
+              "pos": "DEL"
+            },
+            {
+              "name": "Musa Al-Tamari",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "formation": "4-3-3",
+          "xi": [
+            {
+              "name": "Emiliano Martínez",
+              "pos": "POR"
+            },
+            {
+              "name": "Tomás Palacios",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nicolás Otamendi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Marcos Senesi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nicolás Tagliafico",
+              "pos": "DEF"
+            },
+            {
+              "name": "Leandro Paredes",
+              "pos": "MED"
+            },
+            {
+              "name": "Nico Paz",
+              "pos": "MED"
+            },
+            {
+              "name": "Giovani Lo Celso",
+              "pos": "MED"
+            },
+            {
+              "name": "Giuliano Simeone",
+              "pos": "DEL"
+            },
+            {
+              "name": "Lautaro Martínez",
+              "pos": "DEL"
+            },
+            {
+              "name": "Julián Álvarez",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Giuliano Simeone",
+              "in": "Lionel Messi",
+              "minute": ""
+            }
+          ]
+        }
+      }
+    },
+    "GJ-5": {
+      "h": 3,
+      "a": 3,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Marko Arnautović",
+          "minute": "28",
+          "assist": "David Alaba"
+        },
+        {
+          "team": "h",
+          "name": "Rafik Belghali",
+          "minute": "45"
+        },
+        {
+          "team": "a",
+          "name": "Marcel Sabitzer",
+          "minute": "55",
+          "assist": "Konrad Laimer"
+        },
+        {
+          "team": "h",
+          "name": "Riyad Mahrez",
+          "minute": "60",
+          "assist": "Houssem Aouar"
+        },
+        {
+          "team": "h",
+          "name": "Riyad Mahrez",
+          "minute": "90+3",
+          "assist": "Houssem Aouar"
+        },
+        {
+          "team": "a",
+          "name": "Saša Kalajdžić",
+          "minute": "90+6",
+          "assist": "Michael Gregoritsch"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Marko Arnautović",
+          "minute": "11"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Konrad Laimer",
+          "minute": "76"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Oussama Benbot",
+              "pos": "POR"
+            },
+            {
+              "name": "Rafik Belghali",
+              "pos": "DEF"
+            },
+            {
+              "name": "Aïssa Mandi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ramy Bensebaini",
+              "pos": "DEF"
+            },
+            {
+              "name": "Jaouen Hadjam",
+              "pos": "DEF"
+            },
+            {
+              "name": "Farès Chaïbi",
+              "pos": "MED"
+            },
+            {
+              "name": "Nabil Bentaleb",
+              "pos": "MED"
+            },
+            {
+              "name": "Riyad Mahrez",
+              "pos": "DEL"
+            },
+            {
+              "name": "Ibrahim Maza",
+              "pos": "DEL"
+            },
+            {
+              "name": "Houssem Aouar",
+              "pos": "DEL"
+            },
+            {
+              "name": "Amine Gouiri",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Jaouen Hadjam",
+              "in": "Rayan Aït-Nouri",
+              "minute": "71"
+            },
+            {
+              "out": "Amine Gouiri",
+              "in": "Zineddine Belaïd",
+              "minute": "71"
+            },
+            {
+              "out": "Rafik Belghali",
+              "in": "Samir Chergui",
+              "minute": "71"
+            },
+            {
+              "out": "Houssem Aouar",
+              "in": "Farès Ghedjemis",
+              "minute": "90+4"
+            }
+          ]
+        },
+        "a": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Alexander Schlager",
+              "pos": "POR"
+            },
+            {
+              "name": "Stefan Posch",
+              "pos": "DEF"
+            },
+            {
+              "name": "Philipp Lienhart",
+              "pos": "DEF"
+            },
+            {
+              "name": "David Alaba",
+              "pos": "DEF"
+            },
+            {
+              "name": "Phillipp Mwene",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nicolas Seiwald",
+              "pos": "MED"
+            },
+            {
+              "name": "Xaver Schlager",
+              "pos": "MED"
+            },
+            {
+              "name": "Konrad Laimer",
+              "pos": "DEL"
+            },
+            {
+              "name": "Romano Schmid",
+              "pos": "DEL"
+            },
+            {
+              "name": "Marcel Sabitzer",
+              "pos": "DEL"
+            },
+            {
+              "name": "Marko Arnautović",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Marko Arnautović",
+              "in": "Michael Gregoritsch",
+              "minute": "45"
+            },
+            {
+              "out": "Xaver Schlager",
+              "in": "Florian Grillitsch",
+              "minute": "45"
+            },
+            {
+              "out": "Romano Schmid",
+              "in": "Paul Wanner",
+              "minute": "45"
+            },
+            {
+              "out": "David Alaba",
+              "in": "Kevin Danso",
+              "minute": "62"
+            },
+            {
+              "out": "Phillipp Mwene",
+              "in": "Saša Kalajdžić",
+              "minute": "90+5"
+            }
+          ]
+        }
+      }
+    },
+    "GK-4": {
+      "h": 0,
+      "a": 0,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/8tSsUTDaizPYqH3tPtPym",
+      "scorers": [],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Gustavo Puerta",
+          "minute": "86"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Camilo Vargas",
+              "pos": "POR"
+            },
+            {
+              "name": "Santiago Arias",
+              "pos": "DEF"
+            },
+            {
+              "name": "Davinson Sánchez",
+              "pos": "DEF"
+            },
+            {
+              "name": "Jhon Lucumí",
+              "pos": "DEF"
+            },
+            {
+              "name": "Johan Mojica",
+              "pos": "DEF"
+            },
+            {
+              "name": "Jefferson Lerma",
+              "pos": "MED"
+            },
+            {
+              "name": "Gustavo Puerta",
+              "pos": "MED"
+            },
+            {
+              "name": "Jhon Arias",
+              "pos": "MED"
+            },
+            {
+              "name": "James Rodríguez",
+              "pos": "MED"
+            },
+            {
+              "name": "Jhon Córdoba",
+              "pos": "DEL"
+            },
+            {
+              "name": "Luis Díaz",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Diogo Costa",
+              "pos": "POR"
+            },
+            {
+              "name": "João Cancelo",
+              "pos": "DEF"
+            },
+            {
+              "name": "Rúben Dias",
+              "pos": "DEF"
+            },
+            {
+              "name": "António Silva",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nuno Mendes",
+              "pos": "DEF"
+            },
+            {
+              "name": "Rúben Neves",
+              "pos": "MED"
+            },
+            {
+              "name": "Vitinha",
+              "pos": "MED"
+            },
+            {
+              "name": "Pedro Neto",
+              "pos": "DEL"
+            },
+            {
+              "name": "Bruno Fernandes",
+              "pos": "DEL"
+            },
+            {
+              "name": "João Félix",
+              "pos": "DEL"
+            },
+            {
+              "name": "Cristiano Ronaldo",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        }
+      }
+    },
+    "GK-5": {
+      "h": 3,
+      "a": 1,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Eldor Shomurodov",
+          "minute": "10"
+        },
+        {
+          "team": "h",
+          "name": "Yoane Wissa",
+          "minute": "68",
+          "pk": true
+        },
+        {
+          "team": "h",
+          "name": "Fiston Mayele",
+          "minute": "78",
+          "assist": "Meschack Elia"
+        },
+        {
+          "team": "h",
+          "name": "Yoane Wissa",
+          "minute": "90+1"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Sadiki",
+          "minute": "21"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Abdukodir Khusanov",
+          "minute": "43"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Mbuku",
+          "minute": "45+4"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Nasrullaev",
+          "minute": "47"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Samuel Moutoussamy",
+          "minute": "62"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "name": "Lionel Mpasi",
+              "pos": "POR"
+            },
+            {
+              "name": "Aaron Wan-Bissaka",
+              "pos": "DEF"
+            },
+            {
+              "name": "Chancel Mbemba",
+              "pos": "DEF"
+            },
+            {
+              "name": "Axel Tuanzebe",
+              "pos": "DEF"
+            },
+            {
+              "name": "Arthur Masuaku",
+              "pos": "DEF"
+            },
+            {
+              "name": "Charles Pickel Cipenga",
+              "pos": "MED"
+            },
+            {
+              "name": "Samuel Moutoussamy",
+              "pos": "MED"
+            },
+            {
+              "name": "Sadiki",
+              "pos": "MED"
+            },
+            {
+              "name": "Mbuku",
+              "pos": "MED"
+            },
+            {
+              "name": "Cédric Bakambu",
+              "pos": "DEL"
+            },
+            {
+              "name": "Yoane Wissa",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "name": "Nematov",
+              "pos": "POR"
+            },
+            {
+              "name": "Alijonov",
+              "pos": "DEF"
+            },
+            {
+              "name": "Abdukodir Khusanov",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ashurmatov",
+              "pos": "DEF"
+            },
+            {
+              "name": "Urozov",
+              "pos": "DEF"
+            },
+            {
+              "name": "Karimov",
+              "pos": "MED"
+            },
+            {
+              "name": "Shukurov",
+              "pos": "MED"
+            },
+            {
+              "name": "Mozgovoy",
+              "pos": "MED"
+            },
+            {
+              "name": "Nasrullaev",
+              "pos": "MED"
+            },
+            {
+              "name": "Abbosbek Fayzullaev",
+              "pos": "DEL"
+            },
+            {
+              "name": "Eldor Shomurodov",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        }
+      }
+    },
+    "GL-4": {
+      "h": 0,
+      "a": 2,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/22YjMVCjKIb6m3PjnvWtXB",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Jude Bellingham",
+          "minute": "62",
+          "assist": "Bukayo Saka"
+        },
+        {
+          "team": "a",
+          "name": "Harry Kane",
+          "minute": "67",
+          "assist": "Jude Bellingham"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Jarell Quansah",
+          "minute": "60"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Andrés Andrade",
+          "minute": "83"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Orlando Mosquera",
+              "pos": "POR"
+            },
+            {
+              "name": "Fidel Escobar",
+              "pos": "DEF"
+            },
+            {
+              "name": "José Córdoba",
+              "pos": "DEF"
+            },
+            {
+              "name": "Andrés Andrade",
+              "pos": "DEF"
+            },
+            {
+              "name": "Michael Amir Murillo",
+              "pos": "MED"
+            },
+            {
+              "name": "Carlos Harvey",
+              "pos": "MED"
+            },
+            {
+              "name": "Yoel Bárcenas",
+              "pos": "MED"
+            },
+            {
+              "name": "Jorge Gutiérrez",
+              "pos": "MED"
+            },
+            {
+              "name": "Cristian Martínez",
+              "pos": "MED"
+            },
+            {
+              "name": "Tomás Rodríguez",
+              "pos": "DEL"
+            },
+            {
+              "name": "José Luis Rodríguez",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Jordan Pickford",
+              "pos": "POR"
+            },
+            {
+              "name": "Jarell Quansah",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ezri Konsa",
+              "pos": "DEF"
+            },
+            {
+              "name": "Marc Guéhi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nico O'Reilly",
+              "pos": "MED"
+            },
+            {
+              "name": "Elliot Anderson",
+              "pos": "MED"
+            },
+            {
+              "name": "Jude Bellingham",
+              "pos": "MED"
+            },
+            {
+              "name": "Bukayo Saka",
+              "pos": "DEL"
+            },
+            {
+              "name": "Morgan Rogers",
+              "pos": "DEL"
+            },
+            {
+              "name": "Marcus Rashford",
+              "pos": "DEL"
+            },
+            {
+              "name": "Harry Kane",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        }
+      }
+    },
+    "GL-5": {
+      "h": 2,
+      "a": 1,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/DZ0FHbTgZcLaZe4t8YQew",
+      "scorers": [
+        {
+          "team": "h",
+          "name": "Petar Sučić",
+          "minute": "31"
+        },
+        {
+          "team": "a",
+          "name": "Derrick Luckassen",
+          "minute": "73"
+        },
+        {
+          "team": "h",
+          "name": "Nikola Vlašić",
+          "minute": "83",
+          "assist": "Luka Modrić"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Iñaki Williams",
+          "minute": "60"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Ivan Perišić",
+          "minute": "68"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Kojo Peprah Oppong",
+          "minute": "90+4"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Dominik Livaković",
+              "pos": "POR"
+            },
+            {
+              "name": "Josip Stanišić",
+              "pos": "DEF"
+            },
+            {
+              "name": "Josip Šutalo",
+              "pos": "DEF"
+            },
+            {
+              "name": "Marin Pongračić",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ivan Perišić",
+              "pos": "MED"
+            },
+            {
+              "name": "Luka Modrić",
+              "pos": "MED"
+            },
+            {
+              "name": "Mateo Kovačić",
+              "pos": "MED"
+            },
+            {
+              "name": "Petar Sučić",
+              "pos": "MED"
+            },
+            {
+              "name": "Nikola Vlašić",
+              "pos": "DEL"
+            },
+            {
+              "name": "Martin Baturina",
+              "pos": "DEL"
+            },
+            {
+              "name": "Ante Budimir",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "formation": "",
+          "xi": [
+            {
+              "name": "Benjamin Asare",
+              "pos": "POR"
+            },
+            {
+              "name": "Marvin Senaya",
+              "pos": "DEF"
+            },
+            {
+              "name": "Jonas Adjetey",
+              "pos": "DEF"
+            },
+            {
+              "name": "Derrick Luckassen",
+              "pos": "DEF"
+            },
+            {
+              "name": "Gideon Mensah",
+              "pos": "MED"
+            },
+            {
+              "name": "Thomas Partey",
+              "pos": "MED"
+            },
+            {
+              "name": "Elisha Owusu",
+              "pos": "MED"
+            },
+            {
+              "name": "Kwasi Sibo",
+              "pos": "MED"
+            },
+            {
+              "name": "Antoine Semenyo",
+              "pos": "MED"
+            },
+            {
+              "name": "Jordan Ayew",
+              "pos": "DEL"
+            },
+            {
+              "name": "Kamaldeen Sulemana",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
         }
       }
     }
