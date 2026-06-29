@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28 11:05",
+  "updated": "2026-06-29 09:48",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -11733,6 +11733,7 @@
       "h": 3,
       "a": 2,
       "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/qE2AtDA3GeQvnPPOcQCmi",
       "scorers": [
         {
           "team": "a",
@@ -13249,6 +13250,7 @@
       "h": 1,
       "a": 1,
       "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/4h74CcFsYuSUjg53SPcBvi",
       "scorers": [
         {
           "team": "h",
@@ -14539,6 +14541,7 @@
       "h": 3,
       "a": 3,
       "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/2bOGz6Fht3JL0EejbQh0vv",
       "scorers": [
         {
           "team": "a",
@@ -14861,6 +14864,7 @@
       "h": 3,
       "a": 1,
       "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/3qv3zdDeGxu5KG6WPOZ9eW",
       "scorers": [
         {
           "team": "a",
@@ -15299,6 +15303,201 @@
             }
           ],
           "subs": []
+        }
+      }
+    },
+    "M73": {
+      "h": 0,
+      "a": 1,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/6dFyzSCghyabYGJRQk8RYB",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Stephen Eustaquio",
+          "minute": "90+2"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Nathan Saliba",
+          "minute": "54"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Niko Sigur",
+          "minute": "67"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Ronwen Williams",
+              "pos": "POR",
+              "cap": true
+            },
+            {
+              "n": 6,
+              "name": "Aubrey Modiba",
+              "pos": "DEF"
+            },
+            {
+              "n": 14,
+              "name": "Mbekezeli Mbokazi",
+              "pos": "DEF"
+            },
+            {
+              "n": 20,
+              "name": "Khuliso Mudau",
+              "pos": "DEF"
+            },
+            {
+              "n": 21,
+              "name": "Ime Okon",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Teboho Mokoena",
+              "pos": "MED"
+            },
+            {
+              "n": 13,
+              "name": "Sphephelo Sithole",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Oswin Appollis",
+              "pos": "DEL"
+            },
+            {
+              "n": 10,
+              "name": "Relebohile Mofokeng",
+              "pos": "DEL"
+            },
+            {
+              "n": 12,
+              "name": "Thapelo Maseko",
+              "pos": "DEL"
+            },
+            {
+              "n": 17,
+              "name": "Evidence Makgopa",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Relebohile Mofokeng",
+              "in": "Thalente Mbatha",
+              "minute": ""
+            },
+            {
+              "out": "Evidence Makgopa",
+              "in": "Iqraam Rayners",
+              "minute": "86"
+            },
+            {
+              "out": "Thapelo Maseko",
+              "in": "Tshepang Moremi",
+              "minute": "86"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "n": 16,
+              "name": "Maxime Crepeau",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Alistair Johnston",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Derek Cornelius",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Moise Bombito",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Richie Laryea",
+              "pos": "DEF"
+            },
+            {
+              "n": 7,
+              "name": "Stephen Eustaquio",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 11,
+              "name": "Liam Millar",
+              "pos": "MED"
+            },
+            {
+              "n": 25,
+              "name": "Nathan Saliba",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Jonathan David",
+              "pos": "DEL"
+            },
+            {
+              "n": 12,
+              "name": "Tani Oluwaseyi",
+              "pos": "DEL"
+            },
+            {
+              "n": 17,
+              "name": "Tajon Buchanan",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Nathan Saliba",
+              "in": "Niko Sigur",
+              "minute": "59"
+            },
+            {
+              "out": "Moise Bombito",
+              "in": "Luc De Fougerolles",
+              "minute": "59"
+            },
+            {
+              "out": "Tani Oluwaseyi",
+              "in": "Promise David",
+              "minute": "70"
+            },
+            {
+              "out": "Liam Millar",
+              "in": "Jacob Shaffelburg",
+              "minute": "70"
+            },
+            {
+              "out": "Tajon Buchanan",
+              "in": "Alphonso Davies",
+              "minute": "75"
+            }
+          ]
         }
       }
     }
