@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29 09:48",
+  "updated": "2026-06-30 09:14",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -15496,6 +15496,690 @@
               "out": "Tajon Buchanan",
               "in": "Alphonso Davies",
               "minute": "75"
+            }
+          ]
+        }
+      }
+    },
+    "M74": {
+      "h": 1,
+      "a": 1,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/1ObqWjTvyAO5EaR5aAQYbQ",
+      "pen": "a",
+      "penScore": {
+        "h": 3,
+        "a": 4
+      },
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Julio Enciso",
+          "minute": "42",
+          "assist": "Matias Galarza"
+        },
+        {
+          "team": "h",
+          "name": "Kai Havertz",
+          "minute": "54",
+          "assist": "Florian Wirtz"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Andres Cubas",
+          "minute": "65"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Kai Havertz",
+          "minute": "106"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Jamal Musiala",
+          "minute": "115"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Matias Galarza",
+          "minute": "117"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Manuel Neuer",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Antonio Ruediger",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Jonathan Tah",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Joshua Kimmich",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 18,
+              "name": "Nathaniel Brown",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Aleksandar Pavlovic",
+              "pos": "MED"
+            },
+            {
+              "n": 17,
+              "name": "Florian Wirtz",
+              "pos": "MED"
+            },
+            {
+              "n": 19,
+              "name": "Leroy Sane",
+              "pos": "MED"
+            },
+            {
+              "n": 23,
+              "name": "Felix Nmecha",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Kai Havertz",
+              "pos": "DEL"
+            },
+            {
+              "n": 26,
+              "name": "Deniz Undav",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Felix Nmecha",
+              "in": "Leon Goretzka",
+              "minute": ""
+            },
+            {
+              "out": "Deniz Undav",
+              "in": "Jamal Musiala",
+              "minute": "63"
+            },
+            {
+              "out": "Aleksandar Pavlovic",
+              "in": "Waldemar Anton",
+              "minute": "79"
+            },
+            {
+              "out": "Leroy Sane",
+              "in": "Nick Woltemade",
+              "minute": "88"
+            },
+            {
+              "out": "Antonio Ruediger",
+              "in": "Malick Thiaw",
+              "minute": "110"
+            },
+            {
+              "out": "Florian Wirtz",
+              "in": "Nadiem Amiri",
+              "minute": "110"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-4-2",
+          "xi": [
+            {
+              "n": 12,
+              "name": "Orlando Gill",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Juan Jose Caceres",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Junior Alonso",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Jose Canale",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Gustavo Gomez",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 10,
+              "name": "Miguel Almiron",
+              "pos": "MED"
+            },
+            {
+              "n": 14,
+              "name": "Andres Cubas",
+              "pos": "MED"
+            },
+            {
+              "n": 16,
+              "name": "Damian Bobadilla",
+              "pos": "MED"
+            },
+            {
+              "n": 23,
+              "name": "Matias Galarza",
+              "pos": "MED"
+            },
+            {
+              "n": 19,
+              "name": "Julio Enciso",
+              "pos": "DEL"
+            },
+            {
+              "n": 21,
+              "name": "Gabriel Avalos",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Gabriel Avalos",
+              "in": "Gustavo Caballero",
+              "minute": "55"
+            },
+            {
+              "out": "Julio Enciso",
+              "in": "Mauricio",
+              "minute": "57"
+            },
+            {
+              "out": "Miguel Almiron",
+              "in": "Gustavo Velazquez",
+              "minute": ""
+            },
+            {
+              "out": "Juan Jose Caceres",
+              "in": "Braian Ojeda",
+              "minute": "99"
+            },
+            {
+              "out": "Damian Bobadilla",
+              "in": "Antonio Sanabria",
+              "minute": "99"
+            },
+            {
+              "out": "Junior Alonso",
+              "in": "Fabian Balbuena",
+              "minute": "120+2"
+            }
+          ]
+        }
+      }
+    },
+    "M75": {
+      "h": 1,
+      "a": 1,
+      "src": "FIFA",
+      "pen": "a",
+      "penScore": {
+        "h": 2,
+        "a": 3
+      },
+      "scorers": [
+        {
+          "team": "h",
+          "name": "Cody Gakpo",
+          "minute": "72",
+          "assist": "Crysencio Summerville"
+        },
+        {
+          "team": "a",
+          "name": "Issa Diop",
+          "minute": "90+1",
+          "assist": "Chemsdine Talbi"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Issa Diop",
+          "minute": "47"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "3-4-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Bart Verbruggen",
+              "pos": "POR"
+            },
+            {
+              "n": 4,
+              "name": "Virgil Van Dijk",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 5,
+              "name": "Nathan Ake",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Jan Paul Van Hecke",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Micky Van De Ven",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Denzel Dumfries",
+              "pos": "DEF"
+            },
+            {
+              "n": 8,
+              "name": "Ryan Gravenberch",
+              "pos": "MED"
+            },
+            {
+              "n": 21,
+              "name": "Frenkie De Jong",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Cody Gakpo",
+              "pos": "DEL"
+            },
+            {
+              "n": 19,
+              "name": "Brian Brobbey",
+              "pos": "DEL"
+            },
+            {
+              "n": 24,
+              "name": "Crysencio Summerville",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Nathan Ake",
+              "in": "Teun Koopmeiners",
+              "minute": "71"
+            },
+            {
+              "out": "Brian Brobbey",
+              "in": "Wout Weghorst",
+              "minute": "71"
+            },
+            {
+              "out": "Ryan Gravenberch",
+              "in": "Quinten Timber",
+              "minute": "86"
+            },
+            {
+              "out": "Micky Van De Ven",
+              "in": "Jorrel Hato",
+              "minute": "86"
+            },
+            {
+              "out": "Frenkie De Jong",
+              "in": "Marten De Roon",
+              "minute": "110"
+            },
+            {
+              "out": "Cody Gakpo",
+              "in": "Justin Kluivert",
+              "minute": "113"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Yassine Bounou",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Achraf Hakimi",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 3,
+              "name": "Noussair Mazraoui",
+              "pos": "DEF"
+            },
+            {
+              "n": 14,
+              "name": "Issa Diop",
+              "pos": "DEF"
+            },
+            {
+              "n": 18,
+              "name": "Chadi Riad",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Ayyoub Bouaddi",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Azzedine Ounahi",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Ismael Saibari",
+              "pos": "MED"
+            },
+            {
+              "n": 23,
+              "name": "Bilal El Khannouss",
+              "pos": "MED"
+            },
+            {
+              "n": 24,
+              "name": "Neil El Aynaoui",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Brahim Diaz",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Chadi Riad",
+              "in": "Anass Salah Eddine",
+              "minute": "75"
+            },
+            {
+              "out": "Brahim Diaz",
+              "in": "Gessime Yassine",
+              "minute": "79"
+            },
+            {
+              "out": "Ayyoub Bouaddi",
+              "in": "Samir El Mourabet",
+              "minute": "79"
+            },
+            {
+              "out": "Azzedine Ounahi",
+              "in": "Soufiane Rahimi",
+              "minute": "86"
+            },
+            {
+              "out": "Bilal El Khannouss",
+              "in": "Chemsdine Talbi",
+              "minute": "86"
+            }
+          ]
+        }
+      }
+    },
+    "M76": {
+      "h": 2,
+      "a": 1,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/2RdUNscru4TZmci6y3Akdp",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Kaishu Sano",
+          "minute": "29"
+        },
+        {
+          "team": "h",
+          "name": "Casemiro",
+          "minute": "56",
+          "assist": "Gabriel Magalhaes"
+        },
+        {
+          "team": "h",
+          "name": "Gabriel Martinelli",
+          "minute": "90+5",
+          "assist": "Bruno Guimaraes"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Kaishu Sano",
+          "minute": "12"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Casemiro",
+          "minute": "14"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Daichi Kamada",
+          "minute": "45"
+        },
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Danilo",
+          "minute": "48"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Junnosuke Suzuki",
+          "minute": "84"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-1-2-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Alisson",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "Gabriel Magalhaes",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Marquinhos",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 13,
+              "name": "Danilo",
+              "pos": "DEF"
+            },
+            {
+              "n": 16,
+              "name": "Douglas Santos",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Casemiro",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Bruno Guimaraes",
+              "pos": "MED"
+            },
+            {
+              "n": 20,
+              "name": "Lucas Paqueta",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Vinicius Junior",
+              "pos": "DEL"
+            },
+            {
+              "n": 9,
+              "name": "Matheus Cunha",
+              "pos": "DEL"
+            },
+            {
+              "n": 26,
+              "name": "Rayan",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Lucas Paqueta",
+              "in": "Endrick",
+              "minute": ""
+            },
+            {
+              "out": "Matheus Cunha",
+              "in": "Gabriel Martinelli",
+              "minute": "65"
+            },
+            {
+              "out": "Casemiro",
+              "in": "Fabinho",
+              "minute": "90+1"
+            },
+            {
+              "out": "Bruno Guimaraes",
+              "in": "Danilo Santos",
+              "minute": "90+7"
+            }
+          ]
+        },
+        "a": {
+          "formation": "3-4-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Zion Suzuki",
+              "pos": "POR"
+            },
+            {
+              "n": 3,
+              "name": "Shogo Taniguchi",
+              "pos": "DEF"
+            },
+            {
+              "n": 21,
+              "name": "Hiroki Ito",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Takehiro Tomiyasu",
+              "pos": "DEF"
+            },
+            {
+              "n": 10,
+              "name": "Ritsu Doan",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 11,
+              "name": "Daizen Maeda",
+              "pos": "MED"
+            },
+            {
+              "n": 13,
+              "name": "Keito Nakamura",
+              "pos": "MED"
+            },
+            {
+              "n": 14,
+              "name": "Junya Ito",
+              "pos": "MED"
+            },
+            {
+              "n": 15,
+              "name": "Daichi Kamada",
+              "pos": "MED"
+            },
+            {
+              "n": 24,
+              "name": "Kaishu Sano",
+              "pos": "MED"
+            },
+            {
+              "n": 18,
+              "name": "Ayase Ueda",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Keito Nakamura",
+              "in": "Junnosuke Suzuki",
+              "minute": "66"
+            },
+            {
+              "out": "Ritsu Doan",
+              "in": "Yukinari Sugawara",
+              "minute": "66"
+            },
+            {
+              "out": "Junya Ito",
+              "in": "Shuto Machino",
+              "minute": "78"
+            },
+            {
+              "out": "Daichi Kamada",
+              "in": "Ao Tanaka",
+              "minute": "78"
+            },
+            {
+              "out": "Daizen Maeda",
+              "in": "Koki Ogawa",
+              "minute": "90+7"
             }
           ]
         }
