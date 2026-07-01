@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01 08:58",
+  "updated": "2026-07-01 09:05",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -16193,7 +16193,7 @@
       "scorers": [
         {
           "team": "h",
-          "name": "Kylian Mbappé",
+          "name": "Kylian Mbappe",
           "minute": "45",
           "assist": ""
         },
@@ -16201,13 +16201,13 @@
           "team": "h",
           "name": "Bradley Barcola",
           "minute": "53",
-          "assist": "Michael Olisé"
+          "assist": "Michael Olise"
         },
         {
           "team": "h",
-          "name": "Kylian Mbappé",
+          "name": "Kylian Mbappe",
           "minute": "74",
-          "assist": "Michael Olisé"
+          "assist": "Michael Olise"
         }
       ],
       "cards": [],
@@ -16232,7 +16232,7 @@
             },
             {
               "n": 5,
-              "name": "Jules Koundé",
+              "name": "Jules Kounde",
               "pos": "DEF"
             },
             {
@@ -16242,7 +16242,7 @@
             },
             {
               "n": 8,
-              "name": "Aurélien Tchouaméni",
+              "name": "Aurelien Tchouameni",
               "pos": "MED"
             },
             {
@@ -16252,18 +16252,18 @@
             },
             {
               "n": 7,
-              "name": "Ousmane Dembélé",
+              "name": "Ousmane Dembele",
               "pos": "DEL"
             },
             {
               "n": 10,
-              "name": "Kylian Mbappé",
+              "name": "Kylian Mbappe",
               "pos": "DEL",
               "cap": true
             },
             {
               "n": 11,
-              "name": "Michael Olisé",
+              "name": "Michael Olise",
               "pos": "DEL"
             },
             {
@@ -16274,27 +16274,27 @@
           ],
           "subs": [
             {
-              "out": "Ousmane Dembélé",
-              "in": "Désirée Doué",
+              "out": "Ousmane Dembele",
+              "in": "Desiree Doue",
               "minute": "75"
             },
             {
-              "out": "Jules Koundé",
+              "out": "Jules Kounde",
               "in": "Malo Gusto",
               "minute": "75"
             },
             {
               "out": "Lucas Digne",
-              "in": "Théo Hernández",
+              "in": "Theo Hernandez",
               "minute": "78"
             },
             {
-              "out": "Kylian Mbappé",
+              "out": "Kylian Mbappe",
               "in": "Jean-Philippe Mateta",
               "minute": "85"
             },
             {
-              "out": "Michael Olisé",
+              "out": "Michael Olise",
               "in": "Rayan Cherki",
               "minute": "85"
             }
@@ -16356,7 +16356,7 @@
             },
             {
               "n": 17,
-              "name": "Viktor Gyökeres",
+              "name": "Viktor Gyokeres",
               "pos": "DEL"
             }
           ],
@@ -16517,7 +16517,7 @@
           "xi": [
             {
               "n": 1,
-              "name": "Ørjan Nyland",
+              "name": "Orjan Nyland",
               "pos": "POR"
             },
             {
@@ -16527,7 +16527,7 @@
             },
             {
               "n": 5,
-              "name": "David Møller Wolfe",
+              "name": "David Moller Wolfe",
               "pos": "DEF"
             },
             {
@@ -16537,7 +16537,7 @@
             },
             {
               "n": 17,
-              "name": "Torbjørn Heggem",
+              "name": "Torbjorn Heggem",
               "pos": "DEF"
             },
             {
@@ -16552,13 +16552,13 @@
             },
             {
               "n": 10,
-              "name": "Martin Ødegaard",
+              "name": "Martin Odegaard",
               "pos": "MED",
               "cap": true
             },
             {
               "n": 7,
-              "name": "Alexander Sørloth",
+              "name": "Alexander Sorloth",
               "pos": "DEL"
             },
             {
@@ -16579,7 +16579,7 @@
               "minute": "71"
             },
             {
-              "out": "Alexander Sørloth",
+              "out": "Alexander Sorloth",
               "in": "Oscar Bobb",
               "minute": "71"
             },
@@ -16599,15 +16599,15 @@
       "scorers": [
         {
           "team": "h",
-          "name": "Julián Quiñones",
+          "name": "Julian Quinones",
           "minute": "22",
           "assist": "Roberto Alvarado"
         },
         {
           "team": "h",
-          "name": "Raúl Jiménez",
+          "name": "Raul Jimenez",
           "minute": "31",
-          "assist": "Julián Quiñones"
+          "assist": "Julian Quinones"
         }
       ],
       "cards": [
@@ -16642,28 +16642,28 @@
           "xi": [
             {
               "n": 1,
-              "name": "Raúl Rangel",
+              "name": "Raul Rangel",
               "pos": "POR"
             },
             {
               "n": 2,
-              "name": "Jorge Sánchez",
+              "name": "Jorge Sanchez",
               "pos": "DEF"
             },
             {
               "n": 3,
-              "name": "César Montes",
+              "name": "Cesar Montes",
               "pos": "DEF",
               "cap": true
             },
             {
               "n": 5,
-              "name": "Johan Vásquez",
+              "name": "Johan Vasquez",
               "pos": "DEF"
             },
             {
               "n": 23,
-              "name": "Jesús Gallardo",
+              "name": "Jesus Gallardo",
               "pos": "DEF"
             },
             {
@@ -16683,12 +16683,12 @@
             },
             {
               "n": 9,
-              "name": "Raúl Jiménez",
+              "name": "Raul Jimenez",
               "pos": "DEL"
             },
             {
               "n": 16,
-              "name": "Julián Quiñones",
+              "name": "Julian Quinones",
               "pos": "DEL"
             },
             {
@@ -16700,12 +16700,12 @@
           "subs": [
             {
               "out": "Gilberto Mora",
-              "in": "Brian Gutiérrez",
+              "in": "Brian Gutierrez",
               "minute": "59"
             },
             {
-              "out": "Raúl Jiménez",
-              "in": "Santiago Giménez",
+              "out": "Raul Jimenez",
+              "in": "Santiago Gimenez",
               "minute": "73"
             },
             {
@@ -16714,8 +16714,8 @@
               "minute": "73"
             },
             {
-              "out": "Julián Quiñones",
-              "in": "Orbelín Pineda",
+              "out": "Julian Quinones",
+              "in": "Orbelin Pineda",
               "minute": "80"
             },
             {
@@ -16730,17 +16730,17 @@
           "xi": [
             {
               "n": 1,
-              "name": "Hernán Galíndez",
+              "name": "Hernan Galindez",
               "pos": "POR"
             },
             {
               "n": 3,
-              "name": "Piero Hincapié",
+              "name": "Piero Hincapie",
               "pos": "DEF"
             },
             {
               "n": 4,
-              "name": "Joel Ordóñez",
+              "name": "Joel Ordonez",
               "pos": "DEF"
             },
             {
@@ -16760,7 +16760,7 @@
             },
             {
               "n": 23,
-              "name": "Moisés Caicedo",
+              "name": "Moises Caicedo",
               "pos": "MED",
               "cap": true
             },
@@ -16792,13 +16792,13 @@
               "minute": "45"
             },
             {
-              "out": "Joel Ordóñez",
-              "in": "Ángelo Preciado",
+              "out": "Joel Ordonez",
+              "in": "Angelo Preciado",
               "minute": "45"
             },
             {
               "out": "Enner Valencia",
-              "in": "Kevin Rodríguez",
+              "in": "Kevin Rodriguez",
               "minute": "59"
             },
             {
@@ -16808,7 +16808,7 @@
             },
             {
               "out": "Nilson Angulo",
-              "in": "Kendry Páez",
+              "in": "Kendry Paez",
               "minute": "79"
             }
           ]
