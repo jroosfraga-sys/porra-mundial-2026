@@ -4,3 +4,5 @@
 !index.html
 !official.json
 !schedule.json
+!probabilities.json
+!simulate-probabilities.js

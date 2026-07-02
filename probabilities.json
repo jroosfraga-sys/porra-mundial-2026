@@ -1,0 +1,159 @@
+{
+ "updated": "2026-07-02 09:35",
+ "sims": 50000,
+ "model": "Elo (ranking FIFA + cuotas) + forma real del torneo; Montecarlo del cuadro restante. Solo resultados oficiales.",
+ "probs": {
+  "Dudu": {
+   "win": 0,
+   "prize": 0.0365
+  },
+  "Angelitros": {
+   "win": 0,
+   "prize": 0.0001
+  },
+  "Antoñito": {
+   "win": 0,
+   "prize": 0.0005
+  },
+  "Felipitoooo": {
+   "win": 0,
+   "prize": 0.0028
+  },
+  "Roberto Larcos": {
+   "win": 0,
+   "prize": 0.0052
+  },
+  "Adri93": {
+   "win": 0.0355,
+   "prize": 0.107
+  },
+  "Bizcochito santos": {
+   "win": 0,
+   "prize": 0
+  },
+  "Nach": {
+   "win": 0,
+   "prize": 0.0129
+  },
+  "MarioR": {
+   "win": 0.2936,
+   "prize": 0.9376
+  },
+  "Octavio": {
+   "win": 0,
+   "prize": 0.0558
+  },
+  "Samubv": {
+   "win": 0,
+   "prize": 0
+  },
+  "Franute": {
+   "win": 0.0007,
+   "prize": 0.0028
+  },
+  "Fidel": {
+   "win": 0.0002,
+   "prize": 0.001
+  },
+  "Martin98": {
+   "win": 0,
+   "prize": 0
+  },
+  "Daniel Villarreal": {
+   "win": 0,
+   "prize": 0.0727
+  },
+  "Garrota": {
+   "win": 0,
+   "prize": 0
+  },
+  "Peluka19": {
+   "win": 0,
+   "prize": 0.0053
+  },
+  "Alex :)": {
+   "win": 0,
+   "prize": 0.0001
+  },
+  "Cocu": {
+   "win": 0.0002,
+   "prize": 0.0008
+  },
+  "El calito": {
+   "win": 0,
+   "prize": 0
+  },
+  "Juanmaldini": {
+   "win": 0,
+   "prize": 0.0717
+  },
+  "psansito": {
+   "win": 0.0001,
+   "prize": 0.0181
+  },
+  "Empresario de éxito": {
+   "win": 0,
+   "prize": 0.6314
+  },
+  "Becquerbauer": {
+   "win": 0.0037,
+   "prize": 0.0689
+  },
+  "Chino": {
+   "win": 0,
+   "prize": 0
+  },
+  "Gsus94": {
+   "win": 0.0006,
+   "prize": 0.0041
+  },
+  "Andresrn": {
+   "win": 0,
+   "prize": 0.0083
+  },
+  "Poza": {
+   "win": 0.0034,
+   "prize": 0.0175
+  },
+  "Roos": {
+   "win": 0,
+   "prize": 0.0002
+  },
+  "Messi lover": {
+   "win": 0.6565,
+   "prize": 0.807
+  },
+  "FrancisBacon18": {
+   "win": 0,
+   "prize": 0.0827
+  },
+  "Al-Var": {
+   "win": 0.0001,
+   "prize": 0.0004
+  },
+  "QuiQueen": {
+   "win": 0.0044,
+   "prize": 0.0159
+  },
+  "Pau": {
+   "win": 0.0005,
+   "prize": 0.0027
+  },
+  "Mataleanto": {
+   "win": 0,
+   "prize": 0
+  },
+  "Javito": {
+   "win": 0,
+   "prize": 0.0223
+  },
+  "No hay que saber de futbol para ganarasi.": {
+   "win": 0.0006,
+   "prize": 0.0076
+  },
+  "🦁1️⃣4️⃣": {
+   "win": 0,
+   "prize": 0
+  }
+ }
+}

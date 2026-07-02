@@ -169,6 +169,10 @@
   .lb-prize.p1{background:rgba(245,180,0,.18);color:#a87b00;border:1px solid rgba(245,180,0,.45)}
   .lb-prize.p2{background:rgba(154,166,182,.20);color:#5e6b7e;border:1px solid rgba(154,166,182,.5)}
   .lb-prize.p3{background:rgba(255,61,154,.14);color:#c2186e;border:1px solid rgba(255,61,154,.4)}
+  table.lb-table td.lb-prob{text-align:center;white-space:nowrap;min-width:66px}
+  table.lb-table td.lb-prob b{color:var(--purple);font-size:15px;font-weight:900}
+  table.lb-table td.lb-prob .psub{display:block;margin-top:1px}
+  .lb-prob-note{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:9px 13px;margin:0 2px 12px}
   .porra-sec{margin-bottom:16px;overflow-x:auto}
   table.porra-table td{vertical-align:middle}
   table.porra-table td.pcat{color:var(--muted);font-size:12px;font-weight:700}
@@ -585,6 +589,27 @@ async function loadSchedule(){
     if(res.ok){SCHEDULE=await res.json();}
   }catch(e){/* archivo local: nos quedamos con el incrustado */}
   return true;
+}
+/* Probabilidades de victoria de la porra (probabilities.json). Las calcula una
+   vez al día el agente (Montecarlo con la fuerza de cada selección + la forma
+   real del torneo, usando SOLO resultados oficiales) y aquí solo se muestran
+   junto a cada participante en la clasificación. Así todos ven el MISMO %. */
+let PROBS=null;
+async function loadProbs(){
+  try{
+    const res=await fetch('probabilities.json?_='+Date.now(),{cache:'no-store'});
+    if(res.ok){PROBS=await res.json();}
+  }catch(e){/* aún no publicado: la clasificación se muestra sin % */}
+  return PROBS;
+}
+/* Formatea una probabilidad (0..1) como porcentaje legible en español. */
+function fmtPct(x){
+  if(x==null)return '—';
+  const v=x*100;
+  if(v===0)return '0%';
+  if(v>0&&v<0.5)return '<0,5%';
+  const s=v>=10?Math.round(v).toString():(Math.round(v*10)/10).toString();
+  return s.replace('.',',')+'%';
 }
 function save(){localStorage.setItem(LS_KEY,JSON.stringify(DB));}
 function gmId(g,i){return 'G'+g+'-'+i;}
@@ -1230,6 +1255,7 @@ function renderPorra(){
   // Reparto de premios: bote = 10€ x participantes; 70% 1º, 20% 2º, 10% penúltimo
   const pot=PARTICIPANTS.length*10;
   const prizes={0:Math.round(pot*0.70),1:Math.round(pot*0.20),[board.length-2]:Math.round(pot*0.10)};
+  const showProb=!!(PROBS&&PROBS.probs);
   let lbHtml='';
   board.forEach((row,i)=>{
     const isme=row.alias===alias;
@@ -1237,10 +1263,17 @@ function renderPorra(){
     const prize=prizes[i];
     const prizeCls=i===0?'p1':i===1?'p2':'p3';
     const prizeBadge=prize?` <span class="lb-prize ${prizeCls}">${prize} €</span>`:'';
+    let probCell='';
+    if(showProb){
+      const pr=PROBS.probs[row.alias];
+      probCell=pr
+        ? `<td class="lb-prob"><b>${fmtPct(pr.win)}</b><div class="psub">🎁 ${fmtPct(pr.prize)}</div></td>`
+        : `<td class="lb-prob psub">—</td>`;
+    }
     lbHtml+=`<tr class="${isme?'lb-me':''}">
       <td class="lb-pos">${pos}</td>
       <td><b>${esc(row.alias)}</b>${isme?' <span class="lb-tag">tú</span>':''}${prizeBadge}</td>
-      <td class="ptot">${fmtPts(row.total)}</td></tr>`;
+      <td class="ptot">${fmtPts(row.total)}</td>${probCell}</tr>`;
   });
   let teamHtml='';
   r.teamRows.forEach(c=>{
@@ -1288,8 +1321,9 @@ function renderPorra(){
     <div class="scorers-wrap porra-sec">
       <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
       <p class="lb-pot">💰 Bote: <b>${pot} €</b> · 🥇 ${prizes[0]} € · 🥈 ${prizes[1]} € · 💩 penúltimo ${prizes[board.length-2]} €</p>
+      ${showProb?`<p class="porra-note lb-prob-note">🏆 <b>= probabilidad de ganar</b> la porra (quedar 1.º) · 🎁 = probabilidad de <b>llevarse premio</b> (1.º, 2.º o penúltimo). Se calcula una vez al día con los resultados oficiales, la fuerza de cada selección y su forma en el torneo, simulando miles de veces las eliminatorias que faltan. Ojo: ir primero ahora no siempre es la mayor probabilidad de ganar — depende de qué selecciones tuyas sigan vivas.${PROBS.updated?` <span class="psub">(actualizado ${esc(PROBS.updated)})</span>`:''}</p>`:''}
       <table class="scorers porra-table lb-table"><thead><tr>
-        <th>#</th><th>Jugador</th><th>Pts</th>
+        <th>#</th><th>Jugador</th><th>Pts</th>${showProb?'<th>🏆 Ganar</th>':''}
       </tr></thead><tbody>${lbHtml}</tbody></table>
     </div>
 
@@ -1516,6 +1550,7 @@ function toast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.c
 document.getElementById('btn-update').onclick=async()=>{
   const btn=document.getElementById('btn-update');const old=btn.textContent;btn.textContent='⏳ Buscando…';btn.disabled=true;
   const r=await loadOfficial();
+  await loadProbs();
   btn.textContent=old;btn.disabled=false;
   if(r.count){renderAll();toast(`✅ ${r.count} resultado(s) oficial(es) actualizados${r.updated?' · '+r.updated:''}`);}
   else if(r.error){toast('⚠️ No se pudo leer official.json');}
@@ -1613,6 +1648,8 @@ document.getElementById('btn-demo').onclick=()=>{
 renderAll();
 // Cargar calendario (fechas/horas) y refrescar la pestaña Fechas
 loadSchedule().then(()=>renderSchedule());
+// Cargar probabilidades de victoria (probabilities.json) y refrescar la Porra
+loadProbs().then(p=>{if(p)renderPorra();});
 // Cargar resultados oficiales del agente y refrescar
 loadOfficial().then(r=>{
   if(r.count){
