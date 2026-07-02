@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01 09:05",
+  "updated": "2026-07-02 09:35",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -15953,7 +15953,8 @@
             }
           ]
         }
-      }
+      },
+      "fifa": "https://www.fifa.com/es/watch/3ypNkN0kvF5ZdsUFlQCJR5"
     },
     "M76": {
       "h": 2,
@@ -16810,6 +16811,649 @@
               "out": "Nilson Angulo",
               "in": "Kendry Paez",
               "minute": "79"
+            }
+          ]
+        }
+      },
+      "fifa": "https://www.fifa.com/es/watch/3pQ3bqbgJiqBO8ZCJSS1Pf"
+    },
+    "M80": {
+      "h": 2,
+      "a": 1,
+      "src": "ESPN",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Brian Cipenga",
+          "minute": "7",
+          "assist": "Chancel Mbemba"
+        },
+        {
+          "team": "h",
+          "name": "Harry Kane",
+          "minute": "75",
+          "assist": "Anthony Gordon"
+        },
+        {
+          "team": "h",
+          "name": "Harry Kane",
+          "minute": "86",
+          "assist": "Anthony Gordon"
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "h",
+          "name": "Jude Bellingham",
+          "minute": "19"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Noah Sadiki",
+          "minute": "28"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Jordan Pickford",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Ezri Konsa",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Nico O'Reilly",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Marc Guehi",
+              "pos": "DEF"
+            },
+            {
+              "n": 25,
+              "name": "Djed Spence",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Declan Rice",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Elliot Anderson",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Jude Bellingham",
+              "pos": "MED"
+            },
+            {
+              "n": 20,
+              "name": "Noni Madueke",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Marcus Rashford",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Harry Kane",
+              "pos": "DEL",
+              "cap": true
+            }
+          ],
+          "subs": [
+            {
+              "out": "Marcus Rashford",
+              "in": "Anthony Gordon",
+              "minute": "61"
+            },
+            {
+              "out": "Noni Madueke",
+              "in": "Bukayo Saka",
+              "minute": "61"
+            },
+            {
+              "out": "Djed Spence",
+              "in": "Eberechi Eze",
+              "minute": "71"
+            },
+            {
+              "out": "Declan Rice",
+              "in": "John Stones",
+              "minute": "90+1"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-3-3",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Lionel Mpasi",
+              "pos": "POR"
+            },
+            {
+              "n": 2,
+              "name": "Aaron Wan-Bissaka",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Axel Tuanzebe",
+              "pos": "DEF"
+            },
+            {
+              "n": 22,
+              "name": "Chancel Mbemba",
+              "pos": "DEF"
+            },
+            {
+              "n": 26,
+              "name": "Arthur Masuaku",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Ngalayel Mukau",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Samuel Moutoussamy",
+              "pos": "MED"
+            },
+            {
+              "n": 15,
+              "name": "Noah Sadiki",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Nathanael Mbuku",
+              "pos": "DEL"
+            },
+            {
+              "n": 9,
+              "name": "Brian Cipenga",
+              "pos": "DEL"
+            },
+            {
+              "n": 20,
+              "name": "Yoane Wissa",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Nathanael Mbuku",
+              "in": "Meschack Elia",
+              "minute": "64"
+            },
+            {
+              "out": "Brian Cipenga",
+              "in": "Theo Bongonda",
+              "minute": "76"
+            },
+            {
+              "out": "Ngalayel Mukau",
+              "in": "Edo Kayembe",
+              "minute": "76"
+            },
+            {
+              "out": "Arthur Masuaku",
+              "in": "Joris Kayembe",
+              "minute": "89"
+            },
+            {
+              "out": "Samuel Moutoussamy",
+              "in": "Fiston Mayele",
+              "minute": "89"
+            }
+          ]
+        }
+      }
+    },
+    "M81": {
+      "h": 2,
+      "a": 0,
+      "src": "FIFA",
+      "scorers": [
+        {
+          "team": "h",
+          "name": "Folarin Balogun",
+          "minute": "45",
+          "assist": "Malik Tillman"
+        },
+        {
+          "team": "h",
+          "name": "Malik Tillman",
+          "minute": "82",
+          "assist": ""
+        }
+      ],
+      "cards": [
+        {
+          "type": "red",
+          "team": "h",
+          "name": "Folarin Balogun",
+          "minute": "64"
+        },
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Stjepan Radeljic",
+          "minute": "81"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-3-3",
+          "xi": [
+            {
+              "n": 24,
+              "name": "Matt Freese",
+              "pos": "POR"
+            },
+            {
+              "n": 16,
+              "name": "Alex Freeman",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Chris Richards",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Tim Ream",
+              "pos": "DEF",
+              "cap": true
+            },
+            {
+              "n": 5,
+              "name": "Antonee Robinson",
+              "pos": "DEF"
+            },
+            {
+              "n": 17,
+              "name": "Malik Tillman",
+              "pos": "MED"
+            },
+            {
+              "n": 4,
+              "name": "Tyler Adams",
+              "pos": "MED"
+            },
+            {
+              "n": 2,
+              "name": "Sergino Dest",
+              "pos": "MED"
+            },
+            {
+              "n": 8,
+              "name": "Weston McKennie",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Christian Pulisic",
+              "pos": "DEL"
+            },
+            {
+              "n": 20,
+              "name": "Folarin Balogun",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Sergino Dest",
+              "in": "Sebastian Berhalter",
+              "minute": "87"
+            },
+            {
+              "out": "Christian Pulisic",
+              "in": "Ricardo Pepi",
+              "minute": "88"
+            },
+            {
+              "out": "Weston McKennie",
+              "in": "Giovanni Reyna",
+              "minute": "90"
+            }
+          ]
+        },
+        "a": {
+          "formation": "5-3-2",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Nikola Vasilj",
+              "pos": "POR"
+            },
+            {
+              "n": 6,
+              "name": "Nikola Katic",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Stjepan Radeljic",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Tarik Muharemovic",
+              "pos": "DEF"
+            },
+            {
+              "n": 13,
+              "name": "Sead Dedic",
+              "pos": "DEF"
+            },
+            {
+              "n": 15,
+              "name": "Sead Kolasinac",
+              "pos": "DEF"
+            },
+            {
+              "n": 8,
+              "name": "Armin Gigovic",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Ivan Sunjic",
+              "pos": "MED"
+            },
+            {
+              "n": 18,
+              "name": "Kerim Alajbegovic",
+              "pos": "MED"
+            },
+            {
+              "n": 9,
+              "name": "Edin Dzeko",
+              "pos": "DEL",
+              "cap": true
+            },
+            {
+              "n": 11,
+              "name": "Ermedin Demirovic",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Armin Gigovic",
+              "in": "Esmir Bajraktarevic",
+              "minute": "51"
+            },
+            {
+              "out": "Edin Dzeko",
+              "in": "Ermin Mahmic",
+              "minute": "51"
+            },
+            {
+              "out": "Ivan Sunjic",
+              "in": "Benjamin Tahirovic",
+              "minute": "51"
+            },
+            {
+              "out": "Nikola Katic",
+              "in": "Amar Memic",
+              "minute": "75"
+            },
+            {
+              "out": "Sead Kolasinac",
+              "in": "Haris Tabakovic",
+              "minute": "75"
+            }
+          ]
+        }
+      }
+    },
+    "M82": {
+      "h": 3,
+      "a": 2,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/3scjQ5v59JVm8ZY4LYKfZX",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Habib Diarra",
+          "minute": "25",
+          "assist": "Ismaila Sarr"
+        },
+        {
+          "team": "a",
+          "name": "Ismaila Sarr",
+          "minute": "51",
+          "assist": ""
+        },
+        {
+          "team": "h",
+          "name": "Romelu Lukaku",
+          "minute": "86",
+          "assist": "Thomas Meunier"
+        },
+        {
+          "team": "h",
+          "name": "Youri Tielemans",
+          "minute": "89",
+          "assist": "Leandro Trossard"
+        },
+        {
+          "team": "h",
+          "name": "Youri Tielemans",
+          "minute": "120+5",
+          "assist": "",
+          "pk": true
+        }
+      ],
+      "cards": [
+        {
+          "type": "yellow",
+          "team": "a",
+          "name": "Lamine Camara",
+          "minute": "70"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "formation": "4-2-3-1",
+          "xi": [
+            {
+              "n": 1,
+              "name": "Thibaut Courtois",
+              "pos": "POR"
+            },
+            {
+              "n": 21,
+              "name": "Timothy Castagne",
+              "pos": "DEF"
+            },
+            {
+              "n": 3,
+              "name": "Arthur Theate",
+              "pos": "DEF"
+            },
+            {
+              "n": 4,
+              "name": "Brandon Mechele",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Maxim De Cuyper",
+              "pos": "DEF"
+            },
+            {
+              "n": 8,
+              "name": "Youri Tielemans",
+              "pos": "MED",
+              "cap": true
+            },
+            {
+              "n": 20,
+              "name": "Hans Vanaken",
+              "pos": "MED"
+            },
+            {
+              "n": 7,
+              "name": "Kevin De Bruyne",
+              "pos": "MED"
+            },
+            {
+              "n": 10,
+              "name": "Leandro Trossard",
+              "pos": "MED"
+            },
+            {
+              "n": 11,
+              "name": "Jeremy Doku",
+              "pos": "MED"
+            },
+            {
+              "n": 17,
+              "name": "Charles De Ketelaere",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Charles De Ketelaere",
+              "in": "Romelu Lukaku",
+              "minute": "45"
+            },
+            {
+              "out": "Jeremy Doku",
+              "in": "Dodi Lukebakio",
+              "minute": "56"
+            },
+            {
+              "out": "Kevin De Bruyne",
+              "in": "Nicolas Raskin",
+              "minute": "56"
+            },
+            {
+              "out": "Hans Vanaken",
+              "in": "Mario Stroeykens",
+              "minute": "63"
+            },
+            {
+              "out": "Maxim De Cuyper",
+              "in": "Thomas Meunier",
+              "minute": "78"
+            },
+            {
+              "out": "Leandro Trossard",
+              "in": "Amadou Onana",
+              "minute": "109"
+            }
+          ]
+        },
+        "a": {
+          "formation": "4-3-3",
+          "xi": [
+            {
+              "n": 23,
+              "name": "Mory Diaw",
+              "pos": "POR"
+            },
+            {
+              "n": 15,
+              "name": "Krepin Diatta",
+              "pos": "DEF"
+            },
+            {
+              "n": 6,
+              "name": "Pathe Ciss",
+              "pos": "DEF"
+            },
+            {
+              "n": 19,
+              "name": "Moussa Niakhate",
+              "pos": "DEF"
+            },
+            {
+              "n": 14,
+              "name": "Ismail Jakobs",
+              "pos": "DEF"
+            },
+            {
+              "n": 5,
+              "name": "Idrissa Gueye",
+              "pos": "MED"
+            },
+            {
+              "n": 21,
+              "name": "Habib Diarra",
+              "pos": "MED"
+            },
+            {
+              "n": 26,
+              "name": "Pape Gueye",
+              "pos": "MED"
+            },
+            {
+              "n": 18,
+              "name": "Ismaila Sarr",
+              "pos": "DEL"
+            },
+            {
+              "n": 13,
+              "name": "Iliman Ndiaye",
+              "pos": "DEL"
+            },
+            {
+              "n": 10,
+              "name": "Sadio Mane",
+              "pos": "DEL",
+              "cap": true
+            }
+          ],
+          "subs": [
+            {
+              "out": "Pape Gueye",
+              "in": "Lamine Camara",
+              "minute": "66"
+            },
+            {
+              "out": "Iliman Ndiaye",
+              "in": "Habibou Mbaye",
+              "minute": "73"
+            },
+            {
+              "out": "Habib Diarra",
+              "in": "Pape Matar Sarr",
+              "minute": "73"
+            },
+            {
+              "out": "Ismail Jakobs",
+              "in": "Andy Diouf",
+              "minute": "94"
+            },
+            {
+              "out": "Sadio Mane",
+              "in": "Nicolas Jackson",
+              "minute": "94"
             }
           ]
         }
