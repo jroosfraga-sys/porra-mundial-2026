@@ -1,0 +1,22 @@
+{
+ "updated": "2026-07-02",
+ "source": "FOX Sports / FanDuel — cuotas de ganador del Mundial",
+ "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo equipos aún vivos. simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app. Si falta un equipo, mantiene su fuerza base (RATING + forma).",
+ "outright": {
+  "Francia": 2.8,
+  "Argentina": 4.9,
+  "España": 8.5,
+  "Inglaterra": 10.0,
+  "Brasil": 11.0,
+  "Portugal": 16.0,
+  "Marruecos": 26.0,
+  "Estados Unidos": 28.0,
+  "México": 31.0,
+  "Colombia": 31.0,
+  "Bélgica": 36.0,
+  "Noruega": 41.0,
+  "Suiza": 76.0,
+  "Croacia": 201.0,
+  "Canadá": 226.0
+ }
+}

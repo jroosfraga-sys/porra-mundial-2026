@@ -1321,7 +1321,7 @@ function renderPorra(){
     <div class="scorers-wrap porra-sec">
       <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
       <p class="lb-pot">💰 Bote: <b>${pot} €</b> · 🥇 ${prizes[0]} € · 🥈 ${prizes[1]} € · 💩 penúltimo ${prizes[board.length-2]} €</p>
-      ${showProb?`<p class="porra-note lb-prob-note">🏆 <b>= probabilidad de ganar</b> la porra (quedar 1.º) · 🎁 = probabilidad de <b>llevarse premio</b> (1.º, 2.º o penúltimo). Se calcula una vez al día con los resultados oficiales, la fuerza de cada selección y su forma en el torneo, simulando miles de veces las eliminatorias que faltan. Ojo: ir primero ahora no siempre es la mayor probabilidad de ganar — depende de qué selecciones tuyas sigan vivas.${PROBS.updated?` <span class="psub">(actualizado ${esc(PROBS.updated)})</span>`:''}</p>`:''}
+      ${showProb?`<p class="porra-note lb-prob-note">🏆 <b>= probabilidad de ganar</b> la porra (quedar 1.º) · 🎁 = probabilidad de <b>llevarse premio</b> (1.º, 2.º o penúltimo). Se calcula una vez al día con los resultados oficiales, la fuerza de cada selección${PROBS.oddsUsed?', las cuotas actuales de las casas de apuestas':''} y su forma en el torneo, simulando miles de veces las eliminatorias que faltan. Ojo: ir primero ahora no siempre es la mayor probabilidad de ganar — depende de qué selecciones tuyas sigan vivas.${PROBS.updated?` <span class="psub">(actualizado ${esc(PROBS.updated)})</span>`:''}</p>`:''}
       <table class="scorers porra-table lb-table"><thead><tr>
         <th>#</th><th>Jugador</th><th>Pts</th>${showProb?'<th>🏆 Ganar</th>':''}
       </tr></thead><tbody>${lbHtml}</tbody></table>

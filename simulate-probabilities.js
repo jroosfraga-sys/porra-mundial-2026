@@ -283,8 +283,59 @@ function simulateOnce() {
     if (winSide === 'a') q += advB;
     koPts[an] = (koPts[an] || 0) + q;
   }
-  return koPts;
+  // Campeón (ganador de la final M104), para calibrar con las cuotas del mercado.
+  let champ = null;
+  const rf = koResult(state, 'M104');
+  if (rf) champ = resolveEnd(state, rf === 'h' ? KO.M104.h : KO.M104.a);
+  return { koPts, champ };
 }
+
+/* ---- Calibración con cuotas actuales de casas de apuestas (opcional) ----
+ * Si existe odds.json con las cuotas de "ganador del Mundial" (decimales) de los
+ * equipos aún vivos, ajustamos la fuerza de cada selección para que la prob. de
+ * campeón del modelo se acerque a la que implica el mercado HOY. Así las cuotas
+ * actualizadas (no solo las de antes del torneo) influyen en las probabilidades.
+ * Si no hay odds.json, no se toca nada: se usa RATING + forma. */
+let ODDS_USED = false, ODDS_INFO = null;
+function loadOdds() { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'odds.json'), 'utf8')); } catch (e) { return null; } }
+function calibrateToMarket() {
+  const odds = loadOdds();
+  const outright = odds && odds.outright;
+  if (!outright || typeof outright !== 'object') return;
+  // Equipos ya eliminados (perdedores de un cruce KO sellado): no se calibran.
+  const eliminated = new Set();
+  for (const id in SEALED_KO) {
+    const r = koResult(SEALED_KO, id); if (!r) continue;
+    const loser = resolveEnd(SEALED_KO, r === 'h' ? KO[id].a : KO[id].h);
+    if (loser) eliminated.add(loser);
+  }
+  // Prob. implícita del mercado = 1/cuota, normalizada (se quita el margen) sobre
+  // los equipos listados que sigan vivos y existan en el torneo.
+  const raw = {}; let sum = 0;
+  for (const team in outright) {
+    const c = +outright[team];
+    if (!TEAM_INDEX[team] || eliminated.has(team) || !(c > 1)) continue;
+    raw[team] = 1 / c; sum += raw[team];
+  }
+  const teams = Object.keys(raw);
+  if (teams.length < 3 || sum <= 0) return;   // pocas cuotas fiables → no calibrar
+  const q = {}; teams.forEach(t => q[t] = raw[t] / sum);
+  // Iteramos: simular rápido → medir prob. campeón del modelo → empujar la fuerza.
+  const NF = 12000, ITERS = 3, C = 80, CLAMP = 30, eps = 1 / NF;
+  for (let it = 0; it < ITERS; it++) {
+    const champ = {};
+    for (let s = 0; s < NF; s++) { const c = simulateOnce().champ; if (c) champ[c] = (champ[c] || 0) + 1; }
+    teams.forEach(t => {
+      const p = (champ[t] || 0) / NF;
+      let d = C * Math.log(Math.max(q[t], eps) / Math.max(p, eps));
+      d = Math.max(-CLAMP, Math.min(CLAMP, d));
+      RATING_EFF[t] = (RATING_EFF[t] != null ? RATING_EFF[t] : 1500) + d;
+    });
+  }
+  ODDS_USED = true;
+  ODDS_INFO = { source: odds.source || null, oddsUpdated: odds.updated || null, teams: teams.length };
+}
+calibrateToMarket();
 
 /* ---- Montecarlo ---- */
 const winCount = new Array(PART.length).fill(0);
@@ -294,7 +345,7 @@ const penultIdx = nPart - 2;   // penúltimo puesto (cobra premio)
 
 const order = new Array(nPart);
 for (let s = 0; s < N_SIMS; s++) {
-  const koPts = simulateOnce();
+  const { koPts } = simulateOnce();
   // total por participante
   for (let i = 0; i < nPart; i++) {
     let t = PART[i].base;
@@ -317,7 +368,9 @@ PART.forEach((p, i) => { probs[p.alias] = { win: +(winCount[i] / N_SIMS).toFixed
 const out = {
   updated: OFFICIAL.updated || null,
   sims: N_SIMS,
-  model: 'Elo (ranking FIFA + cuotas) + forma real del torneo; Montecarlo del cuadro restante. Solo resultados oficiales.',
+  model: 'Elo (ranking FIFA + cuotas) + forma real del torneo' + (ODDS_USED ? ' + cuotas de mercado actualizadas' : '') + '; Montecarlo del cuadro restante. Solo resultados oficiales.',
+  oddsUsed: ODDS_USED,
+  oddsInfo: ODDS_INFO,
   probs
 };
 fs.writeFileSync(path.join(DIR, 'probabilities.json'), JSON.stringify(out, null, 1));
@@ -325,5 +378,6 @@ fs.writeFileSync(path.join(DIR, 'probabilities.json'), JSON.stringify(out, null,
 // Reporte por consola (top 8 por prob. de ganar)
 const rankByWin = PART.map((p, i) => ({ alias: p.alias, win: winCount[i] / N_SIMS, prize: prizeCount[i] / N_SIMS })).sort((a, b) => b.win - a.win);
 console.log('Simulaciones:', N_SIMS, '· KO restantes por simular:', KO_IDS.filter(id => !SEALED_KO[id]).length);
+console.log('Cuotas de mercado:', ODDS_USED ? ('SÍ (' + ODDS_INFO.teams + ' equipos' + (ODDS_INFO.oddsUpdated ? ', ' + ODDS_INFO.oddsUpdated : '') + ')') : 'no (solo RATING + forma)');
 console.log('Top 8 prob. de GANAR la porra:');
 rankByWin.slice(0, 8).forEach((r, i) => console.log(`  ${i + 1}. ${r.alias}: ${(r.win * 100).toFixed(1)}% ganar · ${(r.prize * 100).toFixed(1)}% premio`));
