@@ -1,37 +1,37 @@
 {
- "updated": "2026-07-02 09:35",
+ "updated": "2026-07-03 10:15",
  "sims": 50000,
  "model": "Elo (ranking FIFA + cuotas) + forma real del torneo + cuotas de mercado actualizadas; Montecarlo del cuadro restante. Solo resultados oficiales.",
  "oddsUsed": true,
  "oddsInfo": {
-  "source": "FOX Sports / FanDuel — cuotas de ganador del Mundial",
-  "oddsUpdated": "2026-07-02",
-  "teams": 15
+  "source": "BetMGM / Yahoo Sports — cuotas de ganador del Mundial (entrando en octavos)",
+  "oddsUpdated": "2026-07-03",
+  "teams": 19
  },
  "probs": {
   "Dudu": {
    "win": 0,
-   "prize": 0.0425
+   "prize": 0.0423
   },
   "Angelitros": {
    "win": 0,
-   "prize": 0.0005
+   "prize": 0.0008
   },
   "Antoñito": {
    "win": 0,
-   "prize": 0.0014
+   "prize": 0.0017
   },
   "Felipitoooo": {
    "win": 0,
-   "prize": 0.0088
+   "prize": 0.0114
   },
   "Roberto Larcos": {
    "win": 0.0001,
-   "prize": 0.0255
+   "prize": 0.0294
   },
   "Adri93": {
-   "win": 0.0491,
-   "prize": 0.1267
+   "win": 0.0627,
+   "prize": 0.152
   },
   "Bizcochito santos": {
    "win": 0,
@@ -39,27 +39,27 @@
   },
   "Nach": {
    "win": 0,
-   "prize": 0.0119
+   "prize": 0.0103
   },
   "MarioR": {
-   "win": 0.3443,
-   "prize": 0.8165
+   "win": 0.3769,
+   "prize": 0.8309
   },
   "Octavio": {
    "win": 0,
-   "prize": 0.0323
+   "prize": 0.0424
   },
   "Samubv": {
    "win": 0,
-   "prize": 0.0001
+   "prize": 0
   },
   "Franute": {
-   "win": 0.0029,
-   "prize": 0.0129
+   "win": 0.0055,
+   "prize": 0.0195
   },
   "Fidel": {
-   "win": 0.0003,
-   "prize": 0.0026
+   "win": 0.0007,
+   "prize": 0.0047
   },
   "Martin98": {
    "win": 0,
@@ -67,7 +67,7 @@
   },
   "Daniel Villarreal": {
    "win": 0,
-   "prize": 0.1197
+   "prize": 0.1273
   },
   "Garrota": {
    "win": 0,
@@ -75,87 +75,87 @@
   },
   "Peluka19": {
    "win": 0,
-   "prize": 0.028
+   "prize": 0.035
   },
   "Alex :)": {
    "win": 0,
-   "prize": 0.0012
+   "prize": 0.0006
   },
   "Cocu": {
-   "win": 0.0002,
-   "prize": 0.0011
+   "win": 0,
+   "prize": 0
   },
   "El calito": {
-   "win": 0.0001,
-   "prize": 0.0007
+   "win": 0,
+   "prize": 0.0001
   },
   "Juanmaldini": {
    "win": 0,
-   "prize": 0.0855
+   "prize": 0.1025
   },
   "psansito": {
-   "win": 0.0017,
-   "prize": 0.0352
+   "win": 0.003,
+   "prize": 0.0476
   },
   "Empresario de éxito": {
    "win": 0,
-   "prize": 0.5384
+   "prize": 0.5107
   },
   "Becquerbauer": {
-   "win": 0.0082,
-   "prize": 0.0682
+   "win": 0.0119,
+   "prize": 0.0895
   },
   "Chino": {
    "win": 0,
    "prize": 0
   },
   "Gsus94": {
-   "win": 0.0043,
-   "prize": 0.0167
+   "win": 0.0063,
+   "prize": 0.0229
   },
   "Andresrn": {
    "win": 0,
-   "prize": 0.0061
+   "prize": 0.0052
   },
   "Poza": {
-   "win": 0.0261,
-   "prize": 0.0793
+   "win": 0.0108,
+   "prize": 0.0372
   },
   "Roos": {
-   "win": 0,
-   "prize": 0.0004
-  },
-  "Messi lover": {
-   "win": 0.5248,
-   "prize": 0.731
-  },
-  "FrancisBacon18": {
-   "win": 0,
-   "prize": 0.0893
-  },
-  "Al-Var": {
-   "win": 0.0002,
-   "prize": 0.001
-  },
-  "QuiQueen": {
-   "win": 0.0312,
-   "prize": 0.0664
-  },
-  "Pau": {
-   "win": 0.0031,
-   "prize": 0.0108
-  },
-  "Mataleanto": {
    "win": 0.0001,
    "prize": 0.0008
   },
+  "Messi lover": {
+   "win": 0.4816,
+   "prize": 0.6875
+  },
+  "FrancisBacon18": {
+   "win": 0,
+   "prize": 0.065
+  },
+  "Al-Var": {
+   "win": 0,
+   "prize": 0.0004
+  },
+  "QuiQueen": {
+   "win": 0.033,
+   "prize": 0.0654
+  },
+  "Pau": {
+   "win": 0.0056,
+   "prize": 0.0193
+  },
+  "Mataleanto": {
+   "win": 0.0003,
+   "prize": 0.0015
+  },
   "Javito": {
-   "win": 0.0001,
-   "prize": 0.0155
+   "win": 0,
+   "prize": 0.0205
   },
   "No hay que saber de futbol para ganarasi.": {
-   "win": 0.0032,
-   "prize": 0.0228
+   "win": 0.0017,
+   "prize": 0.0152
   },
   "🦁1️⃣4️⃣": {
    "win": 0,
