@@ -936,6 +936,11 @@ function renderStats(){
     return base+(isNaN(m)?0:m)*60000;
   };
   Object.keys(DB.det).forEach(mid=>{
+    // Solo contar partidos OFICIALES (sellados). Evita que un detalle guardado
+    // en localStorage de un partido no oficial (rellenado a mano o resto de una
+    // versión anterior) infle las cifras de goles/asistencias/tarjetas.
+    const st=mid.startsWith('M')?DB.ko[mid]:DB.gs[mid];
+    if(!st||!st.sealed)return;
     const d=DB.det[mid];const tn=teamNameForMatch(mid);
     const teamOf=side=>tn?tn[side]||'':'';
     (d.scorers||[]).forEach(sc=>{
