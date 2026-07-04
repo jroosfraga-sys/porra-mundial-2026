@@ -1,6 +1,6 @@
 {
- "updated": "2026-07-03",
- "source": "BetMGM / Yahoo Sports — cuotas de ganador del Mundial (entrando en octavos)",
+ "updated": "2026-07-04",
+ "source": "Yahoo Sports / FOX Sports — cuotas de ganador del Mundial (octavos de final)",
  "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo equipos aún vivos. simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app. Si falta un equipo, mantiene su fuerza base (RATING + forma).",
  "outright": {
   "Francia": 2.88,
@@ -17,10 +17,7 @@
   "Colombia": 34.0,
   "Suiza": 67.0,
   "Canadá": 101.0,
-  "Australia": 201.0,
   "Paraguay": 201.0,
-  "Egipto": 251.0,
-  "Ghana": 351.0,
-  "Cabo Verde": 501.0
+  "Egipto": 251.0
  }
 }
