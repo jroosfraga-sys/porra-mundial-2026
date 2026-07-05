@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-04 11:35",
+ "updated": "2026-07-05 11:20",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -18638,6 +18638,306 @@
        "minute": "120"
       }
      ]
+    }
+   }
+  },
+  "M89": {
+   "h": 0,
+   "a": 1,
+   "src": "FIFA",
+   "scorers": [
+    {
+     "team": "a",
+     "name": "Kylian Mbappe",
+     "minute": "70",
+     "pk": true,
+     "assist": ""
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Bradley Barcola",
+     "minute": ""
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Manu Kone",
+     "minute": ""
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Michael Olise",
+     "minute": ""
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "5-4-1",
+     "xi": [
+      {
+       "name": "Orlando Gill",
+       "pos": "POR"
+      },
+      {
+       "name": "Gustavo Velazquez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Gustavo Gomez",
+       "pos": "DEF",
+       "cap": true
+      },
+      {
+       "name": "Omar Alderete",
+       "pos": "DEF"
+      },
+      {
+       "name": "Juan Caceres",
+       "pos": "DEF"
+      },
+      {
+       "name": "Junior Alonso",
+       "pos": "DEF"
+      },
+      {
+       "name": "Miguel Almiron",
+       "pos": "MED"
+      },
+      {
+       "name": "Andres Cubas",
+       "pos": "MED"
+      },
+      {
+       "name": "Diego Gomez",
+       "pos": "MED"
+      },
+      {
+       "name": "Matias Galarza",
+       "pos": "MED"
+      },
+      {
+       "name": "Julio Enciso",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Omar Alderete",
+       "in": "Canale",
+       "minute": "58"
+      },
+      {
+       "out": "Julio Enciso",
+       "in": "Caballero",
+       "minute": "61"
+      },
+      {
+       "out": "Diego Gomez",
+       "in": "Mauricio",
+       "minute": "71"
+      },
+      {
+       "out": "Miguel Almiron",
+       "in": "Avalos",
+       "minute": "71"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Mike Maignan",
+       "pos": "POR"
+      },
+      {
+       "name": "Dayot Upamecano",
+       "pos": "DEF"
+      },
+      {
+       "name": "William Saliba",
+       "pos": "DEF"
+      },
+      {
+       "name": "Jules Kounde",
+       "pos": "DEF"
+      },
+      {
+       "name": "Lucas Digne",
+       "pos": "DEF"
+      },
+      {
+       "name": "Manu Kone",
+       "pos": "MED"
+      },
+      {
+       "name": "Adrien Rabiot",
+       "pos": "MED"
+      },
+      {
+       "name": "Ousmane Dembele",
+       "pos": "MED"
+      },
+      {
+       "name": "Michael Olise",
+       "pos": "MED"
+      },
+      {
+       "name": "Bradley Barcola",
+       "pos": "MED"
+      },
+      {
+       "name": "Kylian Mbappe",
+       "pos": "DEL",
+       "cap": true
+      }
+     ],
+     "subs": [
+      {
+       "out": "Bradley Barcola",
+       "in": "Desire Doue",
+       "minute": "61"
+      },
+      {
+       "out": "Ousmane Dembele",
+       "in": "Rayan Cherki",
+       "minute": "84"
+      }
+     ]
+    }
+   }
+  },
+  "M90": {
+   "h": 0,
+   "a": 3,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/1Yw1ocUULCrvW3PYSDX0pL",
+   "scorers": [
+    {
+     "team": "a",
+     "name": "Azzedine Ounahi",
+     "minute": "49",
+     "assist": "Achraf Hakimi"
+    },
+    {
+     "team": "a",
+     "name": "Azzedine Ounahi",
+     "minute": "81",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Soufiane Rahimi",
+     "minute": "90+8",
+     "assist": ""
+    }
+   ],
+   "cards": [],
+   "lineups": {
+    "h": {
+     "formation": "4-4-2",
+     "xi": [
+      {
+       "name": "Maxime Crepeau",
+       "pos": "POR"
+      },
+      {
+       "name": "Alistair Johnston",
+       "pos": "DEF"
+      },
+      {
+       "name": "Moise Bombito",
+       "pos": "DEF"
+      },
+      {
+       "name": "Luc De Fougerolles",
+       "pos": "DEF"
+      },
+      {
+       "name": "Richie Laryea",
+       "pos": "DEF"
+      },
+      {
+       "name": "Tajon Buchanan",
+       "pos": "MED"
+      },
+      {
+       "name": "Niko Sigur",
+       "pos": "MED"
+      },
+      {
+       "name": "Stephen Eustaquio",
+       "pos": "MED"
+      },
+      {
+       "name": "Ali Ahmed",
+       "pos": "MED"
+      },
+      {
+       "name": "Jonathan David",
+       "pos": "DEL"
+      },
+      {
+       "name": "Tani Oluwaseyi",
+       "pos": "DEL"
+      }
+     ],
+     "subs": []
+    },
+    "a": {
+     "formation": "4-3-3",
+     "xi": [
+      {
+       "name": "Yassine Bounou",
+       "pos": "POR"
+      },
+      {
+       "name": "Achraf Hakimi",
+       "pos": "DEF",
+       "cap": true
+      },
+      {
+       "name": "Diop",
+       "pos": "DEF"
+      },
+      {
+       "name": "Redouane Halhal",
+       "pos": "DEF"
+      },
+      {
+       "name": "Noussair Mazraoui",
+       "pos": "DEF"
+      },
+      {
+       "name": "Ayyoub Bouaddi",
+       "pos": "MED"
+      },
+      {
+       "name": "Neil El Aynaoui",
+       "pos": "MED"
+      },
+      {
+       "name": "Azzedine Ounahi",
+       "pos": "MED"
+      },
+      {
+       "name": "Brahim Diaz",
+       "pos": "DEL"
+      },
+      {
+       "name": "Ismael Saibari",
+       "pos": "DEL"
+      },
+      {
+       "name": "Bilal El Khannouss",
+       "pos": "DEL"
+      }
+     ],
+     "subs": []
     }
    }
   }
