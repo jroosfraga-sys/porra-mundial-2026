@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-06 10:40",
+ "updated": "2026-07-06 11:05",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -14828,7 +14828,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Jefferson Lerma",
+       "in": "Richard Rios",
+       "minute": "60"
+      },
+      {
+       "out": "Jhon Cordoba",
+       "in": "Luis Suarez",
+       "minute": "60"
+      },
+      {
+       "out": "Jhon Arias",
+       "in": "Kevin Castano",
+       "minute": "76"
+      },
+      {
+       "out": "James Rodriguez",
+       "in": "Juan Fernando Quintero",
+       "minute": "76"
+      },
+      {
+       "out": "Santiago Arias",
+       "in": "Daniel Munoz",
+       "minute": "87"
+      }
+     ]
     },
     "a": {
      "formation": "",
@@ -14878,7 +14904,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Joao Cancelo",
+       "in": "Diogo Dalot",
+       "minute": "45"
+      },
+      {
+       "out": "Ruben Neves",
+       "in": "Joao Neves",
+       "minute": "45"
+      },
+      {
+       "out": "Vitinha",
+       "in": "Samu Costa",
+       "minute": "70"
+      },
+      {
+       "out": "Joao Felix",
+       "in": "Rafael Leao",
+       "minute": "70"
+      },
+      {
+       "out": "Nuno Mendes",
+       "in": "Matheus Nunes",
+       "minute": "90+2"
+      }
+     ]
     }
    }
   },
@@ -14993,7 +15045,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "C. Bakambu",
+       "in": "F. Mayele",
+       "minute": "51"
+      },
+      {
+       "out": "B. Cipenga",
+       "in": "T. Bongonda",
+       "minute": "72"
+      },
+      {
+       "out": "N. Mbuku",
+       "in": "M. Elia",
+       "minute": "72"
+      },
+      {
+       "out": "S. Moutoussamy",
+       "in": "N. Mukau",
+       "minute": "72"
+      },
+      {
+       "out": "A. Masuaku",
+       "in": "J. Kayembe",
+       "minute": "83"
+      }
+     ]
     },
     "a": {
      "formation": "4-4-2",
@@ -15043,7 +15121,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "D. Khamdamov",
+       "in": "A. Ganiev",
+       "minute": "59"
+      },
+      {
+       "out": "O. Shukurov",
+       "in": "O. Xamrobekov",
+       "minute": "59"
+      },
+      {
+       "out": "A. Fayzullaev",
+       "in": "O. Urunov",
+       "minute": "73"
+      },
+      {
+       "out": "A. Mozgovoy",
+       "in": "J. Iskanderov",
+       "minute": "82"
+      },
+      {
+       "out": "J. Urozov",
+       "in": "I. Sergeev",
+       "minute": "82"
+      }
+     ]
     }
    }
   },
@@ -15129,7 +15233,28 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "T. Rodriguez",
+       "in": "J. Fajardo",
+       "minute": "45"
+      },
+      {
+       "out": "J. Rodriguez",
+       "in": "A. Londono",
+       "minute": "71"
+      },
+      {
+       "out": "J. Gutierrez",
+       "in": "E. Davis",
+       "minute": "88"
+      },
+      {
+       "out": "C. Harvey",
+       "in": "A. Quintero",
+       "minute": "88"
+      }
+     ]
     },
     "a": {
      "formation": "",
@@ -15179,7 +15304,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Bukayo Saka",
+       "in": "Noni Madueke",
+       "minute": "63"
+      },
+      {
+       "out": "Jarell Quansah",
+       "in": "Djed Spence",
+       "minute": "63"
+      },
+      {
+       "out": "Jude Bellingham",
+       "in": "Eberechi Eze",
+       "minute": "71"
+      },
+      {
+       "out": "Elliot Anderson",
+       "in": "Jordan Henderson",
+       "minute": "84"
+      },
+      {
+       "out": "Harry Kane",
+       "in": "Ollie Watkins",
+       "minute": "84"
+      }
+     ]
     }
    }
   },
@@ -15275,7 +15426,28 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Ante Budimir",
+       "in": "Igor Matanovic",
+       "minute": "66"
+      },
+      {
+       "out": "Mateo Kovacic",
+       "in": "Mario Pasalic",
+       "minute": "78"
+      },
+      {
+       "out": "Nikola Vlasic",
+       "in": "Josko Gvardiol",
+       "minute": "88"
+      },
+      {
+       "out": "Martin Baturina",
+       "in": "Marco Pasalic",
+       "minute": "88"
+      }
+     ]
     },
     "a": {
      "formation": "",
@@ -15325,7 +15497,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Elisha Owusu",
+       "in": "Fatawu Issahaku",
+       "minute": "45"
+      },
+      {
+       "out": "Jonas Adjetey",
+       "in": "Kojo Peprah Oppong",
+       "minute": "45"
+      },
+      {
+       "out": "Kamaldeen Sulemana",
+       "in": "Ernest Nuamah",
+       "minute": "71"
+      },
+      {
+       "out": "Jordan Ayew",
+       "in": "Brandon Thomas-Asante",
+       "minute": "71"
+      },
+      {
+       "out": "Kwasi Sibo",
+       "in": "Caleb Yirenkyi",
+       "minute": "85"
+      }
+     ]
     }
    }
   },
@@ -17048,7 +17246,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/6B2He3tAKrjUSIRJYbFNUV"
   },
   "M81": {
    "h": 2,
@@ -17248,7 +17447,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/5C4EUTQtunUpC47YeP9Uj1"
   },
   "M82": {
    "h": 3,
@@ -17890,7 +18090,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/3vt1Bl4M0VL5MPVPi86jsL"
   },
   "M85": {
    "h": 2,
@@ -18100,7 +18301,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/6la26pHrweIQnxNsHSFR28"
   },
   "M86": {
    "h": 3,
@@ -18298,7 +18500,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/2MYDEoxhtcLI6AW0hGG1yP"
   },
   "M87": {
    "h": 1,
@@ -18453,7 +18656,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/4JaxdQNgyF6wsiYLbU0p2m"
   },
   "M88": {
    "h": 1,
@@ -18639,7 +18843,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/2dIWdC0fggkK67mkHVpFtb"
   },
   "M89": {
    "h": 0,
@@ -18809,7 +19014,8 @@
       }
      ]
     }
-   }
+   },
+   "fifa": "https://www.fifa.com/es/watch/6cm1kVkhlVgrFkP3Cdiqoh"
   },
   "M90": {
    "h": 0,
@@ -18886,7 +19092,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Tani Oluwaseyi",
+       "in": "Cyle Larin",
+       "minute": "63"
+      },
+      {
+       "out": "Ali Ahmed",
+       "in": "Promise David",
+       "minute": "78"
+      },
+      {
+       "out": "Richie Laryea",
+       "in": "Jacob Shaffelburg",
+       "minute": "78"
+      },
+      {
+       "out": "Tajon Buchanan",
+       "in": "Jayden Nelson",
+       "minute": "87"
+      },
+      {
+       "out": "Niko Sigur",
+       "in": "Jonathan Osorio",
+       "minute": "87"
+      }
+     ]
     },
     "a": {
      "formation": "4-3-3",
@@ -18937,7 +19169,33 @@
        "pos": "DEL"
       }
      ],
-     "subs": []
+     "subs": [
+      {
+       "out": "Ismael Saibari",
+       "in": "Soufiane Rahimi",
+       "minute": "22"
+      },
+      {
+       "out": "Ayyoub Bouaddi",
+       "in": "Sofyan Amrabat",
+       "minute": "63"
+      },
+      {
+       "out": "Bilal El Khannouss",
+       "in": "Chemsdine Talbi",
+       "minute": "63"
+      },
+      {
+       "out": "Azzedine Ounahi",
+       "in": "Samir El Mourabet",
+       "minute": "87"
+      },
+      {
+       "out": "Diop",
+       "in": "Marwane Saadane",
+       "minute": "87"
+      }
+     ]
     }
    }
   },
