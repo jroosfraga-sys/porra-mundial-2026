@@ -169,6 +169,35 @@
   .lb-prize.p1{background:rgba(245,180,0,.18);color:#a87b00;border:1px solid rgba(245,180,0,.45)}
   .lb-prize.p2{background:rgba(154,166,182,.20);color:#5e6b7e;border:1px solid rgba(154,166,182,.5)}
   .lb-prize.p3{background:rgba(255,61,154,.14);color:#c2186e;border:1px solid rgba(255,61,154,.4)}
+  /* ===== Podio final de la porra (aparece cuando se juega la final) ===== */
+  .podium-wrap{background:linear-gradient(160deg,#2a1e5c,#4b2a8f 55%,#7c3aed);border-radius:20px;padding:22px 16px 20px;margin-bottom:16px;box-shadow:0 12px 34px rgba(76,42,143,.4);text-align:center;position:relative;overflow:hidden}
+  .podium-wrap::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(245,180,0,.25),transparent 60%);pointer-events:none}
+  .podium-title{color:#fff;font-size:20px;font-weight:900;margin:0 0 2px;letter-spacing:.3px;position:relative}
+  .podium-sub{color:#e7defc;font-size:12.5px;margin:0 0 18px;position:relative}
+  .podium-sub b{color:var(--gold)}
+  .podium{display:flex;justify-content:center;align-items:flex-end;gap:10px;position:relative;max-width:440px;margin:0 auto}
+  .podium-step{flex:1;display:flex;flex-direction:column;align-items:center}
+  .podium-card{width:100%;background:rgba(255,255,255,.97);border-radius:12px 12px 0 0;padding:11px 6px 10px;box-shadow:0 -3px 14px rgba(0,0,0,.18)}
+  .podium-medal{font-size:30px;line-height:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+  .podium-name{font-weight:900;color:var(--txt);font-size:14px;margin-top:5px;word-break:break-word;line-height:1.15}
+  .podium-pts{font-size:11.5px;color:var(--muted);font-weight:700;margin-top:2px}
+  .podium-role{font-size:9.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+  .podium-prize{display:inline-block;margin-top:6px;font-size:13px;font-weight:900;color:#fff;border-radius:8px;padding:2px 10px}
+  .podium-base{width:100%;border-radius:0 0 4px 4px;display:flex;align-items:flex-start;justify-content:center;padding-top:8px;font-size:26px;font-weight:900;color:rgba(255,255,255,.9)}
+  .podium-step.gold .podium-base{background:linear-gradient(180deg,var(--gold),#c68f00);height:96px}
+  .podium-step.gold .podium-medal{font-size:38px}
+  .podium-step.gold .podium-name{font-size:16px}
+  .podium-step.gold .podium-prize{background:linear-gradient(135deg,#f5b400,#c68f00)}
+  .podium-step.silver .podium-base{background:linear-gradient(180deg,var(--silver),#6e7a8a);height:70px}
+  .podium-step.silver .podium-prize{background:linear-gradient(135deg,#9aa6b6,#6e7a8a)}
+  .podium-step.poop .podium-base{background:linear-gradient(180deg,#b98a55,#8a6236);height:52px}
+  .podium-step.poop .podium-prize{background:linear-gradient(135deg,#c2186e,#8a1250)}
+  @keyframes podiumRise{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .podium-step{animation:podiumRise .5s cubic-bezier(.2,.8,.3,1) both}
+  .podium-step.silver{animation-delay:.05s}
+  .podium-step.gold{animation-delay:.15s}
+  .podium-step.poop{animation-delay:.1s}
+  @media(max-width:430px){.podium-name{font-size:12.5px}.podium-step.gold .podium-name{font-size:13.5px}.podium-medal{font-size:26px}.podium-step.gold .podium-medal{font-size:32px}}
   table.lb-table td.lb-prob{text-align:center;white-space:nowrap;min-width:66px}
   table.lb-table td.lb-prob b{color:var(--purple);font-size:15px;font-weight:900}
   table.lb-table td.lb-prob .psub{display:block;margin-top:1px}
@@ -1249,6 +1278,42 @@ function renderPorraPicker(preselect){
   const cc=document.getElementById('porra-who-cancel');
   if(cc)cc.onclick=()=>renderPorra();
 }
+/* ¿Se ha jugado ya la final (M104) con resultado OFICIAL? */
+function porraFinished(){
+  const f=DB.ko['M104'];
+  return !!(f&&f.sealed&&f.h!==null&&f.h!==''&&f.a!==null&&f.a!=='');
+}
+/* Podio final de la porra: 1.º (oro), 2.º (plata) y penúltimo (💩), los tres
+   premiados. Solo se muestra cuando la final ya se ha jugado oficialmente. */
+function renderPodium(board,prizes){
+  if(!porraFinished()||board.length<3)return '';
+  const goldIdx=0,silverIdx=1,poopIdx=board.length-2;
+  if(poopIdx<=silverIdx)return ''; // muy pocos participantes: evita solapes
+  const champ=koWinnerSealed('M104');
+  const champTxt=champ?`Campeón del Mundo: <b>${champ.flag||''} ${esc(champ.name)}</b>`:'Mundial finalizado';
+  const step=(idx,cls,medal,role,base)=>{
+    const row=board[idx],prize=prizes[idx];
+    return `<div class="podium-step ${cls}">
+      <div class="podium-card">
+        <div class="podium-medal">${medal}</div>
+        <div class="podium-role">${role}</div>
+        <div class="podium-name">${esc(row.alias)}</div>
+        <div class="podium-pts">${fmtPts(row.total)} pts</div>
+        ${prize?`<div class="podium-prize">${prize} €</div>`:''}
+      </div>
+      <div class="podium-base">${base}</div>
+    </div>`;
+  };
+  return `<div class="podium-wrap">
+    <p class="podium-title">🏆 ¡Porra finalizada!</p>
+    <p class="podium-sub">${champTxt}</p>
+    <div class="podium">
+      ${step(silverIdx,'silver','🥈','2.º','2')}
+      ${step(goldIdx,'gold','🥇','Ganador','1')}
+      ${step(poopIdx,'poop','💩','Penúltimo',String(poopIdx+1))}
+    </div>
+  </div>`;
+}
 function renderPorra(){
   const box=document.getElementById('porra-content');if(!box)return;
   const alias=getMyAlias();
@@ -1322,6 +1387,8 @@ function renderPorra(){
     <div class="porra-total"><div class="pt-num">${fmtPts(r.total)}</div><div class="pt-lbl">puntos · ${myPos}.º de ${board.length}</div></div>
     <p class="porra-note">Viendo la porra de <b>${esc(me.alias)}</b>. Solo se cuentan los <b>resultados oficiales</b> (🔒); las predicciones manuales no afectan. Los puntos van apareciendo a medida que se juegan y se actualizan los partidos.</p>
     <button class="pbtn-edit" id="porra-change">🔄 Cambiar de persona</button>
+
+    ${renderPodium(board,prizes)}
 
     <div class="scorers-wrap porra-sec">
       <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
