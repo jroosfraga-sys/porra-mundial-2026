@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-05 11:20",
+ "updated": "2026-07-06 10:40",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -18938,6 +18938,394 @@
       }
      ],
      "subs": []
+    }
+   }
+  },
+  "M91": {
+   "h": 1,
+   "a": 2,
+   "src": "ESPN",
+   "fifa": "https://www.fifa.com/es/watch/2GmG5OiXMG1EuoLtfYSCMf",
+   "scorers": [
+    {
+     "team": "a",
+     "name": "Erling Haaland",
+     "minute": "79",
+     "assist": "Andreas Schjelderup"
+    },
+    {
+     "team": "a",
+     "name": "Erling Haaland",
+     "minute": "90",
+     "assist": "Andreas Schjelderup"
+    },
+    {
+     "team": "h",
+     "name": "Neymar",
+     "minute": "90+10",
+     "pk": true,
+     "assist": ""
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Neymar",
+     "minute": "90+6"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-4-2",
+     "xi": [
+      {
+       "name": "Alisson Becker",
+       "pos": "POR"
+      },
+      {
+       "name": "Marquinhos",
+       "pos": "DEF"
+      },
+      {
+       "name": "Gabriel Magalhaes",
+       "pos": "DEF"
+      },
+      {
+       "name": "Danilo",
+       "pos": "DEF"
+      },
+      {
+       "name": "Douglas Santos",
+       "pos": "DEF"
+      },
+      {
+       "name": "Bruno Guimaraes",
+       "pos": "MED"
+      },
+      {
+       "name": "Casemiro",
+       "pos": "MED"
+      },
+      {
+       "name": "Rayan",
+       "pos": "MED"
+      },
+      {
+       "name": "Gabriel Martinelli",
+       "pos": "MED"
+      },
+      {
+       "name": "Matheus Cunha",
+       "pos": "DEL"
+      },
+      {
+       "name": "Vinicius Junior",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Matheus Cunha",
+       "in": "Endrick",
+       "minute": "58"
+      },
+      {
+       "out": "Gabriel Martinelli",
+       "in": "Neymar",
+       "minute": "67"
+      },
+      {
+       "out": "Rayan",
+       "in": "Danilo Santos",
+       "minute": "67"
+      },
+      {
+       "out": "Bruno Guimaraes",
+       "in": "Ederson",
+       "minute": "79"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-3-3",
+     "xi": [
+      {
+       "name": "Orjan Nyland",
+       "pos": "POR"
+      },
+      {
+       "name": "Kristoffer Ajer",
+       "pos": "DEF"
+      },
+      {
+       "name": "Torbjorn Heggem",
+       "pos": "DEF"
+      },
+      {
+       "name": "David Moller Wolfe",
+       "pos": "DEF"
+      },
+      {
+       "name": "Julian Ryerson",
+       "pos": "DEF"
+      },
+      {
+       "name": "Patrick Berg",
+       "pos": "MED"
+      },
+      {
+       "name": "Sander Berge",
+       "pos": "MED"
+      },
+      {
+       "name": "Martin Odegaard",
+       "pos": "MED"
+      },
+      {
+       "name": "Alexander Sorloth",
+       "pos": "DEL"
+      },
+      {
+       "name": "Antonio Nusa",
+       "pos": "DEL"
+      },
+      {
+       "name": "Erling Haaland",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Alexander Sorloth",
+       "in": "Oscar Bobb",
+       "minute": "45"
+      },
+      {
+       "out": "Antonio Nusa",
+       "in": "Andreas Schjelderup",
+       "minute": "45"
+      },
+      {
+       "out": "Julian Ryerson",
+       "in": "Fredrik Aursnes",
+       "minute": "63"
+      },
+      {
+       "out": "David Moller Wolfe",
+       "in": "Leo Ostigard",
+       "minute": "90+5"
+      }
+     ]
+    }
+   }
+  },
+  "M92": {
+   "h": 2,
+   "a": 3,
+   "src": "ESPN",
+   "fifa": "https://www.fifa.com/es/watch/UtO24MbZ8ce7YLpu6NMsM",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Julian Quinones",
+     "minute": "42",
+     "assist": ""
+    },
+    {
+     "team": "h",
+     "name": "Raul Jimenez",
+     "minute": "69",
+     "pk": true,
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Jude Bellingham",
+     "minute": "36",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Jude Bellingham",
+     "minute": "38",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Harry Kane",
+     "minute": "60",
+     "pk": true,
+     "assist": ""
+    }
+   ],
+   "cards": [
+    {
+     "type": "red",
+     "team": "a",
+     "name": "Jarell Quansah",
+     "minute": "54"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Johan Vasquez",
+     "minute": "90+8"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Jordan Henderson",
+     "minute": "90+8"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-3-3",
+     "xi": [
+      {
+       "name": "Rangel",
+       "pos": "POR"
+      },
+      {
+       "name": "Sanchez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Johan Vasquez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Montes",
+       "pos": "DEF"
+      },
+      {
+       "name": "Gallardo",
+       "pos": "DEF"
+      },
+      {
+       "name": "Romo",
+       "pos": "MED"
+      },
+      {
+       "name": "Lira",
+       "pos": "MED"
+      },
+      {
+       "name": "Mora",
+       "pos": "MED"
+      },
+      {
+       "name": "Alvarado",
+       "pos": "DEL"
+      },
+      {
+       "name": "Julian Quinones",
+       "pos": "DEL"
+      },
+      {
+       "name": "Raul Jimenez",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Montes",
+       "in": "Alvarez",
+       "minute": "45"
+      },
+      {
+       "out": "Mora",
+       "in": "Gimenez",
+       "minute": "61"
+      },
+      {
+       "out": "Romo",
+       "in": "Gutierrez",
+       "minute": "61"
+      },
+      {
+       "out": "Sanchez",
+       "in": "Fidalgo",
+       "minute": "79"
+      },
+      {
+       "out": "Julian Quinones",
+       "in": "Martinez",
+       "minute": "81"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Pickford",
+       "pos": "POR"
+      },
+      {
+       "name": "Konsa",
+       "pos": "DEF"
+      },
+      {
+       "name": "Guehi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Jarell Quansah",
+       "pos": "DEF"
+      },
+      {
+       "name": "O'Reilly",
+       "pos": "DEF"
+      },
+      {
+       "name": "Rice",
+       "pos": "MED"
+      },
+      {
+       "name": "Anderson",
+       "pos": "MED"
+      },
+      {
+       "name": "Jude Bellingham",
+       "pos": "MED"
+      },
+      {
+       "name": "Saka",
+       "pos": "DEL"
+      },
+      {
+       "name": "Gordon",
+       "pos": "DEL"
+      },
+      {
+       "name": "Harry Kane",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Saka",
+       "in": "Stones",
+       "minute": "57"
+      },
+      {
+       "out": "O'Reilly",
+       "in": "Spence",
+       "minute": "74"
+      },
+      {
+       "out": "Anderson",
+       "in": "Burn",
+       "minute": "75"
+      },
+      {
+       "out": "Harry Kane",
+       "in": "Rogers",
+       "minute": "90"
+      }
+     ]
     }
    }
   }
