@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-06 11:05",
+ "updated": "2026-07-07 09:05",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -19582,6 +19582,370 @@
        "out": "Harry Kane",
        "in": "Rogers",
        "minute": "90"
+      }
+     ]
+    }
+   }
+  },
+  "M93": {
+   "h": 0,
+   "a": 1,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/740lMnWHWJZaxv4hYSKFur",
+   "scorers": [
+    {
+     "team": "a",
+     "name": "Mikel Merino",
+     "minute": "90+1",
+     "assist": "Ferran Torres"
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Ferran Torres",
+     "minute": "90+8"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Diogo Costa",
+       "pos": "POR"
+      },
+      {
+       "name": "Joao Cancelo",
+       "pos": "DEF"
+      },
+      {
+       "name": "Ruben Dias",
+       "pos": "DEF"
+      },
+      {
+       "name": "Renato Veiga",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nuno Mendes",
+       "pos": "DEF"
+      },
+      {
+       "name": "Vitinha",
+       "pos": "MED"
+      },
+      {
+       "name": "Joao Neves",
+       "pos": "MED"
+      },
+      {
+       "name": "Pedro Neto",
+       "pos": "MED"
+      },
+      {
+       "name": "Bruno Fernandes",
+       "pos": "MED"
+      },
+      {
+       "name": "Joao Felix",
+       "pos": "MED"
+      },
+      {
+       "name": "Cristiano Ronaldo",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Nuno Mendes",
+       "in": "Nelson Semedo",
+       "minute": "56"
+      },
+      {
+       "out": "Joao Cancelo",
+       "in": "Diogo Dalot",
+       "minute": "71"
+      },
+      {
+       "out": "Joao Felix",
+       "in": "Rafael Leao",
+       "minute": "71"
+      },
+      {
+       "out": "Pedro Neto",
+       "in": "Francisco Conceicao",
+       "minute": "83"
+      },
+      {
+       "out": "Vitinha",
+       "in": "Bernardo Silva",
+       "minute": "83"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Unai Simon",
+       "pos": "POR"
+      },
+      {
+       "name": "Pedro Porro",
+       "pos": "DEF"
+      },
+      {
+       "name": "Aymeric Laporte",
+       "pos": "DEF"
+      },
+      {
+       "name": "Pau Cubarsi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Marc Cucurella",
+       "pos": "DEF"
+      },
+      {
+       "name": "Rodri",
+       "pos": "MED"
+      },
+      {
+       "name": "Pedri",
+       "pos": "MED"
+      },
+      {
+       "name": "Lamine Yamal",
+       "pos": "MED"
+      },
+      {
+       "name": "Dani Olmo",
+       "pos": "MED"
+      },
+      {
+       "name": "Alex Baena",
+       "pos": "MED"
+      },
+      {
+       "name": "Mikel Oyarzabal",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Alex Baena",
+       "in": "Ferran Torres",
+       "minute": "75"
+      },
+      {
+       "out": "Dani Olmo",
+       "in": "Mikel Merino",
+       "minute": "85"
+      },
+      {
+       "out": "Pedri",
+       "in": "Fabian Ruiz",
+       "minute": "85"
+      },
+      {
+       "out": "Mikel Oyarzabal",
+       "in": "Borja Iglesias",
+       "minute": "90+7"
+      }
+     ]
+    }
+   }
+  },
+  "M94": {
+   "h": 1,
+   "a": 4,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/1m2vueOgvj9cbqE2lMS3dJ",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Malik Tillman",
+     "minute": "31",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Charles De Ketelaere",
+     "minute": "9",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Charles De Ketelaere",
+     "minute": "33",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Hans Vanaken",
+     "minute": "57",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Romelu Lukaku",
+     "minute": "90+3",
+     "assist": ""
+    }
+   ],
+   "cards": [],
+   "lineups": {
+    "h": {
+     "formation": "4-3-3",
+     "xi": [
+      {
+       "name": "Matt Freese",
+       "pos": "POR"
+      },
+      {
+       "name": "Alex Freeman",
+       "pos": "DEF"
+      },
+      {
+       "name": "Chris Richards",
+       "pos": "DEF"
+      },
+      {
+       "name": "Tim Ream",
+       "pos": "DEF"
+      },
+      {
+       "name": "Antonee Robinson",
+       "pos": "DEF"
+      },
+      {
+       "name": "Weston McKennie",
+       "pos": "MED"
+      },
+      {
+       "name": "Tyler Adams",
+       "pos": "MED"
+      },
+      {
+       "name": "Malik Tillman",
+       "pos": "MED"
+      },
+      {
+       "name": "Christian Pulisic",
+       "pos": "DEL"
+      },
+      {
+       "name": "Sergino Dest",
+       "pos": "DEL"
+      },
+      {
+       "name": "Folarin Balogun",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Sergino Dest",
+       "in": "Giovanni Reyna",
+       "minute": "45"
+      },
+      {
+       "out": "Christian Pulisic",
+       "in": "Sebastian Berhalter",
+       "minute": "59"
+      },
+      {
+       "out": "Tyler Adams",
+       "in": "Ricardo Pepi",
+       "minute": "72"
+      },
+      {
+       "out": "Antonee Robinson",
+       "in": "Max Arfsten",
+       "minute": "90+2"
+      },
+      {
+       "out": "Folarin Balogun",
+       "in": "Haji Wright",
+       "minute": "90+2"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Thibaut Courtois",
+       "pos": "POR"
+      },
+      {
+       "name": "Timothy Castagne",
+       "pos": "DEF"
+      },
+      {
+       "name": "Brandon Mechele",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nathan Ngoy",
+       "pos": "DEF"
+      },
+      {
+       "name": "Maxim De Cuyper",
+       "pos": "DEF"
+      },
+      {
+       "name": "Amadou Onana",
+       "pos": "MED"
+      },
+      {
+       "name": "Nicolas Raskin",
+       "pos": "MED"
+      },
+      {
+       "name": "Dodi Lukebakio",
+       "pos": "MED"
+      },
+      {
+       "name": "Youri Tielemans",
+       "pos": "MED"
+      },
+      {
+       "name": "Leandro Trossard",
+       "pos": "MED"
+      },
+      {
+       "name": "Charles De Ketelaere",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Amadou Onana",
+       "in": "Hans Vanaken",
+       "minute": "21"
+      },
+      {
+       "out": "Dodi Lukebakio",
+       "in": "Jeremy Doku",
+       "minute": "67"
+      },
+      {
+       "out": "Charles De Ketelaere",
+       "in": "Romelu Lukaku",
+       "minute": "67"
+      },
+      {
+       "out": "Leandro Trossard",
+       "in": "Alexis Saelemaekers",
+       "minute": "89"
+      },
+      {
+       "out": "Nicolas Raskin",
+       "in": "Axel Witsel",
+       "minute": "89"
       }
      ]
     }

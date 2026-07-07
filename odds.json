@@ -1,18 +1,16 @@
 {
- "updated": "2026-07-06",
- "source": "FanDuel via FOX Sports — cuotas de ganador del Mundial (octavos, tras Francia, Marruecos, Noruega e Inglaterra)",
+ "updated": "2026-07-07",
+ "source": "FanDuel via FOX Sports — cuotas de ganador del Mundial (tras octavos M93 Portugal 0-1 España y M94 USA 1-4 Bélgica)",
  "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo equipos aún vivos. simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app. Si falta un equipo, mantiene su fuerza base (RATING + forma).",
  "outright": {
-  "Francia": 2.7,
-  "Argentina": 5.4,
+  "Francia": 2.75,
+  "España": 4.3,
+  "Argentina": 5.5,
   "Inglaterra": 6.0,
-  "España": 6.5,
-  "Portugal": 15.0,
-  "Noruega": 17.0,
-  "Colombia": 26.0,
+  "Noruega": 19.0,
+  "Colombia": 23.0,
+  "Bélgica": 28.0,
   "Marruecos": 31.0,
-  "Estados Unidos": 31.0,
-  "Bélgica": 56.0,
   "Suiza": 76.0,
   "Egipto": 251.0
  }
