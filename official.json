@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07 09:05",
+ "updated": "2026-07-08 09:40",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -19202,7 +19202,7 @@
   "M91": {
    "h": 1,
    "a": 2,
-   "src": "ESPN",
+   "src": "FIFA",
    "fifa": "https://www.fifa.com/es/watch/2GmG5OiXMG1EuoLtfYSCMf",
    "scorers": [
     {
@@ -19381,22 +19381,9 @@
   "M92": {
    "h": 2,
    "a": 3,
-   "src": "ESPN",
+   "src": "FIFA",
    "fifa": "https://www.fifa.com/es/watch/UtO24MbZ8ce7YLpu6NMsM",
    "scorers": [
-    {
-     "team": "h",
-     "name": "Julian Quinones",
-     "minute": "42",
-     "assist": ""
-    },
-    {
-     "team": "h",
-     "name": "Raul Jimenez",
-     "minute": "69",
-     "pk": true,
-     "assist": ""
-    },
     {
      "team": "a",
      "name": "Jude Bellingham",
@@ -19410,19 +19397,56 @@
      "assist": ""
     },
     {
+     "team": "h",
+     "name": "Julian Quinones",
+     "minute": "42",
+     "assist": ""
+    },
+    {
      "team": "a",
      "name": "Harry Kane",
      "minute": "60",
+     "pk": true,
+     "assist": ""
+    },
+    {
+     "team": "h",
+     "name": "Raul Jimenez",
+     "minute": "69",
      "pk": true,
      "assist": ""
     }
    ],
    "cards": [
     {
+     "type": "yellow",
+     "team": "a",
+     "name": "Declan Rice",
+     "minute": "1"
+    },
+    {
      "type": "red",
      "team": "a",
      "name": "Jarell Quansah",
      "minute": "54"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Marc Guehi",
+     "minute": "68"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Jorge Sanchez",
+     "minute": "71"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Nico Oreilly",
+     "minute": "72"
     },
     {
      "type": "yellow",
@@ -19946,6 +19970,415 @@
        "out": "Nicolas Raskin",
        "in": "Axel Witsel",
        "minute": "89"
+      }
+     ]
+    }
+   }
+  },
+  "M95": {
+   "h": 3,
+   "a": 2,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/JzfSs2Jwd7yn9Ffowg7YQ",
+   "scorers": [
+    {
+     "team": "a",
+     "name": "Yasser Ibrahim",
+     "minute": "15",
+     "assist": "Marawan Attia"
+    },
+    {
+     "team": "a",
+     "name": "Mostafa Zico",
+     "minute": "67",
+     "assist": "Haissem Hassan"
+    },
+    {
+     "team": "h",
+     "name": "Cristian Romero",
+     "minute": "79",
+     "assist": "Lionel Messi"
+    },
+    {
+     "team": "h",
+     "name": "Lionel Messi",
+     "minute": "83",
+     "assist": ""
+    },
+    {
+     "team": "h",
+     "name": "Enzo Fernandez",
+     "minute": "90+2",
+     "assist": "Lautaro Martinez"
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Mostafa Shoubir",
+     "minute": "90+3"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Hamdy Fathy",
+     "minute": "90+4"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Marawan Attia",
+     "minute": "90+8"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-1-3-2",
+     "xi": [
+      {
+       "name": "Emiliano Martinez",
+       "pos": "POR"
+      },
+      {
+       "name": "Nicolas Tagliafico",
+       "pos": "DEF"
+      },
+      {
+       "name": "Lisandro Martinez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Cristian Romero",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nahuel Molina",
+       "pos": "DEF"
+      },
+      {
+       "name": "Leandro Paredes",
+       "pos": "MED"
+      },
+      {
+       "name": "Rodrigo De Paul",
+       "pos": "MED"
+      },
+      {
+       "name": "Alexis Mac Allister",
+       "pos": "MED"
+      },
+      {
+       "name": "Enzo Fernandez",
+       "pos": "MED"
+      },
+      {
+       "name": "Julian Alvarez",
+       "pos": "DEL"
+      },
+      {
+       "name": "Lionel Messi",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Rodrigo De Paul",
+       "in": "Lautaro Martinez",
+       "minute": "66"
+      },
+      {
+       "out": "Nicolas Tagliafico",
+       "in": "Nico Gonzalez",
+       "minute": "66"
+      },
+      {
+       "out": "Nahuel Molina",
+       "in": "Gonzalo Montiel",
+       "minute": "73"
+      },
+      {
+       "out": "Cristian Romero",
+       "in": "Nicolas Otamendi",
+       "minute": "90+5"
+      },
+      {
+       "out": "Julian Alvarez",
+       "in": "Facundo Medina",
+       "minute": "90+5"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Mostafa Shoubir",
+       "pos": "POR"
+      },
+      {
+       "name": "Yasser Ibrahim",
+       "pos": "DEF"
+      },
+      {
+       "name": "Mohamed Hany",
+       "pos": "DEF"
+      },
+      {
+       "name": "Ramy Rabia",
+       "pos": "DEF"
+      },
+      {
+       "name": "Karim Hafez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Emam Ashour",
+       "pos": "MED"
+      },
+      {
+       "name": "Mostafa Zico",
+       "pos": "MED"
+      },
+      {
+       "name": "Mohanad Lashin",
+       "pos": "MED"
+      },
+      {
+       "name": "Marawan Attia",
+       "pos": "MED"
+      },
+      {
+       "name": "Mohamed Salah",
+       "pos": "DEL"
+      },
+      {
+       "name": "Haissem Hassan",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Emam Ashour",
+       "in": "Hamdy Fathy",
+       "minute": "45"
+      },
+      {
+       "out": "Haissem Hassan",
+       "in": "Trezeguet",
+       "minute": "73"
+      },
+      {
+       "out": "Mostafa Zico",
+       "in": "Omar Marmoush",
+       "minute": "80"
+      },
+      {
+       "out": "Mohanad Lashin",
+       "in": "Zizo",
+       "minute": "90+6"
+      }
+     ]
+    }
+   }
+  },
+  "M96": {
+   "h": 0,
+   "a": 0,
+   "src": "FIFA",
+   "pen": "h",
+   "penScore": {
+    "h": 4,
+    "a": 3
+   },
+   "scorers": [],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Granit Xhaka",
+     "minute": "51"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Denis Zakaria",
+     "minute": "59"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Luis Suarez",
+     "minute": "60"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Davinson Sanchez",
+     "minute": "94"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Miro Muheim",
+     "minute": "105"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-1-2-3",
+     "xi": [
+      {
+       "name": "Gregor Kobel",
+       "pos": "POR"
+      },
+      {
+       "name": "Nico Elvedi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Manuel Akanji",
+       "pos": "DEF"
+      },
+      {
+       "name": "Ricardo Rodriguez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Denis Zakaria",
+       "pos": "MED"
+      },
+      {
+       "name": "Remo Freuler",
+       "pos": "MED"
+      },
+      {
+       "name": "Granit Xhaka",
+       "pos": "MED"
+      },
+      {
+       "name": "Ardon Jashari",
+       "pos": "MED"
+      },
+      {
+       "name": "Fabian Rieder",
+       "pos": "MED"
+      },
+      {
+       "name": "Breel Embolo",
+       "pos": "DEL"
+      },
+      {
+       "name": "Dan Ndoye",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Ardon Jashari",
+       "in": "Djibril Sow",
+       "minute": "46"
+      },
+      {
+       "out": "Ricardo Rodriguez",
+       "in": "Miro Muheim",
+       "minute": "71"
+      },
+      {
+       "out": "Breel Embolo",
+       "in": "Cedric Itten",
+       "minute": "87"
+      },
+      {
+       "out": "Denis Zakaria",
+       "in": "Silvan Widmer",
+       "minute": "87"
+      },
+      {
+       "out": "Dan Ndoye",
+       "in": "Ruben Vargas",
+       "minute": "90+1"
+      },
+      {
+       "out": "Fabian Rieder",
+       "in": "Zeki Amdouni",
+       "minute": "103"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-1-2-3",
+     "xi": [
+      {
+       "name": "Camilo Vargas",
+       "pos": "POR"
+      },
+      {
+       "name": "Daniel Munoz",
+       "pos": "DEF"
+      },
+      {
+       "name": "Jhon Lucumi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Gustavo Puerta",
+       "pos": "DEF"
+      },
+      {
+       "name": "Johan Mojica",
+       "pos": "DEF"
+      },
+      {
+       "name": "Davinson Sanchez",
+       "pos": "DEF"
+      },
+      {
+       "name": "James Rodriguez",
+       "pos": "MED"
+      },
+      {
+       "name": "Jhon Arias",
+       "pos": "MED"
+      },
+      {
+       "name": "Jefferson Lerma",
+       "pos": "MED"
+      },
+      {
+       "name": "Luis Diaz",
+       "pos": "DEL"
+      },
+      {
+       "name": "Luis Suarez",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Jhon Arias",
+       "in": "Jaminton Campaz",
+       "minute": "66"
+      },
+      {
+       "out": "James Rodriguez",
+       "in": "Juan Quintero",
+       "minute": "66"
+      },
+      {
+       "out": "Jefferson Lerma",
+       "in": "Richard Rios",
+       "minute": "82"
+      },
+      {
+       "out": "Luis Suarez",
+       "in": "Cucho Hernandez",
+       "minute": "82"
+      },
+      {
+       "out": "Jhon Lucumi",
+       "in": "Yerry Mina",
+       "minute": "118"
       }
      ]
     }
