@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-08 09:40",
+ "updated": "2026-07-10 09:44",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -20379,6 +20379,207 @@
        "out": "Jhon Lucumi",
        "in": "Yerry Mina",
        "minute": "118"
+      }
+     ]
+    }
+   }
+  },
+  "M97": {
+   "h": 2,
+   "a": 0,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/5hMWkQ5zuaopBunGPcLez5",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Kylian Mbappe",
+     "minute": "60",
+     "assist": ""
+    },
+    {
+     "team": "h",
+     "name": "Ousmane Dembele",
+     "minute": "66",
+     "assist": "Kylian Mbappe"
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Issa Diop",
+     "minute": "63"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "n": 16,
+       "name": "Mike Maignan",
+       "pos": "POR"
+      },
+      {
+       "n": 3,
+       "name": "Lucas Digne",
+       "pos": "DEF"
+      },
+      {
+       "n": 4,
+       "name": "Dayot Upamecano",
+       "pos": "DEF"
+      },
+      {
+       "n": 5,
+       "name": "Jules Kounde",
+       "pos": "DEF"
+      },
+      {
+       "n": 17,
+       "name": "William Saliba",
+       "pos": "DEF"
+      },
+      {
+       "n": 6,
+       "name": "Manu Kone",
+       "pos": "MED"
+      },
+      {
+       "n": 14,
+       "name": "Adrien Rabiot",
+       "pos": "MED"
+      },
+      {
+       "n": 7,
+       "name": "Ousmane Dembele",
+       "pos": "MED"
+      },
+      {
+       "n": 10,
+       "name": "Kylian Mbappe",
+       "pos": "MED",
+       "cap": true
+      },
+      {
+       "n": 11,
+       "name": "Michael Olise",
+       "pos": "DEL"
+      },
+      {
+       "n": 20,
+       "name": "Desire Doue",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Manu Kone",
+       "in": "Warren Zaire-Emery",
+       "minute": "71"
+      },
+      {
+       "out": "Kylian Mbappe",
+       "in": "Jean-Philippe Mateta",
+       "minute": "77"
+      },
+      {
+       "out": "Desire Doue",
+       "in": "Bradley Barcola",
+       "minute": "77"
+      },
+      {
+       "out": "Jules Kounde",
+       "in": "Malo Gusto",
+       "minute": "87"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "n": 1,
+       "name": "Yassine Bounou",
+       "pos": "POR"
+      },
+      {
+       "n": 2,
+       "name": "Achraf Hakimi",
+       "pos": "DEF",
+       "cap": true
+      },
+      {
+       "n": 3,
+       "name": "Noussair Mazraoui",
+       "pos": "DEF"
+      },
+      {
+       "n": 14,
+       "name": "Issa Diop",
+       "pos": "DEF"
+      },
+      {
+       "n": 26,
+       "name": "Anass Salah Eddine",
+       "pos": "DEF"
+      },
+      {
+       "n": 6,
+       "name": "Ayyoub Bouaddi",
+       "pos": "MED"
+      },
+      {
+       "n": 7,
+       "name": "Chemsdine Talbi",
+       "pos": "MED"
+      },
+      {
+       "n": 8,
+       "name": "Azzedine Ounahi",
+       "pos": "MED"
+      },
+      {
+       "n": 23,
+       "name": "Bilal El Khannouss",
+       "pos": "MED"
+      },
+      {
+       "n": 24,
+       "name": "Neil El Aynaoui",
+       "pos": "MED"
+      },
+      {
+       "n": 10,
+       "name": "Brahim Diaz",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Ayyoub Bouaddi",
+       "in": "Sofyan Amrabat",
+       "minute": "62"
+      },
+      {
+       "out": "Bilal El Khannouss",
+       "in": "Soufiane Rahimi",
+       "minute": "62"
+      },
+      {
+       "out": "Anass Salah Eddine",
+       "in": "Zakaria El Ouahdi",
+       "minute": "74"
+      },
+      {
+       "out": "Brahim Diaz",
+       "in": "Gessime Yassine",
+       "minute": "74"
+      },
+      {
+       "out": "Chemsdine Talbi",
+       "in": "Amine Sbai",
+       "minute": "85"
       }
      ]
     }

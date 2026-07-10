@@ -1,14 +1,13 @@
 {
- "updated": "2026-07-08",
- "source": "DraftKings / FOX Sports — cuotas de ganador del Mundial (tras completarse los octavos: M95 Argentina 3-2 Egipto y M96 Suiza 0-0 (4-3 pen) Colombia)",
- "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo los 8 equipos aún vivos (cuartos). simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app. Si falta un equipo, mantiene su fuerza base (RATING + forma).",
+ "updated": "2026-07-10",
+ "source": "DraftKings / ESPN / FOX Sports — cuotas de ganador del Mundial (tras M97 Francia 2-0 Marruecos; Francia es la primera semifinalista)",
+ "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo los equipos aún vivos. Marruecos eliminado en cuartos (M97). simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app. Si falta un equipo, mantiene su fuerza base (RATING + forma).",
  "outright": {
   "Francia": 2.8,
   "España": 4.7,
   "Argentina": 5.0,
   "Inglaterra": 5.5,
   "Noruega": 13.0,
-  "Marruecos": 29.0,
   "Bélgica": 31.0,
   "Suiza": 41.0
  }

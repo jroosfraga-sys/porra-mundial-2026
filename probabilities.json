@@ -1,17 +1,17 @@
 {
- "updated": "2026-07-08 09:40",
+ "updated": "2026-07-10 09:44",
  "sims": 50000,
  "model": "Elo (ranking FIFA + cuotas) + forma real del torneo + cuotas de mercado actualizadas; Montecarlo del cuadro restante. Solo resultados oficiales.",
  "oddsUsed": true,
  "oddsInfo": {
-  "source": "DraftKings / FOX Sports — cuotas de ganador del Mundial (tras completarse los octavos: M95 Argentina 3-2 Egipto y M96 Suiza 0-0 (4-3 pen) Colombia)",
-  "oddsUpdated": "2026-07-08",
-  "teams": 8
+  "source": "DraftKings / ESPN / FOX Sports — cuotas de ganador del Mundial (tras M97 Francia 2-0 Marruecos; Francia es la primera semifinalista)",
+  "oddsUpdated": "2026-07-10",
+  "teams": 7
  },
  "probs": {
   "Dudu": {
    "win": 0,
-   "prize": 0.0098
+   "prize": 0
   },
   "Angelitros": {
    "win": 0,
@@ -30,8 +30,8 @@
    "prize": 0
   },
   "Adri93": {
-   "win": 0.1035,
-   "prize": 0.231
+   "win": 0.0617,
+   "prize": 0.2125
   },
   "Bizcochito santos": {
    "win": 0,
@@ -42,8 +42,8 @@
    "prize": 0
   },
   "MarioR": {
-   "win": 0.3652,
-   "prize": 0.9436
+   "win": 0.3917,
+   "prize": 0.9763
   },
   "Octavio": {
    "win": 0,
@@ -58,8 +58,8 @@
    "prize": 0
   },
   "Fidel": {
-   "win": 0.0064,
-   "prize": 0.0293
+   "win": 0.0031,
+   "prize": 0.0217
   },
   "Martin98": {
    "win": 0,
@@ -99,11 +99,11 @@
   },
   "Empresario de éxito": {
    "win": 0,
-   "prize": 0.8945
+   "prize": 0.8975
   },
   "Becquerbauer": {
-   "win": 0.0067,
-   "prize": 0.1263
+   "win": 0,
+   "prize": 0.1021
   },
   "Chino": {
    "win": 0,
@@ -111,7 +111,7 @@
   },
   "Gsus94": {
    "win": 0,
-   "prize": 0.0002
+   "prize": 0
   },
   "Andresrn": {
    "win": 0,
@@ -122,12 +122,12 @@
    "prize": 0
   },
   "Roos": {
-   "win": 0.0007,
-   "prize": 0.0029
+   "win": 0.0003,
+   "prize": 0.0024
   },
   "Messi lover": {
-   "win": 0.5176,
-   "prize": 0.6664
+   "win": 0.5431,
+   "prize": 0.685
   },
   "FrancisBacon18": {
    "win": 0,
@@ -143,7 +143,7 @@
   },
   "Pau": {
    "win": 0,
-   "prize": 0.0003
+   "prize": 0
   },
   "Mataleanto": {
    "win": 0,
@@ -151,7 +151,7 @@
   },
   "Javito": {
    "win": 0,
-   "prize": 0.0957
+   "prize": 0.1025
   },
   "No hay que saber de futbol para ganarasi.": {
    "win": 0,
