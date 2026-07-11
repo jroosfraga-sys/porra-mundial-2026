@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-10 09:44",
+ "updated": "2026-07-11 08:58",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -20580,6 +20580,231 @@
        "out": "Chemsdine Talbi",
        "in": "Amine Sbai",
        "minute": "85"
+      }
+     ]
+    }
+   }
+  },
+  "M98": {
+   "h": 2,
+   "a": 1,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/4ILvhnlhpIqtnPHAPekNsM",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Fabian Ruiz",
+     "minute": "30",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Charles De Ketelaere",
+     "minute": "41",
+     "assist": ""
+    },
+    {
+     "team": "h",
+     "name": "Mikel Merino",
+     "minute": "88",
+     "assist": ""
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Pau Cubarsi",
+     "minute": "43"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Kevin De Bruyne",
+     "minute": "85"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Aymeric Laporte",
+     "minute": "90+3"
+    },
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Axel Witsel",
+     "minute": "90+5"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "n": 23,
+       "name": "Unai Simon",
+       "pos": "POR"
+      },
+      {
+       "n": 12,
+       "name": "Pedro Porro",
+       "pos": "DEF"
+      },
+      {
+       "n": 14,
+       "name": "Aymeric Laporte",
+       "pos": "DEF"
+      },
+      {
+       "n": 22,
+       "name": "Pau Cubarsi",
+       "pos": "DEF"
+      },
+      {
+       "n": 24,
+       "name": "Marc Cucurella",
+       "pos": "DEF"
+      },
+      {
+       "n": 8,
+       "name": "Fabian Ruiz",
+       "pos": "MED"
+      },
+      {
+       "n": 15,
+       "name": "Alex Baena",
+       "pos": "MED"
+      },
+      {
+       "n": 16,
+       "name": "Rodri",
+       "pos": "MED",
+       "cap": true
+      },
+      {
+       "n": 10,
+       "name": "Dani Olmo",
+       "pos": "DEL"
+      },
+      {
+       "n": 19,
+       "name": "Lamine Yamal",
+       "pos": "DEL"
+      },
+      {
+       "n": 21,
+       "name": "Mikel Oyarzabal",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Alex Baena",
+       "in": "Ferran Torres",
+       "minute": "55"
+      },
+      {
+       "out": "Fabian Ruiz",
+       "in": "Pedri",
+       "minute": "55"
+      },
+      {
+       "out": "Mikel Oyarzabal",
+       "in": "Nico Williams",
+       "minute": "79"
+      },
+      {
+       "out": "Dani Olmo",
+       "in": "Mikel Merino",
+       "minute": "86"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "n": 1,
+       "name": "Thibaut Courtois",
+       "pos": "POR"
+      },
+      {
+       "n": 4,
+       "name": "Brandon Mechele",
+       "pos": "DEF"
+      },
+      {
+       "n": 5,
+       "name": "Maxim De Cuyper",
+       "pos": "DEF"
+      },
+      {
+       "n": 21,
+       "name": "Timothy Castagne",
+       "pos": "DEF"
+      },
+      {
+       "n": 25,
+       "name": "Nathan Ngoy",
+       "pos": "DEF"
+      },
+      {
+       "n": 7,
+       "name": "Kevin De Bruyne",
+       "pos": "MED",
+       "cap": true
+      },
+      {
+       "n": 20,
+       "name": "Hans Vanaken",
+       "pos": "MED"
+      },
+      {
+       "n": 23,
+       "name": "Nicolas Raskin",
+       "pos": "MED"
+      },
+      {
+       "n": 10,
+       "name": "Leandro Trossard",
+       "pos": "DEL"
+      },
+      {
+       "n": 11,
+       "name": "Jeremy Doku",
+       "pos": "DEL"
+      },
+      {
+       "n": 17,
+       "name": "Charles De Ketelaere",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Hans Vanaken",
+       "in": "Romelu Lukaku",
+       "minute": "60"
+      },
+      {
+       "out": "Leandro Trossard",
+       "in": "Axel Witsel",
+       "minute": "60"
+      },
+      {
+       "out": "Maxim De Cuyper",
+       "in": "Joaquin Seys",
+       "minute": "60"
+      },
+      {
+       "out": "Thibaut Courtois",
+       "in": "Senne Lammens",
+       "minute": "71"
+      },
+      {
+       "out": "Kevin De Bruyne",
+       "in": "Alexis Saelemaekers",
+       "minute": "86"
       }
      ]
     }

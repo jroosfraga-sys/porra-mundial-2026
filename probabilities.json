@@ -1,12 +1,12 @@
 {
- "updated": "2026-07-10 09:44",
+ "updated": "2026-07-11 08:58",
  "sims": 50000,
  "model": "Elo (ranking FIFA + cuotas) + forma real del torneo + cuotas de mercado actualizadas; Montecarlo del cuadro restante. Solo resultados oficiales.",
  "oddsUsed": true,
  "oddsInfo": {
-  "source": "DraftKings / ESPN / FOX Sports — cuotas de ganador del Mundial (tras M97 Francia 2-0 Marruecos; Francia es la primera semifinalista)",
-  "oddsUpdated": "2026-07-10",
-  "teams": 7
+  "source": "ESPN BET / bookies.com — cuotas de ganador del Mundial (tras M98 Espana 2-1 Belgica; Francia y Espana en semifinales)",
+  "oddsUpdated": "2026-07-11",
+  "teams": 6
  },
  "probs": {
   "Dudu": {
@@ -30,8 +30,8 @@
    "prize": 0
   },
   "Adri93": {
-   "win": 0.0617,
-   "prize": 0.2125
+   "win": 0.0746,
+   "prize": 0.2229
   },
   "Bizcochito santos": {
    "win": 0,
@@ -42,8 +42,8 @@
    "prize": 0
   },
   "MarioR": {
-   "win": 0.3917,
-   "prize": 0.9763
+   "win": 0.5005,
+   "prize": 0.9977
   },
   "Octavio": {
    "win": 0,
@@ -58,8 +58,8 @@
    "prize": 0
   },
   "Fidel": {
-   "win": 0.0031,
-   "prize": 0.0217
+   "win": 0.0059,
+   "prize": 0.0281
   },
   "Martin98": {
    "win": 0,
@@ -99,11 +99,11 @@
   },
   "Empresario de éxito": {
    "win": 0,
-   "prize": 0.8975
+   "prize": 0.8873
   },
   "Becquerbauer": {
    "win": 0,
-   "prize": 0.1021
+   "prize": 0.1371
   },
   "Chino": {
    "win": 0,
@@ -122,12 +122,12 @@
    "prize": 0
   },
   "Roos": {
-   "win": 0.0003,
-   "prize": 0.0024
+   "win": 0,
+   "prize": 0.0021
   },
   "Messi lover": {
-   "win": 0.5431,
-   "prize": 0.685
+   "win": 0.4189,
+   "prize": 0.612
   },
   "FrancisBacon18": {
    "win": 0,
@@ -151,7 +151,7 @@
   },
   "Javito": {
    "win": 0,
-   "prize": 0.1025
+   "prize": 0.1127
   },
   "No hay que saber de futbol para ganarasi.": {
    "win": 0,
