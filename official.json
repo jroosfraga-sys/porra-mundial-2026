@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-11 08:58",
+ "updated": "2026-07-12 13:10",
  "matches": {
   "GA-0": {
    "h": 2,
@@ -20805,6 +20805,420 @@
        "out": "Kevin De Bruyne",
        "in": "Alexis Saelemaekers",
        "minute": "86"
+      }
+     ]
+    }
+   }
+  },
+  "M99": {
+   "h": 1,
+   "a": 2,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/6BptF8qH4saNhLcDzUOeQG",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Andreas Schjelderup",
+     "minute": "36",
+     "assist": ""
+    },
+    {
+     "team": "a",
+     "name": "Jude Bellingham",
+     "minute": "45+2",
+     "assist": "Anthony Gordon"
+    },
+    {
+     "team": "a",
+     "name": "Jude Bellingham",
+     "minute": "93",
+     "assist": "Morgan Rogers"
+    }
+   ],
+   "cards": [],
+   "lineups": {
+    "h": {
+     "formation": "4-3-3",
+     "xi": [
+      {
+       "name": "Orjan Nyland",
+       "pos": "POR"
+      },
+      {
+       "name": "Julian Ryerson",
+       "pos": "DEF"
+      },
+      {
+       "name": "Kristoffer Ajer",
+       "pos": "DEF"
+      },
+      {
+       "name": "Torbjorn Heggem",
+       "pos": "DEF"
+      },
+      {
+       "name": "Marius Moller Wolfe",
+       "pos": "DEF"
+      },
+      {
+       "name": "Martin Odegaard",
+       "pos": "MED"
+      },
+      {
+       "name": "Sander Berge",
+       "pos": "MED"
+      },
+      {
+       "name": "Patrick Berg",
+       "pos": "MED"
+      },
+      {
+       "name": "Alexander Sorloth",
+       "pos": "DEL"
+      },
+      {
+       "name": "Andreas Schjelderup",
+       "pos": "DEL"
+      },
+      {
+       "name": "Erling Haaland",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "",
+       "in": "Fredrik Aursnes",
+       "minute": "60"
+      },
+      {
+       "out": "",
+       "in": "Oscar Bobb",
+       "minute": "67"
+      },
+      {
+       "out": "",
+       "in": "Antonio Nusa",
+       "minute": "67"
+      },
+      {
+       "out": "",
+       "in": "Mohamed Elyounoussi",
+       "minute": "89"
+      },
+      {
+       "out": "",
+       "in": "Leo Ostigard",
+       "minute": "91"
+      },
+      {
+       "out": "",
+       "in": "Jorgen Strand Larsen",
+       "minute": "106"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Jordan Pickford",
+       "pos": "POR"
+      },
+      {
+       "name": "Ezri Konsa",
+       "pos": "DEF"
+      },
+      {
+       "name": "John Stones",
+       "pos": "DEF"
+      },
+      {
+       "name": "Marc Guehi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nico OReilly",
+       "pos": "DEF"
+      },
+      {
+       "name": "Elliot Anderson",
+       "pos": "MED"
+      },
+      {
+       "name": "Declan Rice",
+       "pos": "MED"
+      },
+      {
+       "name": "Noni Madueke",
+       "pos": "MED"
+      },
+      {
+       "name": "Jude Bellingham",
+       "pos": "MED"
+      },
+      {
+       "name": "Anthony Gordon",
+       "pos": "MED"
+      },
+      {
+       "name": "Harry Kane",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "",
+       "in": "Bukayo Saka",
+       "minute": "45"
+      },
+      {
+       "out": "",
+       "in": "Eberechi Eze",
+       "minute": "45"
+      },
+      {
+       "out": "",
+       "in": "Reece James",
+       "minute": "67"
+      },
+      {
+       "out": "",
+       "in": "Morgan Rogers",
+       "minute": "69"
+      },
+      {
+       "out": "",
+       "in": "Djed Spence",
+       "minute": "85"
+      },
+      {
+       "out": "",
+       "in": "Dan Burn",
+       "minute": "111"
+      }
+     ]
+    }
+   }
+  },
+  "M100": {
+   "h": 3,
+   "a": 1,
+   "src": "FIFA",
+   "fifa": "https://www.fifa.com/es/watch/1qIwgM3HEsqqpA6iiYFcXT",
+   "scorers": [
+    {
+     "team": "h",
+     "name": "Alexis Mac Allister",
+     "minute": "10",
+     "assist": "Lionel Messi"
+    },
+    {
+     "team": "a",
+     "name": "Dan Ndoye",
+     "minute": "67",
+     "assist": "Ricardo Rodriguez"
+    },
+    {
+     "team": "h",
+     "name": "Julian Alvarez",
+     "minute": "112",
+     "assist": "Jose Manuel Lopez"
+    },
+    {
+     "team": "h",
+     "name": "Lautaro Martinez",
+     "minute": "120+1",
+     "assist": ""
+    }
+   ],
+   "cards": [
+    {
+     "type": "yellow",
+     "team": "a",
+     "name": "Breel Embolo",
+     "minute": "44"
+    },
+    {
+     "type": "red",
+     "team": "a",
+     "name": "Breel Embolo",
+     "minute": "73"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Thiago Almada",
+     "minute": "97"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Lautaro Martinez",
+     "minute": "98"
+    },
+    {
+     "type": "yellow",
+     "team": "h",
+     "name": "Jose Manuel Lopez",
+     "minute": "114"
+    }
+   ],
+   "lineups": {
+    "h": {
+     "formation": "4-1-3-2",
+     "xi": [
+      {
+       "name": "Emiliano Martinez",
+       "pos": "POR"
+      },
+      {
+       "name": "Nahuel Molina",
+       "pos": "DEF"
+      },
+      {
+       "name": "Cristian Romero",
+       "pos": "DEF"
+      },
+      {
+       "name": "Lisandro Martinez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nicolas Tagliafico",
+       "pos": "DEF"
+      },
+      {
+       "name": "Leandro Paredes",
+       "pos": "MED"
+      },
+      {
+       "name": "Rodrigo De Paul",
+       "pos": "MED"
+      },
+      {
+       "name": "Enzo Fernandez",
+       "pos": "MED"
+      },
+      {
+       "name": "Alexis Mac Allister",
+       "pos": "MED"
+      },
+      {
+       "name": "Lionel Messi",
+       "pos": "DEL"
+      },
+      {
+       "name": "Julian Alvarez",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Nicolas Tagliafico",
+       "in": "Nicolas Gonzalez",
+       "minute": "78"
+      },
+      {
+       "out": "Rodrigo De Paul",
+       "in": "Lautaro Martinez",
+       "minute": "85"
+      },
+      {
+       "out": "Nahuel Molina",
+       "in": "Gonzalo Montiel",
+       "minute": "85"
+      },
+      {
+       "out": "",
+       "in": "Thiago Almada",
+       "minute": "90"
+      },
+      {
+       "out": "Cristian Romero",
+       "in": "Nicolas Otamendi",
+       "minute": "105"
+      },
+      {
+       "out": "Leandro Paredes",
+       "in": "Jose Manuel Lopez",
+       "minute": "110"
+      }
+     ]
+    },
+    "a": {
+     "formation": "4-2-3-1",
+     "xi": [
+      {
+       "name": "Gregor Kobel",
+       "pos": "POR"
+      },
+      {
+       "name": "Denis Zakaria",
+       "pos": "DEF"
+      },
+      {
+       "name": "Manuel Akanji",
+       "pos": "DEF"
+      },
+      {
+       "name": "Nico Elvedi",
+       "pos": "DEF"
+      },
+      {
+       "name": "Ricardo Rodriguez",
+       "pos": "DEF"
+      },
+      {
+       "name": "Granit Xhaka",
+       "pos": "MED"
+      },
+      {
+       "name": "Remo Freuler",
+       "pos": "MED"
+      },
+      {
+       "name": "Fabian Rieder",
+       "pos": "MED"
+      },
+      {
+       "name": "Djibril Sow",
+       "pos": "MED"
+      },
+      {
+       "name": "Dan Ndoye",
+       "pos": "MED"
+      },
+      {
+       "name": "Breel Embolo",
+       "pos": "DEL"
+      }
+     ],
+     "subs": [
+      {
+       "out": "Ricardo Rodriguez",
+       "in": "Miro Muheim",
+       "minute": "86"
+      },
+      {
+       "out": "Dan Ndoye",
+       "in": "Zeki Amdouni",
+       "minute": "86"
+      },
+      {
+       "out": "",
+       "in": "Silvan Widmer",
+       "minute": "86"
+      },
+      {
+       "out": "Denis Zakaria",
+       "in": "Ardon Jashari",
+       "minute": "96"
+      },
+      {
+       "out": "Remo Freuler",
+       "in": "Ruben Vargas",
+       "minute": "115"
       }
      ]
     }

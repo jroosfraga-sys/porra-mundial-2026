@@ -1,13 +1,11 @@
 {
- "updated": "2026-07-11",
- "source": "ESPN BET / bookies.com — cuotas de ganador del Mundial (tras M98 Espana 2-1 Belgica; Francia y Espana en semifinales)",
- "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo equipos aun vivos. Belgica eliminada en cuartos (M98). Vivos: Francia y Espana (semis), Noruega e Inglaterra (M99), Argentina y Suiza (M100). simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app.",
+ "updated": "2026-07-12",
+ "source": "ESPN / FOX Sports — cuotas de ganador del Mundial (tras cuartos completos; semis Francia-Espana y Argentina-Inglaterra)",
+ "note": "Cuotas DECIMALES de 'ganador del Mundial 2026' de casas de apuestas, solo equipos aun vivos: los 4 semifinalistas. Noruega y Suiza eliminadas en cuartos (M99/M100). simulate-probabilities.js las usa para calibrar la fuerza de cada seleccion hacia el mercado actual. Nombres en el formato de la app.",
  "outright": {
-  "Francia": 2.34,
-  "España": 4.7,
-  "Argentina": 4.9,
-  "Inglaterra": 5.8,
-  "Noruega": 17.0,
-  "Suiza": 36.0
+  "Francia": 2.35,
+  "España": 5.1,
+  "Argentina": 5.2,
+  "Inglaterra": 5.9
  }
 }
