@@ -1,13 +1,9 @@
 {
- "updated": "2026-07-12 13:10",
+ "updated": "2026-07-16 09:30",
  "sims": 50000,
- "model": "Elo (ranking FIFA + cuotas) + forma real del torneo + cuotas de mercado actualizadas; Montecarlo del cuadro restante. Solo resultados oficiales.",
- "oddsUsed": true,
- "oddsInfo": {
-  "source": "ESPN / FOX Sports — cuotas de ganador del Mundial (tras cuartos completos; semis Francia-Espana y Argentina-Inglaterra)",
-  "oddsUpdated": "2026-07-12",
-  "teams": 4
- },
+ "model": "Elo (ranking FIFA + cuotas) + forma real del torneo; Montecarlo del cuadro restante. Solo resultados oficiales.",
+ "oddsUsed": false,
+ "oddsInfo": null,
  "probs": {
   "Dudu": {
    "win": 0,
@@ -30,8 +26,8 @@
    "prize": 0
   },
   "Adri93": {
-   "win": 0.0664,
-   "prize": 0.1807
+   "win": 0,
+   "prize": 0.0153
   },
   "Bizcochito santos": {
    "win": 0,
@@ -42,7 +38,7 @@
    "prize": 0
   },
   "MarioR": {
-   "win": 0.4182,
+   "win": 0.4019,
    "prize": 1
   },
   "Octavio": {
@@ -99,11 +95,11 @@
   },
   "Empresario de éxito": {
    "win": 0,
-   "prize": 0.8926
+   "prize": 0.6785
   },
   "Becquerbauer": {
    "win": 0,
-   "prize": 0.0858
+   "prize": 0.3866
   },
   "Chino": {
    "win": 0,
@@ -126,8 +122,8 @@
    "prize": 0
   },
   "Messi lover": {
-   "win": 0.5154,
-   "prize": 0.7335
+   "win": 0.5981,
+   "prize": 0.5981
   },
   "FrancisBacon18": {
    "win": 0,
@@ -151,7 +147,7 @@
   },
   "Javito": {
    "win": 0,
-   "prize": 0.1074
+   "prize": 0.3215
   },
   "No hay que saber de futbol para ganarasi.": {
    "win": 0,
