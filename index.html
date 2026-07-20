@@ -183,6 +183,9 @@
   .podium-pts{font-size:11.5px;color:var(--muted);font-weight:700;margin-top:2px}
   .podium-role{font-size:9.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
   .podium-prize{display:inline-block;margin-top:6px;font-size:13px;font-weight:900;color:#fff;border-radius:8px;padding:2px 10px}
+  .podium-tie{display:inline-block;font-size:8.5px;font-weight:800;color:var(--pink);letter-spacing:.3px}
+  .podium-each{font-size:9px;font-weight:800;opacity:.85}
+  .lb-split{display:inline-block;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;opacity:.8;margin-left:2px}
   .podium-base{width:100%;border-radius:0 0 4px 4px;display:flex;align-items:flex-start;justify-content:center;padding-top:8px;font-size:26px;font-weight:900;color:rgba(255,255,255,.9)}
   .podium-step.gold .podium-base{background:linear-gradient(180deg,var(--gold),#c68f00);height:96px}
   .podium-step.gold .podium-medal{font-size:38px}
@@ -1253,6 +1256,32 @@ function porraLeaderboard(){
 }
 function fmtPts(n){return (Math.round(n*10)/10).toString().replace('.',',');}
 function signPts(n){return (n>0?'+':'')+fmtPts(n);}
+function fmtMoney(n){return (Math.round(n*100)/100).toString().replace('.',',');}
+/* Reparto de premios con EMPATES. El bote premia tres PUESTOS: 1.º (70%),
+   2.º (20%) y penúltimo (10%). Cuando varios participantes empatan a puntos
+   ocupan el mismo puesto (ranking de competición) y se REPARTEN a partes
+   iguales el premio de los puestos que abarca su empate. Devuelve, por índice
+   del board: el puesto (rank, empates comparten número), los € que le tocan
+   (prizeShare) y cuántos empatan en su tramo (tieCount). */
+function prizeAllocation(board){
+  const pot=PARTICIPANTS.length*10;
+  const P1=Math.round(pot*0.70),P2=Math.round(pot*0.20),PPEN=Math.round(pot*0.10);
+  const slotPrize={};
+  const add=(idx,v)=>{if(idx>=0&&idx<board.length)slotPrize[idx]=(slotPrize[idx]||0)+v;};
+  add(0,P1);add(1,P2);add(board.length-2,PPEN);
+  const rankOf=new Array(board.length),prizeShare=new Array(board.length).fill(0),tieCount=new Array(board.length).fill(1);
+  let i=0;
+  while(i<board.length){
+    let j=i;
+    while(j+1<board.length&&board[j+1].total===board[i].total)j++;
+    const rank=i+1,n=j-i+1;
+    let sum=0;for(let k=i;k<=j;k++)sum+=(slotPrize[k]||0);
+    const share=sum>0?sum/n:0;
+    for(let k=i;k<=j;k++){rankOf[k]=rank;prizeShare[k]=share;tieCount[k]=n;}
+    i=j+1;
+  }
+  return {pot,P1,P2,PPEN,rankOf,prizeShare,tieCount};
+}
 /* Selector «¿quién eres?»: se muestra la primera vez (sin alias guardado) y al
    pulsar «Cambiar de persona». Permite ver el desglose de cualquier participante. */
 function renderPorraPicker(preselect){
@@ -1285,21 +1314,26 @@ function porraFinished(){
 }
 /* Podio final de la porra: 1.º (oro), 2.º (plata) y penúltimo (💩), los tres
    premiados. Solo se muestra cuando la final ya se ha jugado oficialmente. */
-function renderPodium(board,prizes){
+function renderPodium(board,alloc){
   if(!porraFinished()||board.length<3)return '';
-  const goldIdx=0,silverIdx=1,poopIdx=board.length-2;
-  if(poopIdx<=silverIdx)return ''; // muy pocos participantes: evita solapes
+  const {rankOf,prizeShare}=alloc;
+  const poopIdx=board.length-2;
+  if(rankOf[poopIdx]<=2)return ''; // muy pocos participantes: evita solapes
+  const membersOfRank=rk=>{const a=[];for(let i=0;i<board.length;i++)if(rankOf[i]===rk)a.push(i);return a;};
+  const gold=membersOfRank(1),silver=membersOfRank(2),poop=membersOfRank(rankOf[poopIdx]);
   const champ=koWinnerSealed('M104');
   const champTxt=champ?`Campeón del Mundo: <b>${champ.flag||''} ${esc(champ.name)}</b>`:'Mundial finalizado';
-  const step=(idx,cls,medal,role,base)=>{
-    const row=board[idx],prize=prizes[idx];
+  const step=(members,cls,medal,role,base)=>{
+    if(!members.length)return '';
+    const share=prizeShare[members[0]],tie=members.length>1;
+    const names=members.map(i=>`<div class="podium-name">${esc(board[i].alias)}</div>`).join('');
     return `<div class="podium-step ${cls}">
       <div class="podium-card">
         <div class="podium-medal">${medal}</div>
-        <div class="podium-role">${role}</div>
-        <div class="podium-name">${esc(row.alias)}</div>
-        <div class="podium-pts">${fmtPts(row.total)} pts</div>
-        ${prize?`<div class="podium-prize">${prize} €</div>`:''}
+        <div class="podium-role">${role}${tie?` <span class="podium-tie">empate ×${members.length}</span>`:''}</div>
+        ${names}
+        <div class="podium-pts">${fmtPts(board[members[0]].total)} pts</div>
+        ${share?`<div class="podium-prize">${fmtMoney(share)} €${tie?' <span class="podium-each">c/u</span>':''}</div>`:''}
       </div>
       <div class="podium-base">${base}</div>
     </div>`;
@@ -1308,9 +1342,9 @@ function renderPodium(board,prizes){
     <p class="podium-title">🏆 ¡Porra finalizada!</p>
     <p class="podium-sub">${champTxt}</p>
     <div class="podium">
-      ${step(silverIdx,'silver','🥈','2.º','2')}
-      ${step(goldIdx,'gold','🥇','Ganador','1')}
-      ${step(poopIdx,'poop','💩','Penúltimo',String(poopIdx+1))}
+      ${step(silver,'silver','🥈','2.º','2')}
+      ${step(gold,'gold','🥇','Ganador','1')}
+      ${step(poop,'poop','💩','Penúltimo',String(poopIdx+1))}
     </div>
   </div>`;
 }
@@ -1322,17 +1356,22 @@ function renderPorra(){
   const r=computePorraFor(me.ans);
   // Clasificación general (todos los participantes)
   const board=porraLeaderboard();
-  // Reparto de premios: bote = 10€ x participantes; 70% 1º, 20% 2º, 10% penúltimo
-  const pot=PARTICIPANTS.length*10;
-  const prizes={0:Math.round(pot*0.70),1:Math.round(pot*0.20),[board.length-2]:Math.round(pot*0.10)};
-  const showProb=!!(PROBS&&PROBS.probs);
+  // Reparto de premios: bote = 10€ x participantes; 70% 1º, 20% 2º, 10% penúltimo.
+  // A igualdad de puntos, los empatados comparten puesto y se reparten el premio.
+  const alloc=prizeAllocation(board);
+  const {pot,P1,P2,PPEN,rankOf,prizeShare,tieCount}=alloc;
+  // Las probabilidades solo tienen sentido con el torneo en marcha; al finalizar
+  // manda el resultado real (podio + reparto), así que se ocultan.
+  const showProb=!porraFinished()&&!!(PROBS&&PROBS.probs);
   let lbHtml='';
   board.forEach((row,i)=>{
     const isme=row.alias===alias;
-    const pos=i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
-    const prize=prizes[i];
-    const prizeCls=i===0?'p1':i===1?'p2':'p3';
-    const prizeBadge=prize?` <span class="lb-prize ${prizeCls}">${prize} €</span>`:'';
+    const rank=rankOf[i];
+    const pos=rank===1?'🥇':rank===2?'🥈':rank===3?'🥉':rank+'.';
+    const prize=prizeShare[i];
+    const prizeCls=rank===1?'p1':rank===2?'p2':'p3';
+    const tied=tieCount[i]>1;
+    const prizeBadge=prize?` <span class="lb-prize ${prizeCls}">${fmtMoney(prize)} €${tied?' <span class="lb-split">empate</span>':''}</span>`:'';
     let probCell='';
     if(showProb){
       const pr=PROBS.probs[row.alias];
@@ -1388,11 +1427,11 @@ function renderPorra(){
     <p class="porra-note">Viendo la porra de <b>${esc(me.alias)}</b>. Solo se cuentan los <b>resultados oficiales</b> (🔒); las predicciones manuales no afectan. Los puntos van apareciendo a medida que se juegan y se actualizan los partidos.</p>
     <button class="pbtn-edit" id="porra-change">🔄 Cambiar de persona</button>
 
-    ${renderPodium(board,prizes)}
+    ${renderPodium(board,alloc)}
 
     <div class="scorers-wrap porra-sec">
       <h3>🏆 Clasificación general <span class="psub">(en tiempo real)</span></h3>
-      <p class="lb-pot">💰 Bote: <b>${pot} €</b> · 🥇 ${prizes[0]} € · 🥈 ${prizes[1]} € · 💩 penúltimo ${prizes[board.length-2]} €</p>
+      <p class="lb-pot">💰 Bote: <b>${pot} €</b> · 🥇 ${P1} € · 🥈 ${P2} € · 💩 penúltimo ${PPEN} €<br><span class="psub">A igualdad de puntos, los empatados comparten puesto y se reparten a partes iguales el premio de ese puesto.</span></p>
       ${showProb?`<p class="porra-note lb-prob-note">🏆 <b>= probabilidad de ganar</b> la porra (quedar 1.º) · 🎁 = probabilidad de <b>llevarse premio</b> (1.º, 2.º o penúltimo). Se calcula una vez al día con los resultados oficiales, la fuerza de cada selección${PROBS.oddsUsed?', las cuotas actuales de las casas de apuestas':''} y su forma en el torneo, simulando miles de veces las eliminatorias que faltan. Ojo: ir primero ahora no siempre es la mayor probabilidad de ganar — depende de qué selecciones tuyas sigan vivas.${PROBS.updated?` <span class="psub">(actualizado ${esc(PROBS.updated)})</span>`:''}</p>`:''}
       <table class="scorers porra-table lb-table"><thead><tr>
         <th>#</th><th>Jugador</th><th>Pts</th>${showProb?'<th>🏆 Ganar</th>':''}
