@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16 09:30",
+  "updated": "2026-07-20 10:32",
   "matches": {
     "GA-0": {
       "h": 2,
@@ -21576,6 +21576,360 @@
               "out": "Nicolas Tagliafico",
               "in": "Lautaro Martinez",
               "minute": "81"
+            }
+          ]
+        }
+      }
+    },
+    "M103": {
+      "h": 4,
+      "a": 6,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/7tq7bBkX3Rywetdz4Z3UOn",
+      "scorers": [
+        {
+          "team": "a",
+          "name": "Declan Rice",
+          "minute": "3",
+          "assist": ""
+        },
+        {
+          "team": "a",
+          "name": "Ezri Konsa",
+          "minute": "18",
+          "assist": ""
+        },
+        {
+          "team": "a",
+          "name": "Bukayo Saka",
+          "minute": "37",
+          "assist": ""
+        },
+        {
+          "team": "a",
+          "name": "Bukayo Saka",
+          "minute": "45+1",
+          "assist": ""
+        },
+        {
+          "team": "h",
+          "name": "Kylian Mbappe",
+          "minute": "48",
+          "assist": ""
+        },
+        {
+          "team": "h",
+          "name": "Bradley Barcola",
+          "minute": "54",
+          "assist": ""
+        },
+        {
+          "team": "h",
+          "name": "Kylian Mbappe",
+          "minute": "66",
+          "assist": ""
+        },
+        {
+          "team": "a",
+          "name": "Bukayo Saka",
+          "minute": "87",
+          "pk": true,
+          "assist": ""
+        },
+        {
+          "team": "h",
+          "name": "Ousmane Dembele",
+          "minute": "90+6",
+          "assist": ""
+        },
+        {
+          "team": "a",
+          "name": "Jude Bellingham",
+          "minute": "90+8",
+          "assist": ""
+        }
+      ],
+      "cards": [],
+      "lineups": {
+        "h": {
+          "xi": [
+            {
+              "name": "Mike Maignan",
+              "pos": "POR"
+            },
+            {
+              "name": "Malo Gusto",
+              "pos": "DEF"
+            },
+            {
+              "name": "Ibrahima Konate",
+              "pos": "DEF"
+            },
+            {
+              "name": "Maxence Lacroix",
+              "pos": "DEF"
+            },
+            {
+              "name": "Theo Hernandez",
+              "pos": "DEF"
+            },
+            {
+              "name": "Warren Zaire-Emery",
+              "pos": "MED"
+            },
+            {
+              "name": "Adrien Rabiot",
+              "pos": "MED"
+            },
+            {
+              "name": "Michael Olise",
+              "pos": "MED"
+            },
+            {
+              "name": "Rayan Cherki",
+              "pos": "MED"
+            },
+            {
+              "name": "Desire Doue",
+              "pos": "MED"
+            },
+            {
+              "name": "Kylian Mbappe",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        },
+        "a": {
+          "xi": [
+            {
+              "name": "Dean Henderson",
+              "pos": "POR"
+            },
+            {
+              "name": "Ezri Konsa",
+              "pos": "DEF"
+            },
+            {
+              "name": "Marc Guehi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Jarell Quansah",
+              "pos": "DEF"
+            },
+            {
+              "name": "Djed Spence",
+              "pos": "DEF"
+            },
+            {
+              "name": "Declan Rice",
+              "pos": "MED"
+            },
+            {
+              "name": "Morgan Rogers",
+              "pos": "MED"
+            },
+            {
+              "name": "Eberechi Eze",
+              "pos": "MED"
+            },
+            {
+              "name": "Bukayo Saka",
+              "pos": "MED"
+            },
+            {
+              "name": "Marcus Rashford",
+              "pos": "MED"
+            },
+            {
+              "name": "Ivan Toney",
+              "pos": "DEL"
+            }
+          ],
+          "subs": []
+        }
+      }
+    },
+    "M104": {
+      "h": 1,
+      "a": 0,
+      "src": "FIFA",
+      "fifa": "https://www.fifa.com/es/watch/7rGf4ZlagxiCJ1drrJ8Oeo",
+      "scorers": [
+        {
+          "team": "h",
+          "name": "Ferran Torres",
+          "minute": "106",
+          "assist": ""
+        }
+      ],
+      "cards": [
+        {
+          "type": "red",
+          "team": "a",
+          "name": "Enzo Fernandez",
+          "minute": "90+3"
+        }
+      ],
+      "lineups": {
+        "h": {
+          "xi": [
+            {
+              "name": "Unai Simon",
+              "pos": "POR"
+            },
+            {
+              "name": "Pedro Porro",
+              "pos": "DEF"
+            },
+            {
+              "name": "Pau Cubarsi",
+              "pos": "DEF"
+            },
+            {
+              "name": "Aymeric Laporte",
+              "pos": "DEF"
+            },
+            {
+              "name": "Marc Cucurella",
+              "pos": "DEF"
+            },
+            {
+              "name": "Rodri",
+              "pos": "MED"
+            },
+            {
+              "name": "Fabian Ruiz",
+              "pos": "MED"
+            },
+            {
+              "name": "Lamine Yamal",
+              "pos": "MED"
+            },
+            {
+              "name": "Dani Olmo",
+              "pos": "MED"
+            },
+            {
+              "name": "Alex Baena",
+              "pos": "MED"
+            },
+            {
+              "name": "Mikel Oyarzabal",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Fabian Ruiz",
+              "in": "Pedri",
+              "minute": "62"
+            },
+            {
+              "out": "Mikel Oyarzabal",
+              "in": "Ferran Torres",
+              "minute": "62"
+            },
+            {
+              "out": "Alex Baena",
+              "in": "Nico Williams",
+              "minute": "75"
+            },
+            {
+              "out": "Dani Olmo",
+              "in": "Mikel Merino",
+              "minute": "75"
+            },
+            {
+              "out": "Aymeric Laporte",
+              "in": "Eric Garcia",
+              "minute": "99"
+            },
+            {
+              "out": "Rodri",
+              "in": "Martin Zubimendi",
+              "minute": "99"
+            }
+          ]
+        },
+        "a": {
+          "xi": [
+            {
+              "name": "Emiliano Martinez",
+              "pos": "POR"
+            },
+            {
+              "name": "Gonzalo Montiel",
+              "pos": "DEF"
+            },
+            {
+              "name": "Cristian Romero",
+              "pos": "DEF"
+            },
+            {
+              "name": "Lisandro Martinez",
+              "pos": "DEF"
+            },
+            {
+              "name": "Nicolas Tagliafico",
+              "pos": "DEF"
+            },
+            {
+              "name": "Rodrigo De Paul",
+              "pos": "MED"
+            },
+            {
+              "name": "Enzo Fernandez",
+              "pos": "MED"
+            },
+            {
+              "name": "Alexis Mac Allister",
+              "pos": "MED"
+            },
+            {
+              "name": "Nico Gonzalez",
+              "pos": "MED"
+            },
+            {
+              "name": "Julian Alvarez",
+              "pos": "DEL"
+            },
+            {
+              "name": "Lionel Messi",
+              "pos": "DEL"
+            }
+          ],
+          "subs": [
+            {
+              "out": "Lisandro Martinez",
+              "in": "Nicolas Otamendi",
+              "minute": "44"
+            },
+            {
+              "out": "Nico Gonzalez",
+              "in": "Leandro Paredes",
+              "minute": "45"
+            },
+            {
+              "out": "Gonzalo Montiel",
+              "in": "Nahuel Molina",
+              "minute": "52"
+            },
+            {
+              "out": "Cristian Romero",
+              "in": "Facundo Medina",
+              "minute": "58"
+            },
+            {
+              "out": "Rodrigo De Paul",
+              "in": "Giuliano Simeone",
+              "minute": "70"
+            },
+            {
+              "out": "Julian Alvarez",
+              "in": "Marcos Senesi",
+              "minute": "102"
             }
           ]
         }

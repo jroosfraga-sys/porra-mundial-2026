@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-16 09:30",
+ "updated": "2026-07-20 10:32",
  "sims": 50000,
  "model": "Elo (ranking FIFA + cuotas) + forma real del torneo; Montecarlo del cuadro restante. Solo resultados oficiales.",
  "oddsUsed": false,
@@ -27,7 +27,7 @@
   },
   "Adri93": {
    "win": 0,
-   "prize": 0.0153
+   "prize": 1
   },
   "Bizcochito santos": {
    "win": 0,
@@ -38,7 +38,7 @@
    "prize": 0
   },
   "MarioR": {
-   "win": 0.4019,
+   "win": 1,
    "prize": 1
   },
   "Octavio": {
@@ -95,11 +95,11 @@
   },
   "Empresario de éxito": {
    "win": 0,
-   "prize": 0.6785
+   "prize": 0
   },
   "Becquerbauer": {
    "win": 0,
-   "prize": 0.3866
+   "prize": 0
   },
   "Chino": {
    "win": 0,
@@ -122,8 +122,8 @@
    "prize": 0
   },
   "Messi lover": {
-   "win": 0.5981,
-   "prize": 0.5981
+   "win": 0,
+   "prize": 0
   },
   "FrancisBacon18": {
    "win": 0,
@@ -147,7 +147,7 @@
   },
   "Javito": {
    "win": 0,
-   "prize": 0.3215
+   "prize": 1
   },
   "No hay que saber de futbol para ganarasi.": {
    "win": 0,

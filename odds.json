@@ -1,9 +1,8 @@
 {
-  "updated": "2026-07-16",
-  "source": "bet365 / FOX Sports / Oddspedia",
-  "note": "Cuotas decimales de ganador del Mundial, equipos vivos (finalistas).",
+  "updated": "2026-07-20",
+  "source": "Resultado final del torneo",
+  "note": "Mundial 2026 finalizado: Espana campeona (1-0 a Argentina en la final). Cuotas ya sin efecto; la simulacion usa el resultado oficial.",
   "outright": {
-    "España": 1.67,
-    "Argentina": 4.5
+    "España": 1.0
   }
 }
